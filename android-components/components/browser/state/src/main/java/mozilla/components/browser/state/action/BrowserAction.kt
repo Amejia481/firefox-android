@@ -29,6 +29,7 @@ import mozilla.components.browser.state.state.WebExtensionState
 import mozilla.components.browser.state.state.content.DownloadState
 import mozilla.components.browser.state.state.content.FindResultState
 import mozilla.components.browser.state.state.content.ShareInternetResourceState
+import mozilla.components.browser.state.state.extension.WebExtensionPromptRequest
 import mozilla.components.browser.state.state.recover.RecoverableTab
 import mozilla.components.browser.state.state.recover.TabState
 import mozilla.components.concept.engine.Engine
@@ -865,6 +866,9 @@ sealed class WebExtensionAction : BrowserAction() {
      */
     data class InstallWebExtensionAction(val extension: WebExtensionState) : WebExtensionAction()
 
+    data class UpdatePromptRequestWebExtensionAction(val promptRequest: WebExtensionPromptRequest) : WebExtensionAction()
+
+    object ConsumePromptRequestWebExtensionAction : WebExtensionAction()
     /**
      * Removes all state of the uninstalled extension from [BrowserState.extensions]
      * and [TabSessionState.extensionState].

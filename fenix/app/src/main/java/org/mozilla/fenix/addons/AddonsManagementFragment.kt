@@ -21,13 +21,19 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Dispatchers.IO
+import kotlinx.coroutines.flow.mapNotNull
 import kotlinx.coroutines.launch
+import mozilla.components.browser.state.selector.findCustomTabOrSelectedTab
+import mozilla.components.browser.state.store.BrowserStore
 import mozilla.components.feature.addons.Addon
 import mozilla.components.feature.addons.AddonManagerException
 import mozilla.components.feature.addons.ui.AddonInstallationDialogFragment
 import mozilla.components.feature.addons.ui.AddonsManagerAdapter
 import mozilla.components.feature.addons.ui.PermissionsDialogFragment
 import mozilla.components.feature.addons.ui.translateName
+import mozilla.components.lib.state.ext.consumeFlow
+import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifAnyChanged
+import mozilla.components.support.ktx.kotlinx.coroutines.flow.ifChanged
 import org.mozilla.fenix.BuildConfig
 import org.mozilla.fenix.Config
 import org.mozilla.fenix.R
@@ -38,6 +44,7 @@ import org.mozilla.fenix.ext.getRootView
 import org.mozilla.fenix.ext.runIfFragmentIsAttached
 import org.mozilla.fenix.ext.settings
 import org.mozilla.fenix.ext.showToolbar
+import org.mozilla.fenix.settings.quicksettings.protections.cookiebanners.dialog.CookieBannerReEngagementDialogUtils
 import org.mozilla.fenix.theme.ThemeManager
 import java.lang.ref.WeakReference
 import java.util.concurrent.CancellationException
@@ -51,7 +58,7 @@ class AddonsManagementFragment : Fragment(R.layout.fragment_add_ons_management) 
     private val args by navArgs<AddonsManagementFragmentArgs>()
 
     private var binding: FragmentAddOnsManagementBinding? = null
-
+    private lateinit var addons : List<Addon>
     /**
      * Whether or not an add-on installation is in progress.
      */
@@ -71,6 +78,7 @@ class AddonsManagementFragment : Fragment(R.layout.fragment_add_ons_management) 
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentAddOnsManagementBinding.bind(view)
         bindRecyclerView()
+        observePromptRequestState(requireContext().components.core.store)
     }
 
     override fun onResume() {
@@ -95,7 +103,7 @@ class AddonsManagementFragment : Fragment(R.layout.fragment_add_ons_management) 
     private fun bindRecyclerView() {
         val managementView = AddonsManagementView(
             navController = findNavController(),
-            showPermissionDialog = ::showPermissionDialog,
+            showPermissionDialog = ::doNothing,
         )
 
         val recyclerView = binding?.addOnsList
@@ -107,7 +115,7 @@ class AddonsManagementFragment : Fragment(R.layout.fragment_add_ons_management) 
         val allowCache = args.installAddonId == null || installExternalAddonComplete
         lifecycleScope.launch(IO) {
             try {
-                val addons = requireContext().components.addonManager.getAddons(allowCache = allowCache)
+                addons = requireContext().components.addonManager.getAddons(allowCache = allowCache)
                 // Add-ons that should be excluded in Mozilla Online builds
                 val excludedAddonIDs = if (Config.channel.isMozillaOnline &&
                     !BuildConfig.MOZILLA_ONLINE_ADDON_EXCLUSIONS.isNullOrEmpty()
@@ -210,6 +218,22 @@ class AddonsManagementFragment : Fragment(R.layout.fragment_add_ons_management) 
         return parentFragmentManager.findFragmentByTag(INSTALLATION_DIALOG_FRAGMENT_TAG)
             as? AddonInstallationDialogFragment != null
     }
+
+
+    private fun observePromptRequestState(store: BrowserStore) {
+        consumeFlow(store) { flow ->
+            flow.mapNotNull { state ->
+                state.webExtensionPromptRequest
+            }.ifChanged().collect { promptRequest ->
+                val addon = addons.first() { addon ->
+                    addon.id == promptRequest.extension.id
+                }
+                showPermissionDialog(addon)
+            }
+        }
+    }
+    internal fun doNothing(addon: Addon) = Unit
+
 
     @VisibleForTesting
     internal fun showPermissionDialog(addon: Addon) {
