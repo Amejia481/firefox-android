@@ -322,13 +322,14 @@ class GeckoEngine(
         this.webExtensionDelegate = webExtensionDelegate
 
         val promptDelegate = object : WebExtensionController.PromptDelegate {
-            override fun onInstallPrompt(ext: org.mozilla.geckoview.WebExtension): GeckoResult<AllowOrDeny>? {
+            override fun onInstallPrompt(ext: org.mozilla.geckoview.WebExtension): GeckoResult<AllowOrDeny> {
                 val extension = GeckoWebExtension(ext, runtime)
-                return if (webExtensionDelegate.onInstallPermissionRequest(extension)) {
-                    GeckoResult.allow()
-                } else {
-                    GeckoResult.deny()
+                val result = GeckoResult<AllowOrDeny>()
+
+                webExtensionDelegate.onInstallPermissionRequest(extension) { allow ->
+                    if (allow) result.complete(AllowOrDeny.ALLOW) else result.complete(AllowOrDeny.DENY)
                 }
+                return result
             }
 
             override fun onUpdatePrompt(

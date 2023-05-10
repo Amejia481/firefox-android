@@ -5,6 +5,7 @@
 package mozilla.components.browser.state.state
 
 import mozilla.components.browser.state.state.content.DownloadState
+import mozilla.components.browser.state.state.extension.WebExtensionPromptRequest
 import mozilla.components.browser.state.state.recover.TabState
 import mozilla.components.lib.state.State
 import java.util.Locale
@@ -40,6 +41,7 @@ data class BrowserState(
     val selectedTabId: String? = null,
     val containers: Map<String, ContainerState> = emptyMap(),
     val extensions: Map<String, WebExtensionState> = emptyMap(),
+    val webExtensionPromptRequest: WebExtensionPromptRequest? = null,
     val activeWebExtensionTabId: String? = null,
     val downloads: Map<String, DownloadState> = emptyMap(),
     val search: SearchState = SearchState(),
