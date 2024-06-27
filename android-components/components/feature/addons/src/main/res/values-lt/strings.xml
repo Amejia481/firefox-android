@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:moz="http://schemas.android.com/apk/res-auto">
     <!-- Description for privacy add-on permission. -->
     <string name="mozac_feature_addons_permissions_privacy_description">Skaityti ir keisti privatumo nuostatas</string>
     <!-- Description for all_urls add-on permission. -->
@@ -38,6 +38,8 @@
     <string name="mozac_feature_addons_permissions_clipboard_read_description">Gauti duomenis iš iškarpinės</string>
     <!-- Description for clipboard_write permission. -->
     <string name="mozac_feature_addons_permissions_clipboard_write_description">Įvesti duomenis į iškarpinę</string>
+    <!-- Description for declarativeNetRequest permission. -->
+    <string name="mozac_feature_addons_permissions_declarative_net_request_description">Blokuoti turinį bet kuriame puslapyje</string>
     <!-- Description for downloads permission. -->
     <string name="mozac_feature_addons_permissions_downloads_description">Atsiųsti failus bei skaityti ir keisti naršyklės atsiuntimų žurnalą</string>
     <!-- Description for downloads_open permission. -->
@@ -208,4 +210,4 @@
     <string name="mozac_feature_addons_installed_dialog_description">Atverti jį per meniu</string>
     <!-- Confirmation button text for the dialog when add-on installation is completed. -->
     <string name="mozac_feature_addons_installed_dialog_okay_button">Gerai, supratau</string>
-</resources>
+    </resources>

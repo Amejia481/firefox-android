@@ -53,7 +53,6 @@
     <string name="menu_remove_from_shortcuts">Kısayollardan kaldırıldı</string>
 
     <!-- Menu item: Shows information about features and changes that are new to this version -->
-    <string name="menu_whats_new">Yeni neler var?</string>
     <string name="menu_settings">Ayarlar</string>
     <string name="menu_about">Hakkında</string>
     <string name="menu_help">Yardım</string>
@@ -64,7 +63,7 @@
          Next to this label is a switch that allows the user to temporarily enable / disable the
          blocking of trackers for the current browsing session - for example if the current website
          doesn't work correctly with blocked content. -->
-    <string name="menu_trackers_blocked_title">Takipçileri engelle</string>
+    <string name="menu_trackers_blocked_title">Takip kodlarını engelle</string>
 
     <!-- Menu item: This is the subtitle for the Trackers blocked menu entry that shows how many
     trackers have been blocked for the currently loaded website.  -->
@@ -84,10 +83,13 @@
          sharing an URL. -->
     <string name="share_dialog_title">Paylaş</string>
 
-    <!-- While a browsing session is active (in the foreground or background) we will show a notification
-         so that the user doesn't forget about the website still being open. This text is shown in
-         the notification. Clicking the notification will have the same effect as clicking the "erase"
-         button in the application. -->
+    <string name="notification_erase_title_android_14">Gezinti geçmişi silinsin mi?</string>
+    <string name="notification_erase_text_android_14" moz:RemovedIn="124" tools:ignore="UnusedResources">Gezinti geçmişinizi güvenli bir şekilde silmek için bu bildirime dokunun veya bildirimi temizleyin.</string>
+
+    <!-- Text shown in the notification description that pops up to remind the user that a browsing session is active
+    for Android 14+. -->
+    <string name="notification_erase_text_android_14_1">Gezinti geçmişinizi güvenli bir şekilde silmek için bu bildirime dokunun veya bildirimi kaydırın.</string>
+
     <string name="notification_erase_text">Gezinti geçmişini sil</string>
 
     <!-- Notification action to open Focus and resume the current browsing session. -->
@@ -141,7 +143,7 @@
 <p>Onu gizlilik odaklı bir tarayıcı olarak kullanabilirsiniz:
   <ul>
     <li>Doğrudan uygulamada arama yapabilir ve web’de gezinebilirsiniz</li>
-    <li>Takipçileri engelleyebilirsiniz (veya belli takipçilere izin verebilirsiniz)</li>
+    <li>Takip kodlarını engelleyebilirsiniz (veya belli takip kodlarına izin verebilirsiniz)</li>
     <li>Tek düğmeyle çerezleri, arama ve gezinti geçmişinizi silebilirsiniz</li>
   </ul>
 </p>
@@ -287,20 +289,20 @@
     <string name="preference_language_systemdefault">Sistem varsayılanı</string>
 
     <string name="preference_category_privacy">Gizlilik</string>
-    <string name="preference_privacy_block_ads">Reklam takipçilerini engelle</string>
+    <string name="preference_privacy_block_ads">Reklam takip kodlarını engelle</string>
     <string name="preference_privacy_block_ads_summary">Bazı reklamlar, siz onlara tıklamasanız bile ziyaret ettiğiniz siteleri takip eder</string>
-    <string name="preference_privacy_block_analytics">Analitik takipçilerini engelle</string>
+    <string name="preference_privacy_block_analytics">Analitik takip kodlarını engelle</string>
     <string name="preference_privacy_block_analytics_summary">Dokunma ve kaydırma gibi etkinlikleri kaydetmek, çözümlemek ve ölçmek için kullanılır</string>
-    <string name="preference_privacy_block_social">Sosyal takipçileri engelle</string>
+    <string name="preference_privacy_block_social">Sosyal takip kodlarını engelle</string>
     <string name="preference_privacy_block_social_summary">Sosyal medyada paylaşım düğmeleri, ziyaret ettiğiniz siteleri de takip eder</string>
-    <string name="preference_privacy_block_content">Diğer içerik takipçilerini engelle</string>
+    <string name="preference_privacy_block_content">Diğer içerik takip kodlarını engelle</string>
     <string name="preference_privacy_block_content_summary2">Bunu açarsanız bazı sayfalar olması gerektiği gibi çalışmayabilir</string>
     <string name="preference_privacy_category_cookies">Çerezleri engelle</string>
 
     <!-- Three options for Cookie blocking. Yes (All cookies Blocked), Block 3rd-party cookies
     only (Only 3rd-party Cookies Blocked), No (No cookies blocked) -->
     <string name="preference_privacy_should_block_cookies_no_option2">Hayır</string>
-    <string name="preference_privacy_should_block_cookies_third_party_tracker_cookies_option">Yalnızca üçüncü taraf takipçi çerezlerini engelle</string>
+    <string name="preference_privacy_should_block_cookies_third_party_tracker_cookies_option">Yalnızca üçüncü taraf takip çerezlerini engelle</string>
     <string name="preference_privacy_should_block_cookies_third_party_only_option">Yalnızca üçüncü taraf çerezlerini engelle</string>
 
     <string name="preference_privacy_should_block_cookies_cross_site_option">Siteler arası çerezleri engelle</string>
@@ -333,7 +335,7 @@
 
     <string name="preference_performance_block_javascript">JavaScript’i engelle</string>
     <!-- This text is shown below setting for disabling JavaScript. Some websites may not work correctly when JavaScript is disabled -->
-    <string name="preference_performance_block_javascript_summary">Sayfaları daha hızlı yüklenebilir ama sorun da çıkarabilirler</string>
+    <string name="preference_performance_block_javascript_summary">Sayfalar daha hızlı yüklenebilir ama sorun da çıkarabilirler</string>
 
     <!-- This preference does not set Focus as the default browser but instead links to Android's
      "default apps" settings screen or if not supported by this Android version to a SUMO page describing
@@ -352,6 +354,15 @@
 
     <!-- In-app link (in settings) to Focus privacy notice. -->
     <string name="preference_privacy_notice">Gizlilik bildirimi</string>
+
+    <!-- In-app link (in settings) to Focus licensing information. -->
+    <string name="preference_licensing_info">Lisans bilgileri</string>
+
+    <!-- Link to Focus licensing information from other libraries that we use. -->
+    <string name="preference_libraries_we_use">Kullandığımız kitaplıklar</string>
+
+    <!-- Open Source Licenses page title. The first parameter is the app name -->
+    <string name="open_source_licenses_title">%s | OSS Kitaplıkları</string>
 
     <!-- Item in Preferences that shows the about page. Parameter 1 is the app name, i.e. Firefox Focus/Firefox Klar. -->
     <string name="preference_about">%1$s hakkında</string>
@@ -448,11 +459,11 @@
 
     <!-- Content description (not visible, for screen readers etc.): This is the description for the ImageView in the menu that displays
          the number of trackers blocked for the current session -->
-    <string name="content_description_trackers_blocked">Engellenen takipçi sayısı</string>
+    <string name="content_description_trackers_blocked">Engellenen takip kodu sayısı</string>
 
     <!-- Content description (not visible, for screen readers etc.): This is the description for the switch in the menu that temporarily disables/enables
          content blocking for the current session -->
-    <string name="content_description_blocking_switch">Takipçileri engelle</string>
+    <string name="content_description_blocking_switch">Takip kodlarını engelle</string>
 
     <string name="your_rights">Haklarınız</string>
 
@@ -482,7 +493,10 @@
 
 
 
-  <string name="error_hostLookup_title">Sunucu bulunamadı</string>
+  <!-- Snackbar that will be displayed after a website has been added to shortcuts. -->
+    <string name="snackbar_added_to_shortcuts">Kısayollara eklendi</string>
+
+    <string name="error_hostLookup_title">Sunucu bulunamadı</string>
 
 
 
@@ -614,7 +628,7 @@
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the trademark policy (e.g. https://www.mozilla.org/foundation/trademarks/policy/) -->
-    <string name="your_rights_content3"><![CDATA[Mozilla Foundation’ın tescilli markaları olan Mozilla, Firefox, %1$s adları ve logoları da dahil olmak üzere, tescilli markalarımızın hakları ve lisansları sizinle paylaşılmamaktadır. Daha fazla bilgi almak isterseniz <a href="%2$s">buraya</a> bakabilirsiniz.]]></string>
+    <string name="your_rights_content3"><![CDATA[Mozilla Vakfı’nın tescilli markaları olan Mozilla, Firefox, %1$s adları ve logoları da dahil olmak üzere, tescilli markalarımızın hakları ve lisansları sizinle paylaşılmamaktadır. Daha fazla bilgi almak isterseniz <a href="%2$s">buraya</a> bakabilirsiniz.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
@@ -707,6 +721,9 @@
     <!-- Text for indicating cookie banner handling is on this site, this is shown as part of the protections panel with the tracking protection toggle. -->
     <string name="cookie_banner_exception_item_description_state_on">Bu sitede AÇIK</string>
 
+    <!-- Text for indicating cookie reducer is not supported on the current site, this is shown as part of the protections panel with the tracking protection toggle. -->
+    <string name="cookie_banner_exception_site_not_supported">Bu site şu anda desteklenmiyor</string>
+
     <!-- Text for indicating cookie banner handling is off this site, this is shown as part of the protections panel with the tracking protection toggle. -->
     <string name="cookie_banner_exception_item_description_state_off">Bu sitede KAPALI</string>
 
@@ -729,19 +746,26 @@
     <string name="cookie_banner_exception_panel_description_state_on_for_site">%1$s bu sitenin çerezlerini temizleyip sayfayı tazeleyecek. Tüm çerezlerin temizlenmesi oturumunuzu kapatabilir veya alışveriş sepetlerinizi boşaltabilir.</string>
 
     <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. The placeholder will be updated with the app name. -->
-    <string name="cookie_banner_exception_panel_description_state_off_for_site" moz:RemovedIn="111" tools:ignore="UnusedResources">%1$s, çerez bildirimlerindeki çerez isteklerini otomatik olarak reddetmeye çalışır. Reddetme seçeneği yoksa %1$s, bildirimi kapatmak için tüm çerezleri kabul edebilir.</string>
-
-    <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. The placeholder will be updated with the app name. -->
     <string name="cookie_banner_exception_panel_description_state_off_for_site2">%1$s çerez isteklerini otomatik olarak reddetmeyi deneyebilir.</string>
 
-    <!-- Contextual Feature Recommendation Popups -->
-    <!-- CFR for Cookie Banner (Banner Info Message). The placeholder will be updated with the app name. -->
-    <string name="cfr_for_cookie_banner" moz:RemovedIn="111" tools:ignore="UnusedResources">%1$s sinir bozucu çerez bildirimlerini kapatmak için çerez isteklerini reddetmeye çalışır.\n\nÇerez bildirimi tercihlerinizi ayarlardan değiştirebilirsiniz.</string>
+    <!-- Long text for a detail explanation indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_description_site_is_not_supported">Çerez bildirimlerini azaltma özelliği henüz bu siteyi desteklemiyor. Ekibimizin bu siteyi inceleyip gelecekte desteklemesini ister misiniz?</string>
 
+    <!-- Text for cancel button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_site_is_not_supported_cancel_button">Vazgeç</string>
+
+    <!-- Text for request support button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_site_is_not_supported_request_support_button">Destek iste</string>
+
+    <!-- Label for the snackBar, after the user reports with success a website where cookie banner reducer did not work -->
+    <string name="cookie_banner_report_a_site_snackbar_label">Destek sitesine istek gönderildi.</string>
+
+    <!-- Label for cookie banner item from tracking protection, after the user reports with success a website where cookie banner reducer did not work -->
+    <string name="cookie_banner_the_site_was_reported">Destek sitesine istek gönderildi.</string>
+
+    <!-- Contextual Feature Recommendation Popups -->
     <!-- CFR for Cookie Banner (Banner Info Message). %1$s will be replaced by the app name, %2$s will be an active link using the string cfr_cookie_banner_link as text. -->
     <string name="cfr_cookie_banner">%1$s sinir bozucu çerez bildirimlerini kapatmak için çerez isteklerini reddetmeye çalışır.\n\nÇerez bildirimi tercihlerinizi %2$s ekranından değiştirebilirsiniz.</string>
-    <!-- CFR for Cookie Banner (Banner Info Message). This text should be the same as the settings text from "cfr_for_cookie_banner". The text should be underlined and should redirect the user to the cookie banner settings screen. -->
-    <string name="cfr_for_cookie_banner_underline_settings" moz:RemovedIn="111" tools:ignore="UnusedResources">ayarlar</string>
 
     <!-- CFR for Cookie Banner (Banner Info Message). This string is used as text for a link in cfr_cookie_banner and takes the user to the app settings. -->
     <string name="cfr_cookie_banner_link">ayarlar</string>
@@ -856,7 +880,7 @@
 
     <!-- Description for the prompt to enable search suggestions
         %1$s will be replaced by the app name (e.g. Firefox Focus) -->
-    <string name="enable_search_suggestion_description">Arama önerileri alabilmeniz için %1$s’un adres çubuğuna yazdığınız şeyleri seçtiğiniz arama motoruna göndermesi gerekir.</string>
+    <string name="enable_search_suggestion_description"> Arama önerileri alabilmeniz için %1$s’un adres çubuğuna yazdığınız şeyleri seçtiğiniz arama motoruna göndermesi gerekir.</string>
 
     <!-- Label used for the "NO button" for the prompt to enable search suggestions -->
     <string name="enable_search_suggestions_no">Hayır</string>
@@ -874,7 +898,8 @@
 
     <!-- Tip displayed on home view explaining how to disable tracking protection
     The new line here must be kept as the second half of the string is clickable for the user. -->
-    <string name="tip_disable_tracking_protection">Düzgün görünmeyen bir site mi var?\n İzlenme Koruması’nı kapatmayı deneyin</string>
+    <string name="tip_disable_tracking_protection">Düzgün görünmeyen bir site mi var?\n
+    İzlenme Koruması’nı kapatmayı deneyin</string>
 
     <!-- Tip displayed on home view explaining how to add sites to homescreen
     Argument 1 will be replaced with a line break in the application.-->
@@ -883,15 +908,21 @@
     <!-- Tip displayed on home view explaining how to make Focus the default browser
     Argument 1 is the app name (Firefox Focus/Firefox Klar/etc).
     The new line here must be kept as the second half of the string is clickable for the user. -->
-    <string name="tip_set_default_browser">Her bağlantıyı %1$s ile açabilirsiniz\n %1$s’u varsayılan tarayıcınız yapın</string>
+    <string name="tip_set_default_browser">Her bağlantıyı %1$s ile açabilirsiniz\n
+        %1$s’u varsayılan tarayıcınız yapın
+    </string>
 
     <!-- Tip displayed on home view explaining how to add a custom autocomplete URL
     The new line here must be kept as the second half of the string is clickable for the user. -->
-    <string name="tip_autocomplete_url">En çok kullandığınız sitelerin adreslerini otomatik tamamlayabilirsiniz\n Adres çubuğundaki herhangi bir adrese basılı tutun</string>
+    <string name="tip_autocomplete_url">En çok kullandığınız sitelerin adreslerini otomatik tamamlayabilirsiniz\n
+        Adres çubuğundaki herhangi bir adrese basılı tutun
+    </string>
 
     <!-- Tip displayed on home view explaining how to add a custom autocomplete URL
     The new line here must be kept as the second half of the string is clickable for the user. -->
-    <string name="tip_open_in_new_tab">Bağlantıları yeni sekmede açabilirsiniz\n Bir sayfadaki herhangi bir bağlantıya uzun basın</string>
+    <string name="tip_open_in_new_tab">Bağlantıları yeni sekmede açabilirsiniz\n
+        Bir sayfadaki herhangi bir bağlantıya uzun basın
+    </string>
 
     <!-- Tip displayed on home view explaining how to add a custom autocomplete URL -->
     <string name="tip_disable_tips2">Başlangıç ​​ekranında ipuçlarını kapat</string>
@@ -952,7 +983,7 @@
     <!-- Tracking protection bottom sheet -->
 
     <!-- Label for the total number of trackers blocked. %s represents the app install date -->
-    <string name="trackers_count_note">%s tarihinden beri engellenen takipçi</string>
+    <string name="trackers_count_note">%s tarihinden beri engellenen takip kodu</string>
     <!-- Category of trackers (content) that can be blocked by Enhanced Tracking Protection -->
     <string name="content">İçerik</string>
     <!-- Category of trackers (advertising) that can be blocked by Enhanced Tracking Protection -->
@@ -972,7 +1003,7 @@
     <!-- Label that indicates a site is using a insecure connection -->
     <string name="insecure_connection">Bağlantı güvenli değil</string>
     <!-- Title for the list of trackers enhanced tracking ptotection can block-->
-    <string name="trackers_and_scripts">Engellenecek takipçiler ve betikler</string>
+    <string name="trackers_and_scripts">Engellenecek takip kodları ve betikler</string>
 
     <!-- Content description (not visible, for screen readers etc.): Navigate back button description -->
     <string name="go_back">Geri dön</string>
@@ -1007,16 +1038,29 @@
 
 
     <!-- The title of the error page for websites that do not support HTTPS when HTTPS-Only is turned on  -->
-    <string name="errorpage_httpsonly_title" moz:RemovedIn="111" tools:ignore="UnusedResources">İstediğiniz site HTTPS’yi desteklemiyor</string>
-
-    <!-- The title of the error page for websites that do not support HTTPS when HTTPS-Only is turned on  -->
     <string name="errorpage_httpsonly_title2">Bu site HTTPS’i desteklemiyor</string>
 
-    <!-- The text of the error page for websites that do not support HTTPS when HTTPS-Only is turned on. %1$s will get replaced with the name of the app (e.g. "Firefox Focus") -->
-    <string name="errorpage_httpsonly_message" moz:RemovedIn="111" tools:ignore="UnusedResources">Varsayılan olarak %1$s, güvenliğinizi artırmak için HTTPS aracılığıyla bağlanmaya çalışır. Bu ayarı değiştirmek veya daha bilgi almak için Ayarlar &gt; Gizlilik ve Güvenlik &gt; Güvenlik kısmına bakabilirsiniz.</string>
+    <!-- The text of the error page for websites that do not support HTTPS when HTTPS-Only is turned on. %1$s will get replaced with the name of the app (e.g. "Firefox Focus").
+        Contains a button that will redirect the user to Privacy & Security Screen-->
+    <string name="errorpage_httpsonly_message2"><![CDATA[%1$s, güvenliğinizi artırmak için mümkünse HTTPS bağlantısı kullanmaya çalışır.
+     <a href="%2$s">Daha fazla bilgi alın</a> <br/><br/>
+     Bu ayarı Ayarlar > Gizlilik ve Güvenlik > Güvenlik kısmından değiştirebilirsiniz.]]></string>
 
     <!-- The document title and heading of the error page shown when a website has an invalid or expired SSL certificate. -->
     <string name="mozac_browser_errorpages_security_bad_cert_title">Bağlantı güvenli değil</string>
+
+     <!-- The error message shown when a website has an invalid or expired SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_bad_cert_message"><![CDATA[
+    Sunucunun yapılandırmasıyla ilgili bir sorun olabilir veya birisi sunucuyu taklit etmeye çalışıyor olabilir.<br/><br/>
+    Daha önce bu sunucuya sorunsuz bağlandıysanız sorun geçici olabilir.
+    ]]></string>
+
+    <!-- The advanced certificate information shown when a website has an invalid SSL certificate. The %1$s will be replaced by the app name and %2$s will be replaced by website URL. It's only shown when a website has an invalid SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_bad_cert_techInfo"><![CDATA[
+        <label>Birisi bu siteyi taklit etmeye çalışıyor olabilir ve devam etmeniz riskli olabilir.</label>
+        <br><br>
+        <label>%1$s <b>%2$s</b> sitesine güvenmiyor. Sitenin sertifikasını düzenleyen kuruluş tanınmıyor olabilir, sertifika kendi kendine imzalanmış olabilir veya sunucu doğu ara sertifikaları göndermiyor olabilir.</label>
+    ]]></string>
 
      <!-- Sessions List -->
     <!-- Content description (not visible, for screen readers etc.): Button that closes a tab n the sessions list -->
