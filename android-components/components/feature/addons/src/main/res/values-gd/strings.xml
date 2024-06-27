@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:moz="http://schemas.android.com/apk/res-auto">
     <!-- Description for privacy add-on permission. -->
     <string name="mozac_feature_addons_permissions_privacy_description">roghainnean na prìobhaideachd a leughadh is atharrachadh</string>
     <!-- Description for all_urls add-on permission. -->
@@ -40,6 +40,8 @@
     <string name="mozac_feature_addons_permissions_clipboard_write_description">dàta a chur air an stòr-bhòrd</string>
     <!-- Description for declarativeNetRequest permission. -->
     <string name="mozac_feature_addons_permissions_declarative_net_request_description">Bac susbaint air duilleag sam bith</string>
+    <!-- Description for declarativeNetRequestFeedback permission. -->
+    <string name="mozac_feature_addons_permissions_declarative_net_request_feedback_description">Leugh an eachdraidh brabhsaidh agad</string>
     <!-- Description for downloads permission. -->
     <string name="mozac_feature_addons_permissions_downloads_description">faidhlichean a luchdadh a-nuas agus eachdraidh nan luchdaidhean a-nuas aig a’ bhrabhsair a leughadh is atharrachadh</string>
     <!-- Description for downloads_open permission. -->
@@ -210,4 +212,4 @@
     <string name="mozac_feature_addons_installed_dialog_description">Fosgail e sa chlàr-taice</string>
     <!-- Confirmation button text for the dialog when add-on installation is completed. -->
     <string name="mozac_feature_addons_installed_dialog_okay_button">Ceart, tha mi agaibh</string>
-</resources>
+    </resources>

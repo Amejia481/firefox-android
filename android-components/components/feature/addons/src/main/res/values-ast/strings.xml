@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:moz="http://schemas.android.com/apk/res-auto">
     <!-- Description for privacy add-on permission. -->
     <string name="mozac_feature_addons_permissions_privacy_description">Lleer y modificar los axustes de la privacidá</string>
     <!-- Description for all_urls add-on permission. -->
@@ -40,6 +40,8 @@
     <string name="mozac_feature_addons_permissions_clipboard_write_description">Introducir datos nel cartafueyu</string>
     <!-- Description for declarativeNetRequest permission. -->
     <string name="mozac_feature_addons_permissions_declarative_net_request_description">Bloquiar el conteníu de cualesquier páxina</string>
+    <!-- Description for declarativeNetRequestFeedback permission. -->
+    <string name="mozac_feature_addons_permissions_declarative_net_request_feedback_description">Lleer l\'historial de restolar</string>
     <!-- Description for downloads permission. -->
     <string name="mozac_feature_addons_permissions_downloads_description">Baxar ficheros y lleer y modificar l\'historial de descargues del restolador</string>
     <!-- Description for downloads_open permission. -->
@@ -210,4 +212,4 @@
     <string name="mozac_feature_addons_installed_dialog_description">Ábrilu nel menú</string>
     <!-- Confirmation button text for the dialog when add-on installation is completed. -->
     <string name="mozac_feature_addons_installed_dialog_okay_button">Entendílo</string>
-</resources>
+    </resources>
