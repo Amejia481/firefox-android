@@ -55,10 +55,6 @@ la eraro povas esti tempa kaj vi povos klopodi denove poste.</li>
     <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Spertula…</string>
 
     <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
-    <string moz:removedIn="104" name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo" tools:ignore="UnusedResources"><![CDATA[
-        <label> <b>%1$s</b> havas sekurecan politikon, kiun oni nomas HTTP Strict Transport Security (HSTS), kiu signifas ke <b>%2$s</b> nur povas konektiĝi per sekura konekto. Vi ne povas aldoni escepton por viziti la retejon.
-    ]]></string>
-    <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
     <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[
         <label> <b>%1$s</b> havas sekurecan politikon, kiun oni nomas HTTP Strict Transport Security (HSTS), kiu signifas ke <b>%2$s</b> nur povas konektiĝi per sekura konekto. Vi ne povas aldoni escepton por viziti la retejon.</label>
     ]]></string>
@@ -169,9 +165,12 @@ la eraro povas esti tempa kaj vi povos klopodi denove poste.</li>
       </ul>]]></string>
 
     <!-- The document title and heading of an error page. -->
-    <string name="mozac_browser_errorpages_no_internet_title">Sen retaliro</string>
+    <string name="mozac_browser_errorpages_no_internet_title_2">Ŝajne estas problemo kun via retaliro</string>
     <!-- The main body text of this error page. It will be shown beneath the title -->
-    <string name="mozac_browser_errorpages_no_internet_message">Kontrolu vian retaliron kaj klopodu reŝargi la paĝon post kelkaj momentoj.</string>
+    <string name="mozac_browser_errorpages_no_internet_message_2">Provu konektiĝi el alia aparato. Kontrolu vian modemon aŭ retalirilon. Malkonektiĝu kaj rekonektiĝu al sendrata reto (Wi-Fi).</string>
+    <!-- The document title and heading of an error page. -->
+    <string name="mozac_browser_errorpages_no_internet_error_code">Erarkodo: NS_ERROR_OFFLINE</string>
+
     <!-- Text that will show up on the button at the bottom of the error page -->
     <string name="mozac_browser_errorpages_no_internet_refresh_button">Reŝargi</string>
 

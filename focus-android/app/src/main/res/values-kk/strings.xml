@@ -53,7 +53,6 @@
     <string name="menu_remove_from_shortcuts">Жарлықтардан өшіру</string>
 
     <!-- Menu item: Shows information about features and changes that are new to this version -->
-    <string name="menu_whats_new">Не жаңалық</string>
     <string name="menu_settings">Баптаулар</string>
     <string name="menu_about">Осы туралы</string>
     <string name="menu_help">Көмек</string>
@@ -84,10 +83,12 @@
          sharing an URL. -->
     <string name="share_dialog_title">Арқылы бөлісу</string>
 
-    <!-- While a browsing session is active (in the foreground or background) we will show a notification
-         so that the user doesn't forget about the website still being open. This text is shown in
-         the notification. Clicking the notification will have the same effect as clicking the "erase"
-         button in the application. -->
+    <string name="notification_erase_title_android_14">Шолу тарихын өшіру керек пе?</string>
+
+    <!-- Text shown in the notification description that pops up to remind the user that a browsing session is active
+    for Android 14+. -->
+    <string name="notification_erase_text_android_14_1">Шолу журналын қауіпсіз түрде өшіру үшін осы хабарландыруды шертіңіз немесе сырғытыңыз.</string>
+
     <string name="notification_erase_text">Шолу тарихын өшіру</string>
 
     <!-- Notification action to open Focus and resume the current browsing session. -->
@@ -121,23 +122,23 @@
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
          Focus is hard coded since we can't use variables in this context.
          Do not translate or transliterate Focus.-->
-    <string name="text_selection_search_action_focus">Focus көмегімен іздеу</string>
+    <string name="text_selection_search_action_focus" tools:ignore="BrandUsage">Focus көмегімен іздеу</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
              Klar is hard coded since we can't use variables in this context.
              Do not translate or transliterate Klar.-->
-    <string name="text_selection_search_action_klar">Klar көмегімен іздеу</string>
+    <string name="text_selection_search_action_klar" tools:ignore="BrandUsage">Klar көмегімен іздеу</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
             Focus Beta is hard coded since we can't use variables in this context.
             Do not translate or transliterate Focus Beta.-->
-    <string name="text_selection_search_action_focus_beta">Focus Beta көмегімен іздеу</string>
+    <string name="text_selection_search_action_focus_beta" tools:ignore="BrandUsage">Focus Beta көмегімен іздеу</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
           Focus Nightly is hard coded since we can't use variables in this context.
           Do not translate or transliterate Focus Nightly.-->
-    <string name="text_selection_search_action_focus_nightly">Focus Nightly көмегімен іздеу</string>
+    <string name="text_selection_search_action_focus_nightly" tools:ignore="BrandUsage">Focus Nightly көмегімен іздеу</string>
 
     <!-- Content of about focus. Argument 1 is the app name (Firefox Focus/Firefox Klar/etc).
          Argument 2 is the url for the learn-more link. -->
-    <string name="about_content"><![CDATA[<p>%1$s басқаруды қолыңызға береді.</p>
+    <string name="about_content" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[<p>%1$s басқаруды қолыңызға береді.</p>
 <p>Оны жекелік браузері ретінде қолданыңыз:
   <ul>
     <li>Қолданба ішінен тікелей іздеу және шолу</li>
@@ -352,6 +353,15 @@
     <!-- In-app link (in settings) to Focus privacy notice. -->
     <string name="preference_privacy_notice">Жекелік ескертуі</string>
 
+    <!-- In-app link (in settings) to Focus licensing information. -->
+    <string name="preference_licensing_info">Лицензиялық ақпарат</string>
+
+    <!-- Link to Focus licensing information from other libraries that we use. -->
+    <string name="preference_libraries_we_use">Біз пайдаланатын библиотекалар</string>
+
+    <!-- Open Source Licenses page title. The first parameter is the app name -->
+    <string name="open_source_licenses_title">%s | Ашық библиотекалар</string>
+
     <!-- Item in Preferences that shows the about page. Parameter 1 is the app name, i.e. Firefox Focus/Firefox Klar. -->
     <string name="preference_about">%1$s туралы</string>
 
@@ -480,7 +490,10 @@
 
 
 
-  <string name="error_hostLookup_title">Сервер табылмады</string>
+  <!-- Snackbar that will be displayed after a website has been added to shortcuts. -->
+    <string name="snackbar_added_to_shortcuts">Жарлықтарға қосылды!</string>
+
+    <string name="error_hostLookup_title">Сервер табылмады</string>
 
 
 
@@ -500,10 +513,7 @@
 
 
 
-  <!-- Content description (not visible, for screen readers etc.): This is the description for the close button from the new onboarding flow screen one and two -->
-    <string name="onboarding_close_button_content_description">Жабу</string>
-
-    <!-- New Onboarding flow first screen title -->
+  <!-- New Onboarding flow first screen title -->
     <!-- %1$s will be replaced by the app name and build variant(e.g. Firefox Focus, Firefox Klar Nightly) -->
     <string name="onboarding_first_screen_title">%1$s өніміне қош келдіңіз</string>
 
@@ -591,9 +601,12 @@
     <!-- Label for a button in the "tabs tray" to erase the browsing history (closes all tabs and removes associated data). -->
     <string name="tabs_tray_action_erase">Шолу тарихын өшіру</string>
 
+    <!-- Label for the option in the Focus "tabs tray" to clos the other tabs except the current tab. -->
+    <string name="tabs_tray_action_erase_other">Басқа беттерді жабу</string>
+
     <!-- If the user decides to open the current page in another browser and if Firefox is not installed then we show this
       item in the list of browsers. Clicking it will open the app store installed on the device (usually that's Google Play). -->
-    <string name="download_firefox">Firefox-ты жүктеп алу</string>
+    <string name="download_firefox" tools:ignore="BrandUsage">Firefox-ты жүктеп алу</string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)-->
@@ -605,23 +618,23 @@
   <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the MPL (e.g. https://www.mozilla.org/en-US/MPL/) -->
-    <string name="your_rights_content2"><![CDATA[%1$s сізге <a href="%2$s">Mozilla публикалық лицензиясы</a> және басқа кодтары ашық лицензиялар аясында қолжетімді етілген.]]></string>
+    <string name="your_rights_content2" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[%1$s сізге <a href="%2$s">Mozilla публикалық лицензиясы</a> және басқа кодтары ашық лицензиялар аясында қолжетімді етілген.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the trademark policy (e.g. https://www.mozilla.org/foundation/trademarks/policy/) -->
-    <string name="your_rights_content3"><![CDATA[Сізге Mozilla Foundation-ның немесе басқа да жақтардың ешбір тіркелген сауда белгілеріне, соның ішінде Mozilla, Firefox немесе %1$s аттары немесе логотиптеріне ешбір құқықтар немесе лицензиялар берілмейді. Қосымша ақпаратты <a href="%2$s">осы жерден</a> табуға болады.]]></string>
+    <string name="your_rights_content3" tools:ignore="BrandUsage,IncorrectStraightDoubleQuote"><![CDATA[Сізге Mozilla Foundation-ның немесе басқа да жақтардың ешбір тіркелген сауда белгілеріне, соның ішінде Mozilla, Firefox немесе %1$s аттары немесе логотиптеріне ешбір құқықтар немесе лицензиялар берілмейді. Қосымша ақпаратты <a href="%2$s">осы жерден</a> табуға болады.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the list of licenses used by the dependencies.-->
-    <string name="your_rights_content4"><![CDATA[%1$s үшін қосымша бастапқы кодтары әр түрлі басқа тегін және бастапқы кодтары ашық <a href="%2$s">лицензиялар</a> аясында қолжетімді.]]></string>
+    <string name="your_rights_content4" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[%1$s үшін қосымша бастапқы кодтары әр түрлі басқа тегін және бастапқы кодтары ашық <a href="%2$s">лицензиялар</a> аясында қолжетімді.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the GPL
     %3$s will be replaced with a URL linking to the tracking protection wiki page (e.g. https://wiki.mozilla.org/Security/Tracking_protection#Lists) -->
-    <string name="your_rights_content5"><![CDATA[Сонымен қатар, %1$s Disconnect, Inc. ұсынған блоктізімдерін қолданады, олар <a href="%2$s">GNU General Public License v3</a> аясында, <a href="%3$s">осында</a> бөлек және тәуелсіз жұмыстар ретінде қолжетімді.]]></string>
+    <string name="your_rights_content5" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[Сонымен қатар, %1$s Disconnect, Inc. ұсынған блоктізімдерін қолданады, олар <a href="%2$s">GNU General Public License v3</a> аясында, <a href="%3$s">осында</a> бөлек және тәуелсіз жұмыстар ретінде қолжетімді.]]></string>
 
     <!-- Text shown in prompts for GeckoView -->
     <string name="gv_prompt_username_hint">Пайдаланушы аты</string>
@@ -703,6 +716,9 @@
     <!-- Text for indicating cookie banner handling is on this site, this is shown as part of the protections panel with the tracking protection toggle. -->
     <string name="cookie_banner_exception_item_description_state_on">Бұл сайт үшін іске қосылған</string>
 
+    <!-- Text for indicating cookie reducer is not supported on the current site, this is shown as part of the protections panel with the tracking protection toggle. -->
+    <string name="cookie_banner_exception_site_not_supported">Сайтқа ағымдағы уақытта қолдау жоқ</string>
+
     <!-- Text for indicating cookie banner handling is off this site, this is shown as part of the protections panel with the tracking protection toggle. -->
     <string name="cookie_banner_exception_item_description_state_off">Бұл сайт үшін сөндірілген</string>
 
@@ -725,19 +741,26 @@
     <string name="cookie_banner_exception_panel_description_state_on_for_site">%1$s осы сайттың cookie файлдарын тазартып, бетті жаңартады. Барлық cookie файлдарын тазарту салдарынан сіз сайттан шығуыңыз мүмкін немесе дүкен себеттері тазартылуы мүмкін.</string>
 
     <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. The placeholder will be updated with the app name. -->
-    <string name="cookie_banner_exception_panel_description_state_off_for_site" moz:RemovedIn="111" tools:ignore="UnusedResources">%1$s cookie сұрауларын автоматты түрде тайдыру әрекетін жасайды. Тайдыру опциясы қол жетімді болмаса, %1$s баннерді жабу үшін барлық cookie файлдарын қабылдауы мүмкін.</string>
-
-    <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. The placeholder will be updated with the app name. -->
     <string name="cookie_banner_exception_panel_description_state_off_for_site2">%1$s cookie сұрауларын автоматты түрде қабылдамау әрекетін жасай алады.</string>
 
-    <!-- Contextual Feature Recommendation Popups -->
-    <!-- CFR for Cookie Banner (Banner Info Message). The placeholder will be updated with the app name. -->
-    <string name="cfr_for_cookie_banner" moz:RemovedIn="111" tools:ignore="UnusedResources">%1$s мазаңызды алатын cookie баннерлерін болдырмау үшін cookie сұранымдарын тайдыру талабын жасайды.\n\nБаптауларда cookie баннерлері опцияларын өзгертуге болады.</string>
+    <!-- Long text for a detail explanation indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_description_site_is_not_supported">Бұл сайтқа қазіргі уақытта Cookie баннерлерін азайту қолдау көрсетпейді. Біздің топтан осы веб-сайтты қарап шығуды және болашақта қолдау көрсетуді сұрағыңыз келе ме?</string>
 
+    <!-- Text for cancel button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_site_is_not_supported_cancel_button">Бас тарту</string>
+
+    <!-- Text for request support button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_site_is_not_supported_request_support_button">Қолдау сұрау</string>
+
+    <!-- Label for the snackBar, after the user reports with success a website where cookie banner reducer did not work -->
+    <string name="cookie_banner_report_a_site_snackbar_label">Сайтқа қолдау көрсетуге сұраным жіберілді.</string>
+
+    <!-- Label for cookie banner item from tracking protection, after the user reports with success a website where cookie banner reducer did not work -->
+    <string name="cookie_banner_the_site_was_reported">Сайтқа қолдау көрсетуге сұраным жіберілді.</string>
+
+    <!-- Contextual Feature Recommendation Popups -->
     <!-- CFR for Cookie Banner (Banner Info Message). %1$s will be replaced by the app name, %2$s will be an active link using the string cfr_cookie_banner_link as text. -->
     <string name="cfr_cookie_banner">%1$s мазаңызды алатын cookie баннерлерін болдырмау үшін cookie сұранымдарын қабылдамау талабын жасайды.\n\n%2$s ішінде cookie баннерлері опцияларын өзгертуге болады.</string>
-    <!-- CFR for Cookie Banner (Banner Info Message). This text should be the same as the settings text from "cfr_for_cookie_banner". The text should be underlined and should redirect the user to the cookie banner settings screen. -->
-    <string name="cfr_for_cookie_banner_underline_settings" moz:RemovedIn="111" tools:ignore="UnusedResources">баптаулар</string>
 
     <!-- CFR for Cookie Banner (Banner Info Message). This string is used as text for a link in cfr_cookie_banner and takes the user to the app settings. -->
     <string name="cfr_cookie_banner_link">баптаулар</string>
@@ -803,13 +826,13 @@
     <string name="preference_studies">Зерттеулер</string>
 
     <!-- Preference for studies summary-->
-    <string name="preference_studies_summary">Firefox кейде зерттеулерді орнатып, орындай алады.</string>
+    <string name="preference_studies_summary" tools:ignore="BrandUsage">Firefox кейде зерттеулерді орнатып, орындай алады.</string>
 
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Көбірек білу</string>
 
     <!-- Dialog message shown when some changes are made on studies -->
-    <string name="studies_restart_app">Қолданба өзгерістерді іске асыру үшін жабылады</string>
+    <string name="studies_restart_app" moz:removedIn="135">Қолданба өзгерістерді іске асыру үшін жабылады</string>
 
     <!-- Title of the remove studies button -->
     <string name="studies_remove">Өшіру</string>
@@ -897,9 +920,6 @@
 
     <!-- Label for the button in the snackbar that switches to the newly opened tab -->
     <string name="open_new_tab_snackbar">Ауысу</string>
-
-    <!-- Text displayed in a notification when the user enters full screen mode -->
-    <string name="full_screen_notification">Толық экран режиміне өту</string>
 
     <!-- Preference for switching to a new tab immediately after opening -->
     <string name="preference_open_new_tab">Жаңа бетке тура ауысу</string>
@@ -1003,17 +1023,11 @@
 
 
     <!-- The title of the error page for websites that do not support HTTPS when HTTPS-Only is turned on  -->
-    <string name="errorpage_httpsonly_title" moz:RemovedIn="111" tools:ignore="UnusedResources">Сіз сұраған сайт HTTPS хаттамасын қолдамайды</string>
-
-    <!-- The title of the error page for websites that do not support HTTPS when HTTPS-Only is turned on  -->
     <string name="errorpage_httpsonly_title2">Бұл сайт HTTPS хаттамасын қолдамайды</string>
-
-    <!-- The text of the error page for websites that do not support HTTPS when HTTPS-Only is turned on. %1$s will get replaced with the name of the app (e.g. "Firefox Focus") -->
-    <string name="errorpage_httpsonly_message" moz:RemovedIn="111" tools:ignore="UnusedResources">Бастапұы баптаулар бойынша, %1$s қауіпсіздікті арттыру үшін HTTPS арқылы байланысуға әрекеттенеді. Бұл параметрді өзгерту немесе қосымша ақпарат алу үшін Параметрлер &gt; Жекелік және қауіпсіздік &gt; Қауіпсіздік тармағына өтіңіз.</string>
 
     <!-- The text of the error page for websites that do not support HTTPS when HTTPS-Only is turned on. %1$s will get replaced with the name of the app (e.g. "Firefox Focus").
         Contains a button that will redirect the user to Privacy & Security Screen-->
-    <string name="errorpage_httpsonly_message2"><![CDATA[%1$s көбірек қауіпсіздік үшін мүмкін болған кезде HTTPS байланысын қолдануға тырысады.
+    <string name="errorpage_httpsonly_message2" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[%1$s көбірек қауіпсіздік үшін мүмкін болған кезде HTTPS байланысын қолдануға тырысады.
      <a href="%2$s">Көбірек білу</a> <br/><br/>
      Бұл баптауды Баптаулар > Жекелік және қауіпсіздік > Қауіпсіздік ішінде өзгертуге болады.]]></string>
 
@@ -1095,4 +1109,12 @@
     <!-- This is te text of the snackbar that appears after the search widget was added successfully
     to the home screen. -->
     <string name="promote_search_widget_snackbar_message">Виджетті үй экранына қосылды</string>
+
+    <!-- Messages explaining how to exit fullscreen mode -->
+    <!-- Message shown to explain how to exit fullscreen mode when gesture navigation is enabled. -->
+    <!-- Localisation note: this text should be as short as possible, max 68 chars -->
+    <string name="exit_fullscreen_with_gesture_short">Жоғарыдан тартып әкеліңіз және шығу үшін артқа ым қимылын пайдаланыңыз</string>
+    <!-- Message shown to explain how to exit fullscreen mode when using back button navigation. -->
+    <!-- Localisation note: this text should be as short as possible, max 68 chars -->
+    <string name="exit_fullscreen_with_back_button_short">Жоғарыдан тартып әкеліңіз және шығу үшін артқа басыңыз</string>
 </resources>

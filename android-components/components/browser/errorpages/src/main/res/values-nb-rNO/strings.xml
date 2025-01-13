@@ -60,10 +60,6 @@
     <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Avansert …</string>
 
     <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
-    <string moz:removedIn="104" name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo" tools:ignore="UnusedResources"><![CDATA[
-        <label> <b>%1$s</b> har en sikkerhetspolicy kalt HTTP Strict Transport Security (HSTS), som betyr at <b>%2$s</b> bare kan koble til den sikkert. Du kan ikke legge til et unntak for å besøke dette nettstedet.
-    ]]></string>
-    <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
     <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[
         <label> <b>%1$s</b> har en sikkerhetspolicy kalt HTTP Strict Transport Security (HSTS), som betyr at <b>%2$s</b> bare kan koble til den sikkert. Du kan ikke legge til et unntak for å besøke dette nettstedet. </label>
     ]]></string>
@@ -215,9 +211,12 @@
     ]]></string>
 
     <!-- The document title and heading of an error page. -->
-    <string name="mozac_browser_errorpages_no_internet_title">Ingen internettforbindelse</string>
+    <string name="mozac_browser_errorpages_no_internet_title_2">Det ser ut til at det er et problem med Internett-tilkoblingen din</string>
     <!-- The main body text of this error page. It will be shown beneath the title -->
-    <string name="mozac_browser_errorpages_no_internet_message">Sjekk nettverkstilkoblingen din, eller prøv å laste siden på nytt om en stund.</string>
+    <string name="mozac_browser_errorpages_no_internet_message_2">Prøv å koble til på en annen enhet. Sjekk modemet eller ruteren. Koble fra og koble til Wi-Fi igjen.</string>
+    <!-- The document title and heading of an error page. -->
+    <string name="mozac_browser_errorpages_no_internet_error_code">Feilkode: NS_ERROR_OFFLINE</string>
+
     <!-- Text that will show up on the button at the bottom of the error page -->
     <string name="mozac_browser_errorpages_no_internet_refresh_button">Last på nytt</string>
 

@@ -53,7 +53,6 @@
     <string name="menu_remove_from_shortcuts">刪除捷徑</string>
 
     <!-- Menu item: Shows information about features and changes that are new to this version -->
-    <string name="menu_whats_new">有什麼新鮮事</string>
     <string name="menu_settings">選項</string>
     <string name="menu_about">關於</string>
     <string name="menu_help">說明</string>
@@ -84,10 +83,12 @@
          sharing an URL. -->
     <string name="share_dialog_title">透過下列程式分享</string>
 
-    <!-- While a browsing session is active (in the foreground or background) we will show a notification
-         so that the user doesn't forget about the website still being open. This text is shown in
-         the notification. Clicking the notification will have the same effect as clicking the "erase"
-         button in the application. -->
+    <string name="notification_erase_title_android_14">要清除瀏覽紀錄嗎？</string>
+
+    <!-- Text shown in the notification description that pops up to remind the user that a browsing session is active
+    for Android 14+. -->
+    <string name="notification_erase_text_android_14_1">點擊或滑掉這則通知，即可安全地清除您的瀏覽紀錄。</string>
+
     <string name="notification_erase_text">清除瀏覽紀錄</string>
 
     <!-- Notification action to open Focus and resume the current browsing session. -->
@@ -121,23 +122,23 @@
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
          Focus is hard coded since we can't use variables in this context.
          Do not translate or transliterate Focus.-->
-    <string name="text_selection_search_action_focus">使用 Focus 搜尋</string>
+    <string name="text_selection_search_action_focus" tools:ignore="BrandUsage">使用 Focus 搜尋</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
              Klar is hard coded since we can't use variables in this context.
              Do not translate or transliterate Klar.-->
-    <string name="text_selection_search_action_klar">使用 Klar 搜尋</string>
+    <string name="text_selection_search_action_klar" tools:ignore="BrandUsage">使用 Klar 搜尋</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
             Focus Beta is hard coded since we can't use variables in this context.
             Do not translate or transliterate Focus Beta.-->
-    <string name="text_selection_search_action_focus_beta">使用 Focus Beta 搜尋</string>
+    <string name="text_selection_search_action_focus_beta" tools:ignore="BrandUsage">使用 Focus Beta 搜尋</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
           Focus Nightly is hard coded since we can't use variables in this context.
           Do not translate or transliterate Focus Nightly.-->
-    <string name="text_selection_search_action_focus_nightly">使用 Focus Nightly 搜尋</string>
+    <string name="text_selection_search_action_focus_nightly" tools:ignore="BrandUsage">使用 Focus Nightly 搜尋</string>
 
     <!-- Content of about focus. Argument 1 is the app name (Firefox Focus/Firefox Klar/etc).
          Argument 2 is the url for the learn-more link. -->
-    <string name="about_content"><![CDATA[<p>%1$s 讓您可自行控制線上生活。</p>
+    <string name="about_content" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[<p>%1$s 讓您可自行控制線上生活。</p>
 <p>可當作私密瀏覽器使用:
   <ul>
     <li>直接在程式中搜尋、瀏覽</li>
@@ -353,6 +354,15 @@
     <!-- In-app link (in settings) to Focus privacy notice. -->
     <string name="preference_privacy_notice">隱私權公告</string>
 
+    <!-- In-app link (in settings) to Focus licensing information. -->
+    <string name="preference_licensing_info">授權資訊</string>
+
+    <!-- Link to Focus licensing information from other libraries that we use. -->
+    <string name="preference_libraries_we_use">我們使用的程式庫</string>
+
+    <!-- Open Source Licenses page title. The first parameter is the app name -->
+    <string name="open_source_licenses_title">%s | 開放原始碼程式庫</string>
+
     <!-- Item in Preferences that shows the about page. Parameter 1 is the app name, i.e. Firefox Focus/Firefox Klar. -->
     <string name="preference_about">關於 %1$s</string>
 
@@ -482,7 +492,10 @@
 
 
 
-  <string name="error_hostLookup_title">找不到伺服器</string>
+  <!-- Snackbar that will be displayed after a website has been added to shortcuts. -->
+    <string name="snackbar_added_to_shortcuts">已新增捷徑！</string>
+
+    <string name="error_hostLookup_title">找不到伺服器</string>
 
 
 
@@ -502,10 +515,7 @@
 
 
 
-  <!-- Content description (not visible, for screen readers etc.): This is the description for the close button from the new onboarding flow screen one and two -->
-    <string name="onboarding_close_button_content_description">關閉</string>
-
-    <!-- New Onboarding flow first screen title -->
+  <!-- New Onboarding flow first screen title -->
     <!-- %1$s will be replaced by the app name and build variant(e.g. Firefox Focus, Firefox Klar Nightly) -->
     <string name="onboarding_first_screen_title">歡迎使用 %1$s</string>
 
@@ -595,9 +605,12 @@
     <!-- Label for a button in the "tabs tray" to erase the browsing history (closes all tabs and removes associated data). -->
     <string name="tabs_tray_action_erase">清除瀏覽紀錄</string>
 
+    <!-- Label for the option in the Focus "tabs tray" to clos the other tabs except the current tab. -->
+    <string name="tabs_tray_action_erase_other">關閉其他分頁</string>
+
     <!-- If the user decides to open the current page in another browser and if Firefox is not installed then we show this
       item in the list of browsers. Clicking it will open the app store installed on the device (usually that's Google Play). -->
-    <string name="download_firefox">下載 Firefox</string>
+    <string name="download_firefox" tools:ignore="BrandUsage">下載 Firefox</string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)-->
@@ -609,23 +622,23 @@
   <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the MPL (e.g. https://www.mozilla.org/en-US/MPL/) -->
-    <string name="your_rights_content2"><![CDATA[%1$s 是依照 <a href="%2$s">Mozilla Public License</a> 以及其他開放原始碼授權條款提供給您。]]></string>
+    <string name="your_rights_content2" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[%1$s 是依照 <a href="%2$s">Mozilla Public License</a> 以及其他開放原始碼授權條款提供給您。]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the trademark policy (e.g. https://www.mozilla.org/foundation/trademarks/policy/) -->
-    <string name="your_rights_content3"><![CDATA[您並未被授權使用 Mozilla 基金會或任何相關部門的商標，包含但不限於 Mozilla、Firefox、%1$s 的文字或圖樣。可以在<a href="%2$s">這裡</a>找到更多資訊。]]></string>
+    <string name="your_rights_content3" tools:ignore="BrandUsage,IncorrectStraightDoubleQuote"><![CDATA[您並未被授權使用 Mozilla 基金會或任何相關部門的商標，包含但不限於 Mozilla、Firefox、%1$s 的文字或圖樣。可以在<a href="%2$s">這裡</a>找到更多資訊。]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the list of licenses used by the dependencies.-->
-    <string name="your_rights_content4"><![CDATA[%1$s 其他部分的原始碼，則使用各種不同的自由與開放原始碼<a href="%2$s">授權條款</a>提供。]]></string>
+    <string name="your_rights_content4" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[%1$s 其他部分的原始碼，則使用各種不同的自由與開放原始碼<a href="%2$s">授權條款</a>提供。]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the GPL
     %3$s will be replaced with a URL linking to the tracking protection wiki page (e.g. https://wiki.mozilla.org/Security/Tracking_protection#Lists) -->
-    <string name="your_rights_content5"><![CDATA[%1$s 還使用由 Disconnect, Inc. 提供的封鎖清單，該清單是一份依照 <a href="%2$s">GNU General Public License v3</a> 條款分別提供的獨立作品，可在<a href="%3$s">此處</a>取得。]]></string>
+    <string name="your_rights_content5" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[%1$s 還使用由 Disconnect, Inc. 提供的封鎖清單，該清單是一份依照 <a href="%2$s">GNU General Public License v3</a> 條款分別提供的獨立作品，可在<a href="%3$s">此處</a>取得。]]></string>
 
     <!-- Text shown in prompts for GeckoView -->
     <string name="gv_prompt_username_hint">使用者名稱</string>
@@ -707,6 +720,9 @@
     <!-- Text for indicating cookie banner handling is on this site, this is shown as part of the protections panel with the tracking protection toggle. -->
     <string name="cookie_banner_exception_item_description_state_on">對此網站開啟</string>
 
+    <!-- Text for indicating cookie reducer is not supported on the current site, this is shown as part of the protections panel with the tracking protection toggle. -->
+    <string name="cookie_banner_exception_site_not_supported">目前不支援的網站</string>
+
     <!-- Text for indicating cookie banner handling is off this site, this is shown as part of the protections panel with the tracking protection toggle. -->
     <string name="cookie_banner_exception_item_description_state_off">對此網站關閉</string>
 
@@ -729,19 +745,26 @@
     <string name="cookie_banner_exception_panel_description_state_on_for_site">%1$s 將清除此網站的 Cookie 並重新載入頁面。清除 Cookie 可能會將您從網站登出，或清空購物車。</string>
 
     <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. The placeholder will be updated with the app name. -->
-    <string name="cookie_banner_exception_panel_description_state_off_for_site" moz:RemovedIn="111" tools:ignore="UnusedResources">%1$s 可自動嘗試為您拒絕 Cookie。若網站未提供拒絕選向，%1$s 可能還是會接受所有 Cookie 來讓橫幅消失。</string>
-
-    <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. The placeholder will be updated with the app name. -->
     <string name="cookie_banner_exception_panel_description_state_off_for_site2">%1$s 可以嘗試自動為您拒絕網站要設定 Cookie 的請求。</string>
 
-    <!-- Contextual Feature Recommendation Popups -->
-    <!-- CFR for Cookie Banner (Banner Info Message). The placeholder will be updated with the app name. -->
-    <string name="cfr_for_cookie_banner" moz:RemovedIn="111" tools:ignore="UnusedResources">%1$s 會嘗試拒絕網站設定 Cookie 的請求，來自動為您關閉擾人的 Cookie 橫幅。\n\n可到設定畫面管理 Cookie 橫幅的行為。</string>
+    <!-- Long text for a detail explanation indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_description_site_is_not_supported">「減少 Cookie 橫幅」功能目前暫不支援此網站。您想要將此網站回報給我們的團隊，看看是否未來有機會支援嗎？</string>
 
+    <!-- Text for cancel button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_site_is_not_supported_cancel_button">取消</string>
+
+    <!-- Text for request support button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_site_is_not_supported_request_support_button">請求技術支援</string>
+
+    <!-- Label for the snackBar, after the user reports with success a website where cookie banner reducer did not work -->
+    <string name="cookie_banner_report_a_site_snackbar_label">已送出對此網站的需求。</string>
+
+    <!-- Label for cookie banner item from tracking protection, after the user reports with success a website where cookie banner reducer did not work -->
+    <string name="cookie_banner_the_site_was_reported">已送出對此網站的需求。</string>
+
+    <!-- Contextual Feature Recommendation Popups -->
     <!-- CFR for Cookie Banner (Banner Info Message). %1$s will be replaced by the app name, %2$s will be an active link using the string cfr_cookie_banner_link as text. -->
     <string name="cfr_cookie_banner">%1$s 會嘗試拒絕網站設定 Cookie 的請求，來自動為您關閉擾人的 Cookie 橫幅。\n\n可到 %2$s 管理 Cookie 橫幅的行為。</string>
-    <!-- CFR for Cookie Banner (Banner Info Message). This text should be the same as the settings text from "cfr_for_cookie_banner". The text should be underlined and should redirect the user to the cookie banner settings screen. -->
-    <string name="cfr_for_cookie_banner_underline_settings" moz:RemovedIn="111" tools:ignore="UnusedResources">設定</string>
 
     <!-- CFR for Cookie Banner (Banner Info Message). This string is used as text for a link in cfr_cookie_banner and takes the user to the app settings. -->
     <string name="cfr_cookie_banner_link">設定</string>
@@ -807,13 +830,13 @@
     <string name="preference_studies">使用者研究</string>
 
     <!-- Preference for studies summary-->
-    <string name="preference_studies_summary">Firefox 會不定時安裝並執行使用者研究。</string>
+    <string name="preference_studies_summary" tools:ignore="BrandUsage">Firefox 會不定時安裝並執行使用者研究。</string>
 
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">了解更多</string>
 
     <!-- Dialog message shown when some changes are made on studies -->
-    <string name="studies_restart_app">應用程式將結束以套用變更</string>
+    <string name="studies_restart_app" moz:removedIn="135">應用程式將結束以套用變更</string>
 
     <!-- Title of the remove studies button -->
     <string name="studies_remove">移除</string>
@@ -908,9 +931,6 @@
 
     <!-- Label for the button in the snackbar that switches to the newly opened tab -->
     <string name="open_new_tab_snackbar">切換</string>
-
-    <!-- Text displayed in a notification when the user enters full screen mode -->
-    <string name="full_screen_notification">進入全螢幕模式</string>
 
     <!-- Preference for switching to a new tab immediately after opening -->
     <string name="preference_open_new_tab">開啟鏈結後，立即切換到該分頁</string>
@@ -1014,11 +1034,25 @@
 
 
     <!-- The title of the error page for websites that do not support HTTPS when HTTPS-Only is turned on  -->
-    <string name="errorpage_httpsonly_title">您要開啟的網站不支援 HTTPS</string>
-    <!-- The text of the error page for websites that do not support HTTPS when HTTPS-Only is turned on. %1$s will get replaced with the name of the app (e.g. "Firefox Focus") -->
-    <string name="errorpage_httpsonly_message">預設情況下，為了增加安全性，%1$s 會嘗試使用 HTTPS 通訊協定進行連線。可到「設定 &gt; 隱私權與安全性 &gt; 安全性」來了解更多資訊或更改此設定。</string>
+    <string name="errorpage_httpsonly_title2">此網站不支援 HTTPS</string>
 
-    <!-- Sessions List -->
+    <!-- The text of the error page for websites that do not support HTTPS when HTTPS-Only is turned on. %1$s will get replaced with the name of the app (e.g. "Firefox Focus").
+        Contains a button that will redirect the user to Privacy & Security Screen-->
+    <string name="errorpage_httpsonly_message2" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[%1$s 為了加強安全性，會盡可能使用 HTTPS 進行連線。<a href="%2$s">了解更多</a><br/><br/>可到「設定 > 隱私權與安全性 > 安全性」調整此設定。]]></string>
+
+    <!-- The document title and heading of the error page shown when a website has an invalid or expired SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_bad_cert_title">不安全連線</string>
+
+    <!-- The error message shown when a website has an invalid or expired SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_bad_cert_message"><![CDATA[可能是伺服器設定問題造成，或是有人嘗試偽裝成該伺服器。<br/><br/>
+若您以前可以與該伺服器正常連線，那麼這個錯誤可能只是暫時的，請稍候再試試看。]]></string>
+
+    <!-- The advanced certificate information shown when a website has an invalid SSL certificate. The %1$s will be replaced by the app name and %2$s will be replaced by website URL. It's only shown when a website has an invalid SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_bad_cert_techInfo"><![CDATA[<label>有心人士可能正在嘗試將別的網站偽裝成您想造訪的網站，若繼續開啟網站可能會有風險。</label>
+<br><br>
+<label>因為憑證簽發者未知、憑證是自簽憑證，或伺服器並未送出正確的中介憑證的關係，%1$s 無法信任 <b>%2$s</b>。</label>]]></string>
+
+     <!-- Sessions List -->
     <!-- Content description (not visible, for screen readers etc.): Button that closes a tab n the sessions list -->
     <string name="close_tab">關閉分頁</string>
 
@@ -1080,4 +1114,12 @@
     <!-- This is te text of the snackbar that appears after the search widget was added successfully
     to the home screen. -->
     <string name="promote_search_widget_snackbar_message">已將小工具新增至裝置主畫面</string>
+
+    <!-- Messages explaining how to exit fullscreen mode -->
+    <!-- Message shown to explain how to exit fullscreen mode when gesture navigation is enabled. -->
+    <!-- Localisation note: this text should be as short as possible, max 68 chars -->
+    <string name="exit_fullscreen_with_gesture_short">從畫面頂端向下拖曳，並使用回到上一頁的手勢離開</string>
+    <!-- Message shown to explain how to exit fullscreen mode when using back button navigation. -->
+    <!-- Localisation note: this text should be as short as possible, max 68 chars -->
+    <string name="exit_fullscreen_with_back_button_short">從畫面頂端向下拖曳，並點擊返回上一頁的按鈕離開</string>
 </resources>

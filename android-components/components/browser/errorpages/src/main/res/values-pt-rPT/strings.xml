@@ -60,10 +60,6 @@
     <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Avançado…</string>
 
     <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
-    <string moz:removedIn="104" name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo" tools:ignore="UnusedResources"><![CDATA[
-        <label> <b>%1$s</b> tem uma política de segurança chamada HTTP Strict Transport Security (HSTS), que significa que o <b>%2$s</b> apenas pode ligar-se em segurança. Não pode adicionar uma exceção para visitar este site.
-    ]]></string>
-    <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
     <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[<label> <b>%1$s</b> tem uma política de segurança chamada HTTP Strict Transport Security (HSTS), que significa que o <b>%2$s</b> apenas pode ligar-se com este protocolo. Não é possível adicionar uma exceção para este site.</label>
     ]]></string>
     <!-- The text shown inside the advanced options button used to go back. It's only shown if the user has expanded the advanced options. -->
@@ -190,9 +186,12 @@
       </ul>]]></string>
 
     <!-- The document title and heading of an error page. -->
-    <string name="mozac_browser_errorpages_no_internet_title">Sem ligação à Internet</string>
+    <string name="mozac_browser_errorpages_no_internet_title_2">Parece que existe um problema com a sua ligação à Internet</string>
     <!-- The main body text of this error page. It will be shown beneath the title -->
-    <string name="mozac_browser_errorpages_no_internet_message">Verifique a sua ligação de rede ou tente recarregar a página dentro de alguns momentos.</string>
+    <string name="mozac_browser_errorpages_no_internet_message_2">Tente ligar-se num dispositivo diferente. Verifique o seu modem ou router. Desligue-se e volte a ligar-se ao Wi-Fi.</string>
+    <!-- The document title and heading of an error page. -->
+    <string name="mozac_browser_errorpages_no_internet_error_code">Código de erro: NS_ERROR_OFFLINE</string>
+
     <!-- Text that will show up on the button at the bottom of the error page -->
     <string name="mozac_browser_errorpages_no_internet_refresh_button">Recarregar</string>
 

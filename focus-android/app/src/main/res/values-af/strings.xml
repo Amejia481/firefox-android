@@ -44,7 +44,6 @@
     <string name="menu_add_to_home_screen">Voeg by tuisskerm</string>
 
     <!-- Menu item: Shows information about features and changes that are new to this version -->
-    <string name="menu_whats_new">Wat’s nuut?</string>
     <string name="menu_settings">Instellings</string>
     <string name="menu_about">Inligting hieroor</string>
     <string name="menu_help">Hulp</string>
@@ -59,10 +58,6 @@
          sharing an URL. -->
     <string name="share_dialog_title">Deel via</string>
 
-    <!-- While a browsing session is active (in the foreground or background) we will show a notification
-         so that the user doesn't forget about the website still being open. This text is shown in
-         the notification. Clicking the notification will have the same effect as clicking the "erase"
-         button in the application. -->
     <string name="notification_erase_text">Skrap leesgeskiedenis</string>
 
     <!-- Notification action to open Focus and resume the current browsing session. -->
@@ -81,10 +76,6 @@
          of 25 characters. -->
     <string name="shortcut_erase_long_label">Skrap leesgeskiedenis</string>
 
-
-    <!-- This is the label of an action we offer when the user selects text in other third-party apps.
-         Clicking this action will launch Focus and perform a search in the default search engine. -->
-    <string name="text_selection_search_action">Soek privaat</string>
 
     <!-- Header for the Privacy and Security settings menu -->
     <string name="preference_privacy_and_security_header">Privaatheid en sekuriteit</string>
@@ -229,7 +220,7 @@
 
     <!-- If the user decides to open the current page in another browser and if Firefox is not installed then we show this
       item in the list of browsers. Clicking it will open the app store installed on the device (usually that's Google Play). -->
-    <string name="download_firefox">Laai Firefox af</string>
+    <string name="download_firefox" tools:ignore="BrandUsage">Laai Firefox af</string>
 
     <!-- Text shown in prompts for GeckoView -->
     <string name="gv_prompt_username_hint">Gebruikersnaam</string>
@@ -246,5 +237,7 @@
     <!-- Tips displayed on the home view -->
 
     <!-- Tracking protection bottom sheet -->
+
+     <!-- Promote SearchWidget Dialog -->
 
     </resources>

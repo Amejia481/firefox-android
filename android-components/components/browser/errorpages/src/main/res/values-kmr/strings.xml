@@ -61,11 +61,6 @@
     <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Pêşketî…</string>
 
     <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
-    <string moz:removedIn="104" name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo" tools:ignore="UnusedResources"><![CDATA[
-        <label> <b>%1$s</b> polîtîkayeke ewlekariyê heye ku navê wê HTTP Strict Transport Security (HSTS) ango Ewlekariya Transporta Guvaştî ye, loma <b>%2$s</b> dikare tenê gava ewle be peywendiyê çêke. Tu nikarî ji bo vekirina vê malperê îstisnayan lê zêde bikî.
-    ]]></string>
-
-    <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
     <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[
         <label> <b>%1$s</b> rêgezeke ewlekariyê ya bi navê Ewlekariya Jidandî ya Guheztinê ya HTTPê (HSTS) heye û loma <b>%2$s</b> dikare tenê di rewşeke ewle de bi malperê re têkiliyê dayne. Tu nikarî zêdekariyan bidiyê û têkeviyê.</label>
      ]]></string>
@@ -217,9 +212,12 @@
     ]]></string>
 
     <!-- The document title and heading of an error page. -->
-    <string name="mozac_browser_errorpages_no_internet_title">Girêdana înternetê tune</string>
+    <string name="mozac_browser_errorpages_no_internet_title_2">Wisa xuya dike ku problemeke bi girêdana te ya înternetê re heye</string>
     <!-- The main body text of this error page. It will be shown beneath the title -->
-    <string name="mozac_browser_errorpages_no_internet_message">Girêdana înterneta xwe kontrol bike an jî bîstek din rûpelê ji nû ve bar bike.</string>
+    <string name="mozac_browser_errorpages_no_internet_message_2">Hewlê bide bi cîhazeke din girêdanê çêkî. Modem yan routera xwe kontrol bike. Girêdana Wi-Fiyê qut bike û girêdanê dîsa çêke.</string>
+    <!-- The document title and heading of an error page. -->
+    <string name="mozac_browser_errorpages_no_internet_error_code">Koda Çewtiyê: NS_ERROR_OFFLINE</string>
+
     <!-- Text that will show up on the button at the bottom of the error page -->
     <string name="mozac_browser_errorpages_no_internet_refresh_button">Ji nû ve bar bike</string>
 

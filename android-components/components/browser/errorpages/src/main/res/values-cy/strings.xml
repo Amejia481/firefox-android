@@ -59,10 +59,6 @@
     <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Uwch…</string>
 
     <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
-    <string moz:removedIn="104" name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo" tools:ignore="UnusedResources"><![CDATA[
-        Mae gan <label> <b>%1$s</b> bolisi diogelwch o’r enw HTTP Strict Transport Security (HSTS), sy’n golygu mai dim ond yn ddiogel y gall <b>%2$s</b> gysylltu ag ef. Ni allwch ychwanegu eithriad i ymweld â’r wefan hon.
-    ]]></string>
-    <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
     <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[
  Mae gan <label> <b>%1$s</b> bolisi diogelwch o’r enw HTTP Strict Transport Security (HSTS), sy’n golygu mai dim ond yn ddiogel y gall <b>%2$s</b> gysylltu ag ef. Ni allwch ychwanegu eithriad i ymweld â’r wefan hon. </label>
 ]]></string>
@@ -195,10 +191,12 @@
     ]]></string>
 
     <!-- The document title and heading of an error page. -->
-    <string name="mozac_browser_errorpages_no_internet_title">Dim cysylltiad rhyngrwyd</string>
-
+    <string name="mozac_browser_errorpages_no_internet_title_2">Mae\'n ymddangos bod problem gyda\'ch cysylltiad rhyngrwyd</string>
     <!-- The main body text of this error page. It will be shown beneath the title -->
-    <string name="mozac_browser_errorpages_no_internet_message">Gwiriwch eich cysylltiad rhwydwaith neu ceisiwch ail-lwytho’r dudalen ymhen ychydig eiliadau.</string>
+    <string name="mozac_browser_errorpages_no_internet_message_2">Ceisiwch gysylltu ar ddyfais wahanol. Gwiriwch eich modem neu lwybrydd. Datgysylltwch ac ailgysylltwch â\'r Wi-Fi.</string>
+    <!-- The document title and heading of an error page. -->
+    <string name="mozac_browser_errorpages_no_internet_error_code">Cod Gwall: NS_ERROR_OFFLINE</string>
+
     <!-- Text that will show up on the button at the bottom of the error page -->
     <string name="mozac_browser_errorpages_no_internet_refresh_button">Ail-lwytho</string>
 

@@ -22,7 +22,7 @@
     <string name="feedback_erase2">Pśeglědowańska historija jo se wulašowała</string>
 
     <!-- "Snackbar" shown after the user has pressed the 'erase' button at the end of a custom tab browsing session -->
-    <string name="feedback_erase_custom_tab">Pśeglědowańska historija rejtarka jo se wulašowała.</string>
+    <string name="feedback_erase_custom_tab">Pśeglědowańska historija rejtarika jo se wulašowała.</string>
 
     <!-- This label is shown below the URL bar as soon as the user enters text. Clicking the label will perform a search -->
     <string name="search_hint">Pytanje za %1$s</string>
@@ -53,7 +53,6 @@
     <string name="menu_remove_from_shortcuts">Ze zwězanjow wótwónoźeś</string>
 
     <!-- Menu item: Shows information about features and changes that are new to this version -->
-    <string name="menu_whats_new">Nowe funkcije a změny</string>
     <string name="menu_settings">Nastajenja</string>
     <string name="menu_about">Wó</string>
     <string name="menu_help">Pomoc</string>
@@ -84,10 +83,12 @@
          sharing an URL. -->
     <string name="share_dialog_title">Źěliś pśez</string>
 
-    <!-- While a browsing session is active (in the foreground or background) we will show a notification
-         so that the user doesn't forget about the website still being open. This text is shown in
-         the notification. Clicking the notification will have the same effect as clicking the "erase"
-         button in the application. -->
+    <string name="notification_erase_title_android_14">Pśeglědowańsku historiju lašowaś?</string>
+
+    <!-- Text shown in the notification description that pops up to remind the user that a browsing session is active
+    for Android 14+. -->
+    <string name="notification_erase_text_android_14_1">Pótusniśo toś tu powěźeńku abo zjěźćo pśez ju, aby swóju pśeglědowańsku historiju wěsće wulašował.</string>
+
     <string name="notification_erase_text">Pśeglědowańsku historiju lašowaś</string>
 
     <!-- Notification action to open Focus and resume the current browsing session. -->
@@ -121,23 +122,23 @@
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
          Focus is hard coded since we can't use variables in this context.
          Do not translate or transliterate Focus.-->
-    <string name="text_selection_search_action_focus">W Focus pytaś</string>
+    <string name="text_selection_search_action_focus" tools:ignore="BrandUsage">W Focus pytaś</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
              Klar is hard coded since we can't use variables in this context.
              Do not translate or transliterate Klar.-->
-    <string name="text_selection_search_action_klar">W Klar pytaś</string>
+    <string name="text_selection_search_action_klar" tools:ignore="BrandUsage">W Klar pytaś</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
             Focus Beta is hard coded since we can't use variables in this context.
             Do not translate or transliterate Focus Beta.-->
-    <string name="text_selection_search_action_focus_beta">W Focus Beta pytaś</string>
+    <string name="text_selection_search_action_focus_beta" tools:ignore="BrandUsage">W Focus Beta pytaś</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
           Focus Nightly is hard coded since we can't use variables in this context.
           Do not translate or transliterate Focus Nightly.-->
-    <string name="text_selection_search_action_focus_nightly">W Focus Nightly pytaś</string>
+    <string name="text_selection_search_action_focus_nightly" tools:ignore="BrandUsage">W Focus Nightly pytaś</string>
 
     <!-- Content of about focus. Argument 1 is the app name (Firefox Focus/Firefox Klar/etc).
          Argument 2 is the url for the learn-more link. -->
-    <string name="about_content"><![CDATA[<p>%1$s dajo was kontrolu wobchowaś.</p>
+    <string name="about_content" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[<p>%1$s dajo was kontrolu wobchowaś.</p>
 <p>Wužywajśo jen ako priwatny wobglědowak:
   <ul>
     <li>Pytajśo a pśeglědujśo direktnje w nałoženju</li>
@@ -353,6 +354,15 @@
     <!-- In-app link (in settings) to Focus privacy notice. -->
     <string name="preference_privacy_notice">Powěźeńka priwatnosći</string>
 
+    <!-- In-app link (in settings) to Focus licensing information. -->
+    <string name="preference_licensing_info">Licencne informacije</string>
+
+    <!-- Link to Focus licensing information from other libraries that we use. -->
+    <string name="preference_libraries_we_use">Biblioteki, kótarež wužywamy</string>
+
+    <!-- Open Source Licenses page title. The first parameter is the app name -->
+    <string name="open_source_licenses_title">%s | OSS-biblioteki</string>
+
     <!-- Item in Preferences that shows the about page. Parameter 1 is the app name, i.e. Firefox Focus/Firefox Klar. -->
     <string name="preference_about">Wó %1$s</string>
 
@@ -410,7 +420,7 @@
     <!-- If the user has multiple tabs open we will show an addition "floating action button" showing how many tabs are open.
      This string is not displayed and read only by screenreaders. %1$s will be replaced with the number of open tabs. This
       button will only be visible when there is more than one tab open (>= 2). -->
-    <string name="content_description_tab_counter">Wócynjone rejtarki: %1$s</string>
+    <string name="content_description_tab_counter">Wócynjone rejtariki: %1$s</string>
 
     <!-- Content description (not visible, for screen readers etc.): Lock icon showed in the URL bar for
      https pages.. -->
@@ -482,7 +492,10 @@
 
 
 
-  <string name="error_hostLookup_title">Serwer njejo se namakał</string>
+  <!-- Snackbar that will be displayed after a website has been added to shortcuts. -->
+    <string name="snackbar_added_to_shortcuts">Zwězanjam pśidane!</string>
+
+    <string name="error_hostLookup_title">Serwer njejo se namakał</string>
 
 
 
@@ -502,10 +515,7 @@
 
 
 
-  <!-- Content description (not visible, for screen readers etc.): This is the description for the close button from the new onboarding flow screen one and two -->
-    <string name="onboarding_close_button_content_description">Zacyniś</string>
-
-    <!-- New Onboarding flow first screen title -->
+  <!-- New Onboarding flow first screen title -->
     <!-- %1$s will be replaced by the app name and build variant(e.g. Firefox Focus, Firefox Klar Nightly) -->
     <string name="onboarding_first_screen_title">Witajśo k %1$s</string>
 
@@ -519,6 +529,13 @@
     <!-- Onboarding second screen: Title -->
     <!-- %1$s will be replaced by the app short name(Focus) -->
     <string name="onboarding_second_screen_title">%1$s njejo ako druge wobglědowaki</string>
+
+    <!-- New Onboarding flow second screen subtitle the one that appears under title -->
+    <string name="onboarding_second_screen_subtitle_one">Lašujomy wašu historiju, gaž nałoženje za pśidatnu priwatnosć zacynjaśo.</string>
+
+    <!-- New Onboarding flow second screen subtitle two the one that appears under subtitle one -->
+    <!-- %1$s will be replaced by the app short name(Focus) -->
+    <string name="onboarding_second_screen_subtitle_two">Cyńśo %1$s k swójomu standardnemu wobglědowakoju, aby swóje daty z kuždym wótkazom, kótaryž wócynjaśo, šćitał.</string>
 
     <!-- New Onboarding flow second screen make Focus default browser button label-->
     <string name="onboarding_second_screen_default_browser_button_text">Ako standardny wobglědowak nastajiś</string>
@@ -589,9 +606,12 @@
     <!-- Label for a button in the "tabs tray" to erase the browsing history (closes all tabs and removes associated data). -->
     <string name="tabs_tray_action_erase">Pśeglědowańsku historiju wulašowaś</string>
 
+    <!-- Label for the option in the Focus "tabs tray" to clos the other tabs except the current tab. -->
+    <string name="tabs_tray_action_erase_other">Druge rejtariki zacyniś</string>
+
     <!-- If the user decides to open the current page in another browser and if Firefox is not installed then we show this
       item in the list of browsers. Clicking it will open the app store installed on the device (usually that's Google Play). -->
-    <string name="download_firefox">Firefox ześěgnuś</string>
+    <string name="download_firefox" tools:ignore="BrandUsage">Firefox ześěgnuś</string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)-->
@@ -603,26 +623,26 @@
   <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the MPL (e.g. https://www.mozilla.org/en-US/MPL/) -->
-    <string name="your_rights_content2"><![CDATA[%1$s so pód wuměnjenjami licence <a href="%2$s">Mozilla Public License</a> a drugimi licencami wótwórjonego žrědła k dispoziciji staja.]]></string>
+    <string name="your_rights_content2" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[%1$s so pód wuměnjenjami licence <a href="%2$s">Mozilla Public License</a> a drugimi licencami wótwórjonego žrědła k dispoziciji staja.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the trademark policy (e.g. https://www.mozilla.org/foundation/trademarks/policy/) -->
-    <string name="your_rights_content3"><![CDATA[Njedaju wam žedne pšawa abo licence na wikowych markow załožby Mozilla Foundation abo tśeśich, inkluziwnje mjenja abo loga Mozilla, Firefox abo %1$s. Dalšne informacije namakajośo <a href="%2$s">how</a>.]]></string>
+    <string name="your_rights_content3" tools:ignore="BrandUsage,IncorrectStraightDoubleQuote"><![CDATA[Njedaju wam žedne pšawa abo licence na wikowych markow załožby Mozilla Foundation abo tśeśich, inkluziwnje mjenja abo loga Mozilla, Firefox abo %1$s. Dalšne informacije namakajośo <a href="%2$s">how</a>.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the list of licenses used by the dependencies.-->
-    <string name="your_rights_content4"><![CDATA[Pśidatny žrědłowy kod za %1$s jo pód wšakich drugich lichych <a href="%2$s">licencach</a> wótwórjonego žrědła k dispoziciji.]]></string>
+    <string name="your_rights_content4" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[Pśidatny žrědłowy kod za %1$s jo pód wšakich drugich lichych <a href="%2$s">licencach</a> wótwórjonego žrědła k dispoziciji.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the GPL
     %3$s will be replaced with a URL linking to the tracking protection wiki page (e.g. https://wiki.mozilla.org/Security/Tracking_protection#Lists) -->
-    <string name="your_rights_content5"><![CDATA[%1$s teke blokěrowańske lisćiny póbitowane wót Disconnect, Inc. ako separatne a njewótwisne źěła pód licencu <a href="%2$s">General Public Licence v3</a> wužywa, kótarež su <a href="%3$s">how</a> k dispoziciji.]]></string>
+    <string name="your_rights_content5" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[%1$s teke blokěrowańske lisćiny póbitowane wót Disconnect, Inc. ako separatne a njewótwisne źěła pód licencu <a href="%2$s">General Public Licence v3</a> wužywa, kótarež su <a href="%3$s">how</a> k dispoziciji.]]></string>
 
     <!-- Text shown in prompts for GeckoView -->
-    <string name="gv_prompt_username_hint">Wužywarske mě</string>
+    <string name="gv_prompt_username_hint">Wužywaŕske mě</string>
     <string name="gv_prompt_password_hint">Gronidło</string>
     <string name="gv_prompt_clear">Wuprozniś</string>
 
@@ -692,11 +712,17 @@
     <!--  Title preference inside Cookie banner reduction screen. Here you can set the cookie banner option to disabled or reject_all. -->
     <string name="cookie_banner_reject_all_option_title">Reducěrowanje cookiejowych chórgojow</string>
 
+    <!--  Preference summary inside Cookie banner reduction screen. Here you can set the cookie banner option to disabled or reject_all. -->
+    <string name="cookie_banner_reject_all_option_summary">Wótpokažćo cookiejowe napšašowanja, aby mjenjej chórgojow wiźeł, jolic móžno.</string>
+
     <!-- Preference for removing cookie/consent banners from sites automatically, this is shown as part of the protections panel with the tracking protection toggle. -->--&gt;
     <string name="cookie_banner_exception_item_title">Reducěrowanje cookiejowych chórgojow</string>
 
     <!-- Text for indicating cookie banner handling is on this site, this is shown as part of the protections panel with the tracking protection toggle. -->
     <string name="cookie_banner_exception_item_description_state_on">Za toś to sedło ZMÓŽNJONY</string>
+
+    <!-- Text for indicating cookie reducer is not supported on the current site, this is shown as part of the protections panel with the tracking protection toggle. -->
+    <string name="cookie_banner_exception_site_not_supported">Sedło se tuchylu njepódpěra</string>
 
     <!-- Text for indicating cookie banner handling is off this site, this is shown as part of the protections panel with the tracking protection toggle. -->
     <string name="cookie_banner_exception_item_description_state_off">Za toś to sedło ZNJEMÓŽNJONY</string>
@@ -716,8 +742,32 @@
     <!-- Title text for a detail explanation indicating cookie banner handling is off this site, this is shown as part of the cookie banner panel in the toolbar. The first parameter is a shortened URL of the current site. -->
     <string name="cookie_banner_exception_panel_title_state_off_for_site">Reducěrowanje cookiejowych chórgojow za %1$s znjemóžniś?</string>
 
-    <!-- CFR for Cookie Banner (Banner Info Message).This text should be the same as the settings text from "cfr_for_cookie_banner".The text should be underlined and should redirect the user to the cookie banner settings screen. -->
-    <string name="cfr_for_cookie_banner_underline_settings">nastajenja</string>
+    <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is on for a site, this is shown as part of the cookie banner panel in the toolbar. The placeholder will be updated with the app name. -->
+    <string name="cookie_banner_exception_panel_description_state_on_for_site">%1$s cookieje sedła lašujo a buźo bok aktualizěrowaś. Lašowanje wšych cookiejow móžo was pśizjawiś abo nakupowańske wózyki wuprozniś.</string>
+
+    <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. The placeholder will be updated with the app name. -->
+    <string name="cookie_banner_exception_panel_description_state_off_for_site2">%1$s móžo wopytaś, cookiejowe napšašowanja awtomatiski wótpokazaś.</string>
+
+    <!-- Long text for a detail explanation indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_description_site_is_not_supported">Toś to sedło se tuchylu pśez redukciju cookiejowych chórgojow. Cośo naš team pšosyś, toś to websedło pśeglědowaś a pomoc w pśichoźe pśidaś?</string>
+
+    <!-- Text for cancel button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_site_is_not_supported_cancel_button">Pśetergnuś</string>
+
+    <!-- Text for request support button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_site_is_not_supported_request_support_button">Pomoc póžedaś</string>
+
+    <!-- Label for the snackBar, after the user reports with success a website where cookie banner reducer did not work -->
+    <string name="cookie_banner_report_a_site_snackbar_label">Napšašowanje na sedło pomocy jo se wótpósłało.</string>
+
+    <!-- Label for cookie banner item from tracking protection, after the user reports with success a website where cookie banner reducer did not work -->
+    <string name="cookie_banner_the_site_was_reported">Napšašowanje na sedło pomocy jo se wótpósłało.</string>
+
+    <!-- Contextual Feature Recommendation Popups -->
+    <!-- CFR for Cookie Banner (Banner Info Message). %1$s will be replaced by the app name, %2$s will be an active link using the string cfr_cookie_banner_link as text. -->
+    <string name="cfr_cookie_banner">%1$s wopytujo, cookiejowe napšašowanja wótpokazowaś, aby njepśigódne cookiejowe chórgoji zachyśił.\n\nZastojśo nastajenja cookiejowych chórgojow w %2$s.</string>
+    <!-- CFR for Cookie Banner (Banner Info Message). This string is used as text for a link in cfr_cookie_banner and takes the user to the app settings. -->
+    <string name="cfr_cookie_banner_link">nastajenja</string>
 
     <!-- Preference for autoplay -->
     <string name="preference_autoplay">Awtomatiske wótgraśe</string>
@@ -780,13 +830,13 @@
     <string name="preference_studies">Studije</string>
 
     <!-- Preference for studies summary-->
-    <string name="preference_studies_summary">Firefox móžo wótergi studije instalěrowaś a pśewjasć.</string>
+    <string name="preference_studies_summary" tools:ignore="BrandUsage">Firefox móžo wótergi studije instalěrowaś a pśewjasć.</string>
 
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Dalšne informacije</string>
 
     <!-- Dialog message shown when some changes are made on studies -->
-    <string name="studies_restart_app">Nałoženje se skóńcyjo, aby se změny wustatkowali</string>
+    <string name="studies_restart_app" moz:removedIn="135">Nałoženje se skóńcyjo, aby se změny wustatkowali</string>
 
     <!-- Title of the remove studies button -->
     <string name="studies_remove">Wótwónoźeś</string>
@@ -864,19 +914,20 @@
 
     <!-- Tip displayed on home view explaining how to add a custom autocomplete URL
     The new line here must be kept as the second half of the string is clickable for the user. -->
-    <string name="tip_open_in_new_tab">Wótkaz w nowem rejtarku wócyniś\nTłocćo dłujko na wótkaz na boku</string>
+    <string name="tip_open_in_new_tab">Wótkaz w nowem rejtariku wócyniś\n
+        Tłocćo dłujko na wótkaz na boku</string>
 
     <!-- Tip displayed on home view explaining how to add a custom autocomplete URL -->
     <string name="tip_disable_tips2">Tipy na startowej wobrazowce znjemóžniś</string>
 
     <!-- Label for the snackbar when a user opens a new tab -->
-    <string name="new_tab_opened_snackbar">Nowy rejtark jo se wócynił</string>
+    <string name="new_tab_opened_snackbar">Nowy rejtarik jo se wócynił</string>
 
     <!-- Label for the button in the snackbar that switches to the newly opened tab -->
     <string name="open_new_tab_snackbar">Pśešaltowaś</string>
 
     <!-- Preference for switching to a new tab immediately after opening -->
-    <string name="preference_open_new_tab">Ned k wótkazoju w nowem rejtarku pśejś</string>
+    <string name="preference_open_new_tab">Ned k wótkazoju w nowem rejtariku pśejś</string>
 
     <!-- Preference title for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
     <string name="preference_safe_browsing_title">Ptencielnje tšašne a wobšudnikojske sedła blokěrowaś</string>
@@ -905,13 +956,13 @@
     <string name="preference_category_block_cookies">Cośo cookieje blokěrowaś?</string>
 
     <!-- Title for the tab crash report screen-->
-    <string name="tab_crash_report_title">Rejtark jo wowalił</string>
+    <string name="tab_crash_report_title">Rejtarik jo wowalił</string>
     <!-- Headline for the tab crash report screen -->
-    <string name="tab_crash_report_headline">Bóžko mamy problem z toś tym rejtarkom.</string>
+    <string name="tab_crash_report_headline">Bóžko mamy problem z toś tym rejtarikom.</string>
     <!-- Subtitle for the tab crash report screen -->
-    <string name="tab_crash_report_description">Ako priwatny wobglědowak njeskładujomy nigda a njamóžomy toś ten rejtark wótnowiś.</string>
+    <string name="tab_crash_report_description">Ako priwatny wobglědowak njeskładujomy nigda a njamóžomy toś ten rejtarik wótnowiś.</string>
     <!-- Label for button to close the tab-->
-    <string name="tab_crash_report_close_tab_button_label">Rejtark zacyniś</string>
+    <string name="tab_crash_report_close_tab_button_label">Rejtarik zacyniś</string>
 
 
 
@@ -977,11 +1028,32 @@
 
 
     <!-- The title of the error page for websites that do not support HTTPS when HTTPS-Only is turned on  -->
-    <string name="errorpage_httpsonly_title">Wót was pominane sedło HTTPS njepódpěra</string>
-    <!-- The text of the error page for websites that do not support HTTPS when HTTPS-Only is turned on. %1$s will get replaced with the name of the app (e.g. "Firefox Focus") -->
-    <string name="errorpage_httpsonly_message">Pó standarźe %1$s wopytujo, z pomocu HTTPS za pówušonu wěstotu zwězaś. Aby toś to nastajenje změnił abo wěcej zgónił, źiśo k Nastajenja &gt; Priwatnosć a wěstota &gt; Wěstota.</string>
+    <string name="errorpage_httpsonly_title2">Toś to sedło HTTPS njepódpěra</string>
 
-    <!-- Sessions List -->
+    <!-- The text of the error page for websites that do not support HTTPS when HTTPS-Only is turned on. %1$s will get replaced with the name of the app (e.g. "Firefox Focus").
+        Contains a button that will redirect the user to Privacy & Security Screen-->
+    <string name="errorpage_httpsonly_message2" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[%1$s wópytujo HTTPS-zwisk wužywaś, gažkuli jo móžno za wěstotu.
+ <a href="%2$s">Dalšne informacije</a> <br/><br/>
+ Změńśo toś to nastajenje w Nastajenja > Priwatnosć a wěstota > Wěstota.]]></string>
+
+    <!-- The document title and heading of the error page shown when a website has an invalid or expired SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_bad_cert_title">Zwisk njejo wěsty</string>
+
+    <!-- The error message shown when a website has an invalid or expired SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_bad_cert_message"><![CDATA[
+ To mógło problem z konfiguraciju serwera byś, abo něchten wopytujo, serwer imitěrowaś. <br/><br/>
+
+ Jolic sćo był w zajźonosći ze serwerom wuspěšnje zwězany, móžo zmólka nachylna byś.
+    ]]></string>
+
+    <!-- The advanced certificate information shown when a website has an invalid SSL certificate. The %1$s will be replaced by the app name and %2$s will be replaced by website URL. It's only shown when a website has an invalid SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_bad_cert_techInfo"><![CDATA[
+        <label>Něchten mógał wopytaś, sedło za swójo wudaś, a pókšacowanje mógło riskantne byś.</label>
+        <br><br>
+        <label>%1$s <b>%2$s</b> njedowěri, dokulaž jogo certifikatowy wudawaŕ jo njeznaty, certifkat jo sebjesigněrowany abo serwer korektne mjazycertifikaty njesćelo.</label>
+    ]]></string>
+
+     <!-- Sessions List -->
     <!-- Content description (not visible, for screen readers etc.): Button that closes a tab n the sessions list -->
     <string name="close_tab">Rejtarik zacyniś</string>
 
@@ -1007,13 +1079,18 @@
 
     !-- Content description (not visible, for screen readers etc.): This is the description for
     picture of search widget from promote search widget dialog. --&gt;
+    <!-- Content description (not visible, for screen readers etc.): This is the description for the
+    close button from promote search widget dialog. -->
     <string name="promote_search_widget_dialog_content_description">Zacyniś</string>
 
     !-- Content description (not visible, for screen readers etc.): This is the description for
     picture of search widget from promote search widget dialog. --&gt;
+    <!-- Content description (not visible, for screen readers etc.): This is the description for
+    picture of search widget from promote search widget dialog. -->
     <string name="promote_search_widget_dialog_picture_content_description">Pytański asistent</string>
 
     !-- This is the title of promote search widget dialog. --&gt;
+    <!-- This is the title of promote search widget dialog. -->
     <string name="promote_search_widget_dialog_title">Pśeglědowańska historija jo se wulašowała! 🎉</string>
 
     !-- This is the subtitle of promote search widget dialog. %1$s will get replaced with the name
@@ -1023,9 +1100,25 @@
 
     !-- This is the subtitle of promote search widget dialog. %1$s will get replaced with the name
     of the app (e.g. &quot;Focus&quot;) --&gt;
+    <!-- This is the subtitle of promote search widget dialog. %1$s will get replaced with the name
+    of the app (e.g. "Focus") -->
+    <string name="promote_search_widget_dialog_subtitle">Pśewóstajijomy wašomu priwatnemu modusoju, ale startujśo pśiducy raz malsnjej z asistentom %1$s na swójej startowej wobrazowce.</string>
+
+    <!-- This is te text from add search widget to home screen button .The button is located on
+    promote search widget dialog. -->
     <string name="promote_search_widget_button_text">Asistent startowej wobrazowce pśidaś</string>
 
     !-- This is te text of the snackbar that appears after the search widget was added successfully
     to the home screen. --&gt;
+    <!-- This is te text of the snackbar that appears after the search widget was added successfully
+    to the home screen. -->
     <string name="promote_search_widget_snackbar_message">Asistent jo se pśidał startowej wobrazowce</string>
+
+    <!-- Messages explaining how to exit fullscreen mode -->
+    <!-- Message shown to explain how to exit fullscreen mode when gesture navigation is enabled. -->
+    <!-- Localisation note: this text should be as short as possible, max 68 chars -->
+    <string name="exit_fullscreen_with_gesture_short">Śěgniśo wót górjejce a wužywajśo gestu Slědk, aby skóńcył</string>
+    <!-- Message shown to explain how to exit fullscreen mode when using back button navigation. -->
+    <!-- Localisation note: this text should be as short as possible, max 68 chars -->
+    <string name="exit_fullscreen_with_back_button_short">Śěgniśo wót górjejce a tłocćo Slědk, aby skóńcył</string>
 </resources>

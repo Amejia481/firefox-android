@@ -53,7 +53,6 @@
     <string name="menu_remove_from_shortcuts">Elimina de les dreceres</string>
 
     <!-- Menu item: Shows information about features and changes that are new to this version -->
-    <string name="menu_whats_new">Novetats</string>
     <string name="menu_settings">Paràmetres</string>
     <string name="menu_about">Quant a</string>
     <string name="menu_help">Ajuda</string>
@@ -84,10 +83,12 @@
          sharing an URL. -->
     <string name="share_dialog_title">Comparteix mitjançant</string>
 
-    <!-- While a browsing session is active (in the foreground or background) we will show a notification
-         so that the user doesn't forget about the website still being open. This text is shown in
-         the notification. Clicking the notification will have the same effect as clicking the "erase"
-         button in the application. -->
+    <string name="notification_erase_title_android_14">Voleu esborrar l\'historial de navegació?</string>
+
+    <!-- Text shown in the notification description that pops up to remind the user that a browsing session is active
+    for Android 14+. -->
+    <string name="notification_erase_text_android_14_1">Toqueu o feu lliscar aquesta notificació per a esborrar de manera segura l\'historial de navegació.</string>
+
     <string name="notification_erase_text">Esborra l\'historial de navegació</string>
 
     <!-- Notification action to open Focus and resume the current browsing session. -->
@@ -121,23 +122,23 @@
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
          Focus is hard coded since we can't use variables in this context.
          Do not translate or transliterate Focus.-->
-    <string name="text_selection_search_action_focus">Cerca en el Focus</string>
+    <string name="text_selection_search_action_focus" tools:ignore="BrandUsage">Cerca en el Focus</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
              Klar is hard coded since we can't use variables in this context.
              Do not translate or transliterate Klar.-->
-    <string name="text_selection_search_action_klar">Cerca en el Klar</string>
+    <string name="text_selection_search_action_klar" tools:ignore="BrandUsage">Cerca en el Klar</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
             Focus Beta is hard coded since we can't use variables in this context.
             Do not translate or transliterate Focus Beta.-->
-    <string name="text_selection_search_action_focus_beta">Cerca en el Focus Beta</string>
+    <string name="text_selection_search_action_focus_beta" tools:ignore="BrandUsage">Cerca en el Focus Beta</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
           Focus Nightly is hard coded since we can't use variables in this context.
           Do not translate or transliterate Focus Nightly.-->
-    <string name="text_selection_search_action_focus_nightly">Cerca en el Focus Nightly</string>
+    <string name="text_selection_search_action_focus_nightly" tools:ignore="BrandUsage">Cerca en el Focus Nightly</string>
 
     <!-- Content of about focus. Argument 1 is the app name (Firefox Focus/Firefox Klar/etc).
          Argument 2 is the url for the learn-more link. -->
-    <string name="about_content"><![CDATA[<p>El %1$s us dóna el control.</p>
+    <string name="about_content" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[<p>El %1$s us dóna el control.</p>
 <p>Com a navegador privat, us permet:
   <ul>
     <li>Cercar i navegar directament des de l’aplicació</li>
@@ -352,6 +353,15 @@
     <!-- In-app link (in settings) to Focus privacy notice. -->
     <string name="preference_privacy_notice">Avís de privadesa</string>
 
+    <!-- In-app link (in settings) to Focus licensing information. -->
+    <string name="preference_licensing_info">Informació de la llicència</string>
+
+    <!-- Link to Focus licensing information from other libraries that we use. -->
+    <string name="preference_libraries_we_use">Biblioteques que utilitzem</string>
+
+    <!-- Open Source Licenses page title. The first parameter is the app name -->
+    <string name="open_source_licenses_title">%s | Biblioteques de codi obert</string>
+
     <!-- Item in Preferences that shows the about page. Parameter 1 is the app name, i.e. Firefox Focus/Firefox Klar. -->
     <string name="preference_about">Quant al %1$s</string>
 
@@ -480,7 +490,10 @@
 
 
 
-  <string name="error_hostLookup_title">No s\'ha trobat el servidor</string>
+  <!-- Snackbar that will be displayed after a website has been added to shortcuts. -->
+    <string name="snackbar_added_to_shortcuts">S’ha afegit a les dreceres</string>
+
+    <string name="error_hostLookup_title">No s\'ha trobat el servidor</string>
 
 
 
@@ -500,10 +513,7 @@
 
 
 
-  <!-- Content description (not visible, for screen readers etc.): This is the description for the close button from the new onboarding flow screen one and two -->
-    <string name="onboarding_close_button_content_description">Tanca</string>
-
-    <!-- New Onboarding flow first screen title -->
+  <!-- New Onboarding flow first screen title -->
     <!-- %1$s will be replaced by the app name and build variant(e.g. Firefox Focus, Firefox Klar Nightly) -->
     <string name="onboarding_first_screen_title">Us donem la benvinguda al %1$s</string>
 
@@ -590,9 +600,12 @@
     <!-- Label for a button in the "tabs tray" to erase the browsing history (closes all tabs and removes associated data). -->
     <string name="tabs_tray_action_erase">Esborra l\'historial de navegació</string>
 
+    <!-- Label for the option in the Focus "tabs tray" to clos the other tabs except the current tab. -->
+    <string name="tabs_tray_action_erase_other">Tanca les altres pestanyes</string>
+
     <!-- If the user decides to open the current page in another browser and if Firefox is not installed then we show this
       item in the list of browsers. Clicking it will open the app store installed on the device (usually that's Google Play). -->
-    <string name="download_firefox">Baixa el Firefox</string>
+    <string name="download_firefox" tools:ignore="BrandUsage">Baixa el Firefox</string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)-->
@@ -604,23 +617,23 @@
   <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the MPL (e.g. https://www.mozilla.org/en-US/MPL/) -->
-    <string name="your_rights_content2"><![CDATA[El %1$s és a la vostra disposició sota els termes de la <a href="%2$s">Mozilla Public License (Llicència Pública de Mozilla)</a> i altres llicències lliures.]]></string>
+    <string name="your_rights_content2" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[El %1$s és a la vostra disposició sota els termes de la <a href="%2$s">Mozilla Public License (Llicència Pública de Mozilla)</a> i altres llicències lliures.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the trademark policy (e.g. https://www.mozilla.org/foundation/trademarks/policy/) -->
-    <string name="your_rights_content3"><![CDATA[No se us atorga cap dret ni llicència sobre les marques registrades de la Fundació Mozilla, o de cap altra part, inclosos els noms o els logotips de Mozilla, Firefox o %1$s. Podeu trobar més informació <a href="%2$s">aquí</a>.]]></string>
+    <string name="your_rights_content3" tools:ignore="BrandUsage,IncorrectStraightDoubleQuote"><![CDATA[No se us atorga cap dret ni llicència sobre les marques registrades de la Fundació Mozilla, o de cap altra part, inclosos els noms o els logotips de Mozilla, Firefox o %1$s. Podeu trobar més informació <a href="%2$s">aquí</a>.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the list of licenses used by the dependencies.-->
-    <string name="your_rights_content4"><![CDATA[Hi ha codi font addicional del %1$s que està disponible sota diverses altres <a href="%2$s">llicències</a> lliures i de codi obert.]]></string>
+    <string name="your_rights_content4" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[Hi ha codi font addicional del %1$s que està disponible sota diverses altres <a href="%2$s">llicències</a> lliures i de codi obert.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the GPL
     %3$s will be replaced with a URL linking to the tracking protection wiki page (e.g. https://wiki.mozilla.org/Security/Tracking_protection#Lists) -->
-    <string name="your_rights_content5"><![CDATA[El %1$s també utilitza llistes de bloquejos proporcionades per Disconnect, Inc. que es mantenen de forma independent i separada sota la <a href="%2$s">Llicència Pública General de GNU v3</a> i que estan disponibles <a href="%3$s">aquí</a>.]]></string>
+    <string name="your_rights_content5" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[El %1$s també utilitza llistes de bloquejos proporcionades per Disconnect, Inc. que es mantenen de forma independent i separada sota la <a href="%2$s">Llicència Pública General de GNU v3</a> i que estan disponibles <a href="%3$s">aquí</a>.]]></string>
 
     <!-- Text shown in prompts for GeckoView -->
     <string name="gv_prompt_username_hint">Nom d\'usuari</string>
@@ -702,6 +715,9 @@
     <!-- Text for indicating cookie banner handling is on this site, this is shown as part of the protections panel with the tracking protection toggle. -->
     <string name="cookie_banner_exception_item_description_state_on">Activada en aquest lloc</string>
 
+    <!-- Text for indicating cookie reducer is not supported on the current site, this is shown as part of the protections panel with the tracking protection toggle. -->
+    <string name="cookie_banner_exception_site_not_supported">Aquest lloc no és compatible ara per ara</string>
+
     <!-- Text for indicating cookie banner handling is off this site, this is shown as part of the protections panel with the tracking protection toggle. -->
     <string name="cookie_banner_exception_item_description_state_off">Desactivada en aquest lloc</string>
 
@@ -724,18 +740,26 @@
     <string name="cookie_banner_exception_panel_description_state_on_for_site">El %1$s esborrarà les galetes d’aquest lloc i actualitzarà la pàgina. En esborrar totes les galetes, pot ser que se us tanquin les sessions o que se us buidin els carros de la compra.</string>
 
     <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. The placeholder will be updated with the app name. -->
-    <string name="cookie_banner_exception_panel_description_state_off_for_site" moz:RemovedIn="111" tools:ignore="UnusedResources">El %1$s pot intentar rebutjar automàticament les sol·licituds de galetes. Si no hi ha l’opció de rebutjar-les, el %1$s podria acceptar totes les galetes per tancar el bàner.</string>
-
-    <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. The placeholder will be updated with the app name. -->
     <string name="cookie_banner_exception_panel_description_state_off_for_site2">El %1$s pot intentar rebutjar automàticament les sol·licituds de galetes.</string>
 
+    <!-- Long text for a detail explanation indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_description_site_is_not_supported">Actualment, aquest lloc web no és compatible amb la Reducció de bàners de galetes. Voleu que el nostre equip ho revisi i el faci compatible en el futur?</string>
+
+    <!-- Text for cancel button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_site_is_not_supported_cancel_button">Cancel·la</string>
+
+    <!-- Text for request support button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_site_is_not_supported_request_support_button">Sol·licita que sigui compatible</string>
+
+    <!-- Label for the snackBar, after the user reports with success a website where cookie banner reducer did not work -->
+    <string name="cookie_banner_report_a_site_snackbar_label">S’ha enviat la sol·licitud per a fer que aquest lloc sigui compatible.</string>
+
+    <!-- Label for cookie banner item from tracking protection, after the user reports with success a website where cookie banner reducer did not work -->
+    <string name="cookie_banner_the_site_was_reported">S’ha enviat la sol·licitud per a fer que aquest lloc sigui compatible.</string>
+
     <!-- Contextual Feature Recommendation Popups -->
-    <!-- CFR for Cookie Banner (Banner Info Message). The placeholder will be updated with the app name. -->
-    <string name="cfr_for_cookie_banner" moz:RemovedIn="111" tools:ignore="UnusedResources">El %1$s intenta rebutjar les sol·licituds de galetes per tancar els molestos bàners de galetes.\n\nGestioneu les preferències dels bàners de galetes en els paràmetres.</string>
     <!-- CFR for Cookie Banner (Banner Info Message). %1$s will be replaced by the app name, %2$s will be an active link using the string cfr_cookie_banner_link as text. -->
     <string name="cfr_cookie_banner">El %1$s intenta rebutjar les sol·licituds de galetes per tancar els molestos bàners de galetes.\n\nGestioneu les preferències dels bàners de galetes en els %2$s.</string>
-    <!-- CFR for Cookie Banner (Banner Info Message). This text should be the same as the settings text from "cfr_for_cookie_banner". The text should be underlined and should redirect the user to the cookie banner settings screen. -->
-    <string name="cfr_for_cookie_banner_underline_settings" moz:RemovedIn="111" tools:ignore="UnusedResources">paràmetres</string>
     <!-- CFR for Cookie Banner (Banner Info Message). This string is used as text for a link in cfr_cookie_banner and takes the user to the app settings. -->
     <string name="cfr_cookie_banner_link">paràmetres</string>
 
@@ -800,13 +824,13 @@
     <string name="preference_studies">Estudis</string>
 
     <!-- Preference for studies summary-->
-    <string name="preference_studies_summary">El Firefox pot instal·lar i executar estudis de tant en tant.</string>
+    <string name="preference_studies_summary" tools:ignore="BrandUsage">El Firefox pot instal·lar i executar estudis de tant en tant.</string>
 
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Més informació</string>
 
     <!-- Dialog message shown when some changes are made on studies -->
-    <string name="studies_restart_app">L’aplicació es tancarà per aplicar els canvis</string>
+    <string name="studies_restart_app" moz:removedIn="135">L’aplicació es tancarà per aplicar els canvis</string>
 
     <!-- Title of the remove studies button -->
     <string name="studies_remove">Elimina</string>
@@ -894,9 +918,6 @@
 
     <!-- Label for the button in the snackbar that switches to the newly opened tab -->
     <string name="open_new_tab_snackbar">Vés-hi</string>
-
-    <!-- Text displayed in a notification when the user enters full screen mode -->
-    <string name="full_screen_notification">Esteu en mode de pantalla completa</string>
 
     <!-- Preference for switching to a new tab immediately after opening -->
     <string name="preference_open_new_tab">En obrir un enllaç en una pestanya nova, vés-hi immediatament</string>
@@ -998,12 +1019,30 @@
     <string name="preference_follow_device_theme">Segons el tema del dispositiu</string>
 
     <!-- The title of the error page for websites that do not support HTTPS when HTTPS-Only is turned on  -->
-    <string name="errorpage_httpsonly_title">El lloc que heu sol·licitat no admet HTTPS</string>
+    <string name="errorpage_httpsonly_title2">Aquest lloc no admet HTTPS</string>
 
-    <!-- The text of the error page for websites that do not support HTTPS when HTTPS-Only is turned on. %1$s will get replaced with the name of the app (e.g. "Firefox Focus") -->
-    <string name="errorpage_httpsonly_message">Per defecte, el %1$s intenta connectar-se mitjançant HTTPS per millorar la seguretat. Per a canviar aquest paràmetre o per a obtenir-ne més informació, aneu a Paràmetres &gt; Privadesa i seguretat &gt; Seguretat.</string>
+    <!-- The text of the error page for websites that do not support HTTPS when HTTPS-Only is turned on. %1$s will get replaced with the name of the app (e.g. "Firefox Focus").
+        Contains a button that will redirect the user to Privacy & Security Screen-->
+    <string name="errorpage_httpsonly_message2" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[El %1$s intenta utilitzar una connexió HTTPS sempre que sigui possible per a més seguretat.
+ <a href="%2$s">Més informació</a> <br/><br/>
+ Podeu canviar aquest paràmetre a Paràmetres > Privadesa i seguretat > Seguretat.]]></string>
 
-    <!-- Sessions List -->
+    <!-- The document title and heading of the error page shown when a website has an invalid or expired SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_bad_cert_title">La connexió no és segura</string>
+
+     <!-- The error message shown when a website has an invalid or expired SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_bad_cert_message"><![CDATA[
+ Això podria ser un problema amb la configuració del servidor, o bé podria ser que algú estigués intentant fer-se passar pel servidor.<br/><br/>
+ Si us hi heu connectat sense cap problema alguna altra vegada, l’error podria ser temporal.
+ ]]></string>
+
+    <!-- The advanced certificate information shown when a website has an invalid SSL certificate. The %1$s will be replaced by the app name and %2$s will be replaced by website URL. It's only shown when a website has an invalid SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_bad_cert_techInfo"><![CDATA[
+ <label>És possible que algú estigui intentant suplantar el lloc i podria ser arriscat continuar.</label>
+ <br><br>
+ <label>El %1$s no confia en <b>%2$s</b> perquè l’emissor del seu certificat és desconegut, el certificat està signat per ell mateix o el servidor no envia els certificats intermedis correctes.</label>]]></string>
+
+     <!-- Sessions List -->
     <!-- Content description (not visible, for screen readers etc.): Button that closes a tab n the sessions list -->
     <string name="close_tab">Tanca la pestanya</string>
 
@@ -1053,4 +1092,12 @@
     <!-- This is te text of the snackbar that appears after the search widget was added successfully
     to the home screen. -->
     <string name="promote_search_widget_snackbar_message">S’ha afegit el giny a la pantalla d’inici</string>
+
+    <!-- Messages explaining how to exit fullscreen mode -->
+    <!-- Message shown to explain how to exit fullscreen mode when gesture navigation is enabled. -->
+    <!-- Localisation note: this text should be as short as possible, max 68 chars -->
+    <string name="exit_fullscreen_with_gesture_short">Arrossegueu des de dalt i feu el gest d\'enrere per sortir</string>
+    <!-- Message shown to explain how to exit fullscreen mode when using back button navigation. -->
+    <!-- Localisation note: this text should be as short as possible, max 68 chars -->
+    <string name="exit_fullscreen_with_back_button_short">Arrossegueu des de dalt i premeu enrere per sortir</string>
 </resources>

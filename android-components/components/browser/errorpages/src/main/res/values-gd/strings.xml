@@ -51,11 +51,6 @@
     <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Adhartach…</string>
 
     <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
-    <string moz:removedIn="104" name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo" tools:ignore="UnusedResources"><![CDATA[
-        <label> Tha poileasaidh tèarainteachd aig <b>%1$s</b> air a bheil HTTP Strict Transport Security (HSTS), agus is ciall dha sin nach urrainn dha <b>%2$s</b> ach ceangal tèarainte a dhèanamh. Chan urrainn dhut eisgeachd a chur ris a thadhal air an làrach seo.
-    ]]></string>
-
-    <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
     <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[
         <label> Tha poileasaidh tèarainteachd aig <b>%1$s</b> air a bheil HTTP Strict Transport Security (HSTS), agus is ciall dha sin nach urrainn dha <b>%2$s</b> ach ceangal tèarainte a dhèanamh. Chan urrainn dhut eisgeachd a chur ris a thadhal air an làrach seo.</label>
     ]]></string>
@@ -180,9 +175,12 @@
       </ul>]]></string>
 
     <!-- The document title and heading of an error page. -->
-    <string name="mozac_browser_errorpages_no_internet_title">Chan eil ceangal ris an eadar-lìon</string>
+    <string name="mozac_browser_errorpages_no_internet_title_2">Tha coltas gu bheil duilgheadas ann leis a’ cheangal agad ris an eadar-lìon</string>
     <!-- The main body text of this error page. It will be shown beneath the title -->
-    <string name="mozac_browser_errorpages_no_internet_message">Thoir sùil air a’ cheangal agad ris an lìonra no feuch is ath-luchdaich an duilleag ann an tiotan no dhà.</string>
+    <string name="mozac_browser_errorpages_no_internet_message_2">Feuch is dèan ceangal air uidheam eile. Thoir sùil air a’ mhòdam no rùtar agad. Dì-cheangail on WiFi is ceangail ris as ùr.</string>
+    <!-- The document title and heading of an error page. -->
+    <string name="mozac_browser_errorpages_no_internet_error_code">Còd na mearachd: NS_ERROR_OFFLINE</string>
+
     <!-- Text that will show up on the button at the bottom of the error page -->
     <string name="mozac_browser_errorpages_no_internet_refresh_button">Ath-luchdaich</string>
 

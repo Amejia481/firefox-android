@@ -53,7 +53,6 @@
     <string name="menu_remove_from_shortcuts">Eltávolítás a kezdőképernyőről</string>
 
     <!-- Menu item: Shows information about features and changes that are new to this version -->
-    <string name="menu_whats_new">Újdonságok</string>
     <string name="menu_settings">Beállítások</string>
     <string name="menu_about">Névjegy</string>
     <string name="menu_help">Súgó</string>
@@ -84,10 +83,12 @@
          sharing an URL. -->
     <string name="share_dialog_title">Megosztás ezzel</string>
 
-    <!-- While a browsing session is active (in the foreground or background) we will show a notification
-         so that the user doesn't forget about the website still being open. This text is shown in
-         the notification. Clicking the notification will have the same effect as clicking the "erase"
-         button in the application. -->
+    <string name="notification_erase_title_android_14">Törli a böngészési előzményeket?</string>
+
+    <!-- Text shown in the notification description that pops up to remind the user that a browsing session is active
+    for Android 14+. -->
+    <string name="notification_erase_text_android_14_1">Koppintson vagy csúsztassa oldalra ezt az értesítést a böngészési előzmények biztonságos törléséhez.</string>
+
     <string name="notification_erase_text">Előzmények törlése</string>
 
     <!-- Notification action to open Focus and resume the current browsing session. -->
@@ -121,23 +122,23 @@
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
          Focus is hard coded since we can't use variables in this context.
          Do not translate or transliterate Focus.-->
-    <string name="text_selection_search_action_focus">Keresés a Focusban</string>
+    <string name="text_selection_search_action_focus" tools:ignore="BrandUsage">Keresés a Focusban</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
              Klar is hard coded since we can't use variables in this context.
              Do not translate or transliterate Klar.-->
-    <string name="text_selection_search_action_klar">Keresés a Klarban</string>
+    <string name="text_selection_search_action_klar" tools:ignore="BrandUsage">Keresés a Klarban</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
             Focus Beta is hard coded since we can't use variables in this context.
             Do not translate or transliterate Focus Beta.-->
-    <string name="text_selection_search_action_focus_beta">Keresés a Focus Bétában</string>
+    <string name="text_selection_search_action_focus_beta" tools:ignore="BrandUsage">Keresés a Focus Bétában</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
           Focus Nightly is hard coded since we can't use variables in this context.
           Do not translate or transliterate Focus Nightly.-->
-    <string name="text_selection_search_action_focus_nightly">Keresés a Focus Nightlyban</string>
+    <string name="text_selection_search_action_focus_nightly" tools:ignore="BrandUsage">Keresés a Focus Nightlyban</string>
 
     <!-- Content of about focus. Argument 1 is the app name (Firefox Focus/Firefox Klar/etc).
          Argument 2 is the url for the learn-more link. -->
-    <string name="about_content"><![CDATA[<p>A %1$s az Ön kezébe adja az irányítást.</p>
+    <string name="about_content" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[<p>A %1$s az Ön kezébe adja az irányítást.</p>
 <p>Használja privát böngészőként:
   <ul>
     <li>Keressen és böngésszen közvetlenül az appban</li>
@@ -202,21 +203,21 @@
     <string name="preference_state_off">Ki</string>
 
     <!-- Item in settings that will open a new preference screen for configuring the URL autocomplete behavior. -->
-    <string name="preference_subitem_autocomplete">Automatikus URL kiegészítés</string>
+    <string name="preference_subitem_autocomplete">Automatikus webcím-kiegészítés</string>
 
     <!-- Title of "switch" preference that enables/disables autocomplete for the default list -->
     <string name="preference_switch_autocomplete_topsites">Leggyakrabban felkeresett oldalak esetén</string>
 
     <!-- Summary for the toggle to enable autocomplete for the topsites list
     %s is a placeholder for the app name (e.g. Firefox Focus)-->
-    <string name="preference_autocomplete_topsite_summary2">Engedélyezés, hogy a %s 450 népszerű URL-t automatikusan kiegészítsen a címsávban.</string>
+    <string name="preference_autocomplete_topsite_summary2">Engedélyezés, hogy a %s 450 népszerű webcímet automatikusan kiegészítsen a címsávban.</string>
 
     <!-- Title of "switch" preference that enables/disables autocomplete for the user-defined list -->
     <string name="preference_switch_autocomplete_user_list">Hozzáadott oldalak esetén</string>
 
     <!-- Summary for the toggle to enable autocomplete for the user-defined list
      %s is a placeholder for the app name (e.g. Firefox Focus)-->
-    <string name="preference_autocomplete_user_list_summary2">Engedélyezés, hogy a %s kiegészítse a kedvenc URL-jeit.</string>
+    <string name="preference_autocomplete_user_list_summary2">Engedélyezés, hogy a %s kiegészítse a kedvenc webcímeit.</string>
 
     <!-- Preference category: Manage (user-defined) sites -->
     <string name="preference_category_autocomplete_manage_sites">Oldalak kezelése</string>
@@ -225,19 +226,19 @@
     <string name="preference_autocomplete_subitem_manage_sites">Oldalak kezelése</string>
 
     <!-- Action at the bottom of the list of custom autocomplete URLs that will open a new screen to add a new URL to the list. -->
-    <string name="preference_autocomplete_action_add">+ Egyéni URL hozzáadása</string>
+    <string name="preference_autocomplete_action_add">+ Egyéni webcím hozzáadása</string>
 
     <!-- Explanation text above the list of custom autocomplete URLs. -->
     <string name="preference_autocomplete_explanation_text">Az automatikus kiegészítései:</string>
 
     <!-- Action at the bottom of the list of custom autocomplete URLs that will open a new screen to add a new URL to the list. -->
-    <string name="preference_autocomplete_action_add2">URL hozzáadása</string>
+    <string name="preference_autocomplete_action_add2">Webcím hozzáadása</string>
 
     <!-- Title of the screen for adding custom autocomplete URLs. -->
-    <string name="preference_autocomplete_title_add">Egyéni URL hozzáadása</string>
+    <string name="preference_autocomplete_title_add">Egyéni webcím hozzáadása</string>
 
     <!-- Label for the button to quick add custom autocomplete URLs. -->
-    <string name="custom_autocomplete_quick_add">Egyéni URL hozzáadása</string>
+    <string name="custom_autocomplete_quick_add">Egyéni webcím hozzáadása</string>
 
     <!-- Label for the button to quick add the current URL to the custom autocomplete list -->
     <string name="add_custom_autocomplete_label">Hivatkozás hozzáadása az automatikus kiegészítéshez</string>
@@ -249,19 +250,19 @@
     <string name="preference_category_data_choices">Adatküldések</string>
 
     <!-- Title of the screen for removing custom autocomplete URLs. -->
-    <string name="preference_autocomplete_title_remove">Egyéni URL-ek eltávolítása</string>
+    <string name="preference_autocomplete_title_remove">Egyéni webcímek eltávolítása</string>
 
     <!-- A link to SUMO at autocomplete settings. -->
     <string name="preference_autocomplete_learn_more">További tudnivalók</string>
 
     <!-- Preference summary: Custom (user-defined) autocomplete URLs. -->
-    <string name="preference_autocomplete_custom_summary">Automatikusan kiegészített URL-ek hozzáadása és kezelése.</string>
+    <string name="preference_autocomplete_custom_summary">Automatikusan kiegészített webcímek hozzáadása és kezelése.</string>
 
     <!-- Label for the "custom autocomplete URL" input field -->
-    <string name="preference_autocomplete_add_title">Hozzáadandó URL-ek</string>
+    <string name="preference_autocomplete_add_title">Hozzáadandó webcímek</string>
 
     <!-- "Hint" text for the "custom autocomplete URL" input field. Shown when the field is empty. -->
-    <string name="preference_autocomplete_add_hint">Illessze be, vagy adja meg az URL-t</string>
+    <string name="preference_autocomplete_add_hint">Illessze be, vagy adja meg az webcímet</string>
 
     <!-- Example how a custom domain autocomplete URL be added (e.g. without http://) -->
     <string name="preference_autocomplete_add_example2">Példa: mozilla.org</string>
@@ -270,7 +271,7 @@
     <string name="preference_autocomplete_add_example">Példa: example.com</string>
 
     <!-- Confirmation "snackbar" shown after a new custom autocomplete URL has been added. -->
-    <string name="preference_autocomplete_add_confirmation">Új egyéni URL hozzáadva.</string>
+    <string name="preference_autocomplete_add_confirmation">Új egyéni webcím hozzáadva.</string>
 
     <!-- Menu item to remove existing autocomplete URLs. -->
     <string name="preference_autocomplete_menu_remove">Eltávolítás</string>
@@ -279,7 +280,7 @@
     <string name="preference_autocomplete_action_remove_content_description">Eltávolítás</string>
 
     <!-- Error message shown if the entered custom autocomplete URL is not valid or empty. -->
-    <string name="preference_autocomplete_add_error">Ellenőrizze a megadott URL-t.</string>
+    <string name="preference_autocomplete_add_error">Ellenőrizze a megadott webcímet.</string>
 
     <string name="preference_language">Nyelv</string>
     <!-- This is shown when the user hasn't set a focus specific language, i.e. when Focus
@@ -352,6 +353,15 @@
 
     <!-- In-app link (in settings) to Focus privacy notice. -->
     <string name="preference_privacy_notice">Adatvédelmi nyilatkozat</string>
+
+    <!-- In-app link (in settings) to Focus licensing information. -->
+    <string name="preference_licensing_info">Licencinformációk</string>
+
+    <!-- Link to Focus licensing information from other libraries that we use. -->
+    <string name="preference_libraries_we_use">Az általunk használt programkönyvtárak</string>
+
+    <!-- Open Source Licenses page title. The first parameter is the app name -->
+    <string name="open_source_licenses_title">%s | Nyílt forráskódú programkönyvtárak</string>
 
     <!-- Item in Preferences that shows the about page. Parameter 1 is the app name, i.e. Firefox Focus/Firefox Klar. -->
     <string name="preference_about">A %1$s névjegye</string>
@@ -482,7 +492,10 @@
 
 
 
-  <string name="error_hostLookup_title">A kiszolgáló nem található</string>
+  <!-- Snackbar that will be displayed after a website has been added to shortcuts. -->
+    <string name="snackbar_added_to_shortcuts">Hozzáadva az indítóikonokhoz.</string>
+
+    <string name="error_hostLookup_title">A kiszolgáló nem található</string>
 
 
 
@@ -502,10 +515,7 @@
 
 
 
-  <!-- Content description (not visible, for screen readers etc.): This is the description for the close button from the new onboarding flow screen one and two -->
-    <string name="onboarding_close_button_content_description">Bezárás</string>
-
-    <!-- New Onboarding flow first screen title -->
+  <!-- New Onboarding flow first screen title -->
     <!-- %1$s will be replaced by the app name and build variant(e.g. Firefox Focus, Firefox Klar Nightly) -->
     <string name="onboarding_first_screen_title">Üdvözli a %1$s</string>
 
@@ -596,9 +606,12 @@
     <!-- Label for a button in the "tabs tray" to erase the browsing history (closes all tabs and removes associated data). -->
     <string name="tabs_tray_action_erase">Böngészési előzmények törlése</string>
 
+    <!-- Label for the option in the Focus "tabs tray" to clos the other tabs except the current tab. -->
+    <string name="tabs_tray_action_erase_other">Többi lap bezárása</string>
+
     <!-- If the user decides to open the current page in another browser and if Firefox is not installed then we show this
       item in the list of browsers. Clicking it will open the app store installed on the device (usually that's Google Play). -->
-    <string name="download_firefox">Firefox letöltése</string>
+    <string name="download_firefox" tools:ignore="BrandUsage">Firefox letöltése</string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)-->
@@ -610,23 +623,23 @@
   <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the MPL (e.g. https://www.mozilla.org/en-US/MPL/) -->
-    <string name="your_rights_content2"><![CDATA[A %1$s a <a href="%2$s">Mozilla Public License</a> és más nyílt forráskódú licencek feltételei szerint érhető el.]]></string>
+    <string name="your_rights_content2" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[A %1$s a <a href="%2$s">Mozilla Public License</a> és más nyílt forráskódú licencek feltételei szerint érhető el.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the trademark policy (e.g. https://www.mozilla.org/foundation/trademarks/policy/) -->
-    <string name="your_rights_content3"><![CDATA[Nem kap semmiféle jogot vagy licencet a Mozilla Alapítvány vagy bármely más fél védjegyeihez, köztük a Mozilla, Firefox vagy %1$s nevekhez vagy logókhoz. További információkat <a href="%2$s">itt</a> találhat.]]></string>
+    <string name="your_rights_content3" tools:ignore="BrandUsage,IncorrectStraightDoubleQuote"><![CDATA[Nem kap semmiféle jogot vagy licencet a Mozilla Alapítvány vagy bármely más fél védjegyeihez, köztük a Mozilla, Firefox vagy %1$s nevekhez vagy logókhoz. További információkat <a href="%2$s">itt</a> találhat.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the list of licenses used by the dependencies.-->
-    <string name="your_rights_content4"><![CDATA[További %1$s forráskódok érhetők el különféle szabad szoftver vagy nyílt forráskódú <a href="%2$s">licencek</a> alatt.]]></string>
+    <string name="your_rights_content4" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[További %1$s forráskódok érhetők el különféle szabad szoftver vagy nyílt forráskódú <a href="%2$s">licencek</a> alatt.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the GPL
     %3$s will be replaced with a URL linking to the tracking protection wiki page (e.g. https://wiki.mozilla.org/Security/Tracking_protection#Lists) -->
-    <string name="your_rights_content5"><![CDATA[A %1$s a Disconnect, Inc. által biztosított blokkolási listákat használ, különálló munkaként, <a href="%2$s">GNU General Public Licence v3</a> alatt, ez <a href="%3$s">itt</a> érhető el.]]></string>
+    <string name="your_rights_content5" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[A %1$s a Disconnect, Inc. által biztosított blokkolási listákat használ, különálló munkaként, <a href="%2$s">GNU General Public Licence v3</a> alatt, ez <a href="%3$s">itt</a> érhető el.]]></string>
 
     <!-- Text shown in prompts for GeckoView -->
     <string name="gv_prompt_username_hint">Felhasználónév</string>
@@ -642,7 +655,7 @@
 
     <!-- Content Description of Security Icon in toolbar -->
     <string name="site_security_icon_content_description">Webhely biztonsága</string>
-    <string name="preference_autocomplete_duplicate_url_error">Az URL már létezik</string>
+    <string name="preference_autocomplete_duplicate_url_error">A webcím már létezik</string>
 
     <!-- Label for the Find in page button -->
     <string name="find_in_page">Keresés az oldalon</string>
@@ -673,7 +686,7 @@
     <string name="preference_performance_request_desktop_site2">Asztali oldal</string>
 
     <!-- Displayed after a user long presses on the URL in a custom tab to copy the URL -->
-    <string name="custom_tab_copy_url_action">URL másolva</string>
+    <string name="custom_tab_copy_url_action">Webcím másolva</string>
 
     <!-- Description of what a user may find in the Advanced Setting category, used for debugging -->
     <string name="preference_advanced_summary">Fejlesztői eszközök</string>
@@ -708,6 +721,9 @@
     <!-- Text for indicating cookie banner handling is on this site, this is shown as part of the protections panel with the tracking protection toggle. -->
     <string name="cookie_banner_exception_item_description_state_on">BE ezen az oldalon</string>
 
+    <!-- Text for indicating cookie reducer is not supported on the current site, this is shown as part of the protections panel with the tracking protection toggle. -->
+    <string name="cookie_banner_exception_site_not_supported">A webhely jelenleg nem támogatott</string>
+
     <!-- Text for indicating cookie banner handling is off this site, this is shown as part of the protections panel with the tracking protection toggle. -->
     <string name="cookie_banner_exception_item_description_state_off">KI ezen az oldalon</string>
 
@@ -730,19 +746,26 @@
     <string name="cookie_banner_exception_panel_description_state_on_for_site">A %1$s törli a webhely sütijeit, és frissíti az oldalt. Az összes süti törlésével kijelentkezhet, vagy kiürítheti a kosarait.</string>
 
     <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. The placeholder will be updated with the app name. -->
-    <string name="cookie_banner_exception_panel_description_state_off_for_site" moz:RemovedIn="111" tools:ignore="UnusedResources">A %1$s automatikusan megpróbálhatja elutasítani a sütikéréseket. Ha nem áll rendelkezésre elutasítási lehetőség, akkor a %1$s minden sütit elfogadhat a banner elrejtéséhez.</string>
-
-    <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. The placeholder will be updated with the app name. -->
     <string name="cookie_banner_exception_panel_description_state_off_for_site2">A %1$s megpróbálhatja automatikusan elutasítani a sütikéréseket.</string>
 
-    <!-- Contextual Feature Recommendation Popups -->
-    <!-- CFR for Cookie Banner (Banner Info Message). The placeholder will be updated with the app name. -->
-    <string name="cfr_for_cookie_banner" moz:RemovedIn="111" tools:ignore="UnusedResources">A %1$s megpróbálja elutasítani a sütikéréseket, hogy eltüntesse a bosszantó sütibannereket.\n\nA sütibannerek beállításait a beállításokban kezelheti.</string>
+    <!-- Long text for a detail explanation indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_description_site_is_not_supported">Ez az oldalt jelenleg nem támogatja a Sütibannerek számának csökkentését. Szeretné kérni, hogy csapatunk vizsgálja felül ezt a webhelyet, és támogassa a jövőben?</string>
 
+    <!-- Text for cancel button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_site_is_not_supported_cancel_button">Mégse</string>
+
+    <!-- Text for request support button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_site_is_not_supported_request_support_button">Támogatás kérése</string>
+
+    <!-- Label for the snackBar, after the user reports with success a website where cookie banner reducer did not work -->
+    <string name="cookie_banner_report_a_site_snackbar_label">A kérelem elküldve a támogatási webhelynek.</string>
+
+    <!-- Label for cookie banner item from tracking protection, after the user reports with success a website where cookie banner reducer did not work -->
+    <string name="cookie_banner_the_site_was_reported">A kérelem elküldve a támogatási webhelynek.</string>
+
+    <!-- Contextual Feature Recommendation Popups -->
     <!-- CFR for Cookie Banner (Banner Info Message). %1$s will be replaced by the app name, %2$s will be an active link using the string cfr_cookie_banner_link as text. -->
     <string name="cfr_cookie_banner">A %1$s megpróbálja elutasítani a sütikéréseket, hogy eltüntesse a bosszantó sütibannereket.\n\nA sütibannerek beállításait a %2$s kezelheti.</string>
-    <!-- CFR for Cookie Banner (Banner Info Message). This text should be the same as the settings text from "cfr_for_cookie_banner". The text should be underlined and should redirect the user to the cookie banner settings screen. -->
-    <string name="cfr_for_cookie_banner_underline_settings" moz:RemovedIn="111" tools:ignore="UnusedResources">beállítások</string>
 
     <!-- CFR for Cookie Banner (Banner Info Message). This string is used as text for a link in cfr_cookie_banner and takes the user to the app settings. -->
     <string name="cfr_cookie_banner_link">beállításokban</string>
@@ -808,13 +831,13 @@
     <string name="preference_studies">Tanulmányok</string>
 
     <!-- Preference for studies summary-->
-    <string name="preference_studies_summary">A Firefox időről időre tanulmányokat telepíthet és futtathat.</string>
+    <string name="preference_studies_summary" tools:ignore="BrandUsage">A Firefox időről időre tanulmányokat telepíthet és futtathat.</string>
 
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">További tudnivalók</string>
 
     <!-- Dialog message shown when some changes are made on studies -->
-    <string name="studies_restart_app">Az alkalmazás kilép a módosítások alkalmazásához</string>
+    <string name="studies_restart_app" moz:removedIn="135">Az alkalmazás kilép a módosítások alkalmazásához</string>
 
     <!-- Title of the remove studies button -->
     <string name="studies_remove">Eltávolítás</string>
@@ -888,7 +911,7 @@
 
     <!-- Tip displayed on home view explaining how to add a custom autocomplete URL
     The new line here must be kept as the second half of the string is clickable for the user. -->
-    <string name="tip_autocomplete_url">URL-ek automatikus kiegészítése a leggyakrabban használt oldalaknál\nNyomja meg hosszan az URL-t a címsorban</string>
+    <string name="tip_autocomplete_url">Webcímek automatikus kiegészítése a leggyakrabban használt oldalaknál\nNyomja meg hosszan a webcímet a címsorban</string>
 
     <!-- Tip displayed on home view explaining how to add a custom autocomplete URL
     The new line here must be kept as the second half of the string is clickable for the user. -->
@@ -902,9 +925,6 @@
 
     <!-- Label for the button in the snackbar that switches to the newly opened tab -->
     <string name="open_new_tab_snackbar">Átváltás</string>
-
-    <!-- Text displayed in a notification when the user enters full screen mode -->
-    <string name="full_screen_notification">Belépés a teljes képernyős módba</string>
 
     <!-- Preference for switching to a new tab immediately after opening -->
     <string name="preference_open_new_tab">Azonnali átváltás az új fülre</string>
@@ -1008,12 +1028,31 @@
 
 
     <!-- The title of the error page for websites that do not support HTTPS when HTTPS-Only is turned on  -->
-    <string name="errorpage_httpsonly_title">A kért webhely nem támogatja a HTTPS-t</string>
+    <string name="errorpage_httpsonly_title2">Ez a webhely nem támogatja a HTTPS-t</string>
 
-    <!-- The text of the error page for websites that do not support HTTPS when HTTPS-Only is turned on. %1$s will get replaced with the name of the app (e.g. "Firefox Focus") -->
-    <string name="errorpage_httpsonly_message">Alapértelmezés szerint a %1$s HTTPS használatával próbál csatlakozni a nagyobb biztonság érdekében. A beállítás módosításához vagy további információért ugorjon a Beállítások &gt; Adatvédelem és biztonság &gt; Biztonság menüponthoz.</string>
+     <!-- The text of the error page for websites that do not support HTTPS when HTTPS-Only is turned on. %1$s will get replaced with the name of the app (e.g. "Firefox Focus").
+        Contains a button that will redirect the user to Privacy & Security Screen-->
+    <string name="errorpage_httpsonly_message2" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[A %1$s a nagyobb biztonság érdekében megpróbál HTTPS kapcsolatot használni, amikor az lehetséges.
+     <a href="%2$s">További tudnivalók</a> <br/><br/>
+     Ezt a beállítást itt módosíthatja: Beállítások > Adatvédelem és biztonság > Biztonság.]]></string>
 
-    <!-- Sessions List -->
+    <!-- The document title and heading of the error page shown when a website has an invalid or expired SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_bad_cert_title">A kapcsolat nem biztonságos</string>
+
+    <!-- The error message shown when a website has an invalid or expired SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_bad_cert_message"><![CDATA[
+    Ezt okozhatja a kiszolgáló nem megfelelő beállítása, de az is lehet, hogy valaki megpróbál a kiszolgáló nevében fellépni.<br/><br/>
+    Ha korábban már sikeresen kapcsolódott ehhez a kiszolgálóhoz, akkor lehet, hogy a hiba csak ideiglenes.
+    ]]></string>
+
+    <!-- The advanced certificate information shown when a website has an invalid SSL certificate. The %1$s will be replaced by the app name and %2$s will be replaced by website URL. It's only shown when a website has an invalid SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_bad_cert_techInfo"><![CDATA[
+        <label>Lehet, hogy valaki megpróbálja megszemélyesíteni az oldalt, és a folytatás kockázatos lehet.</label>
+        <br><br>
+        <label>A %1$s nem bízik a(z) <b>%2$s</b> oldalban, mert a tanúsítvány kibocsátója ismeretlen, a tanúsítvány önaláírt, vagy a kiszolgáló nem küldi el a helyes közbülső tanúsítványokat.</label>
+    ]]></string>
+
+     <!-- Sessions List -->
     <!-- Content description (not visible, for screen readers etc.): Button that closes a tab n the sessions list -->
     <string name="close_tab">Lap bezárása</string>
 
@@ -1075,4 +1114,12 @@
     <!-- This is te text of the snackbar that appears after the search widget was added successfully
     to the home screen. -->
     <string name="promote_search_widget_snackbar_message">Modul hozzáadva a kezdőképernyőhöz</string>
+
+    <!-- Messages explaining how to exit fullscreen mode -->
+    <!-- Message shown to explain how to exit fullscreen mode when gesture navigation is enabled. -->
+    <!-- Localisation note: this text should be as short as possible, max 68 chars -->
+    <string name="exit_fullscreen_with_gesture_short">Húzza felülről és használja a vissza gesztust a kilépéshez</string>
+    <!-- Message shown to explain how to exit fullscreen mode when using back button navigation. -->
+    <!-- Localisation note: this text should be as short as possible, max 68 chars -->
+    <string name="exit_fullscreen_with_back_button_short">Húzza felülről és nyomja meg a vissza gombot a kilépéshez</string>
 </resources>

@@ -53,9 +53,6 @@
     <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Լրացուցիչ…</string>
 
     <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
-    <string moz:removedIn="104" name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo" tools:ignore="UnusedResources"><![CDATA[
-        <label> <b>%1$s</b>-ը ունի անվտանգության քաղաքականություն, որը կոչվում է HTTP Strict Transport Security (HSTS): Այն նշանակում է, որ <b>%2$s</b>-ը կարող է միայն անվտանգ կապակցում անել: Տվյալ կայքը այցելելու համար դուք չեք կարող բացառություն սահմանել:]]></string>
-    <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
     <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[
         <label> <b>%1$s</b>-ը ունի անվտանգության քաղաքականություն, որը կոչվում է HTTP Strict Transport Security (HSTS), ինչը նշանակում է, որ <b>%2$s</b>-ը կարող է դրան միմիայն անվտանգ կապակցվել: Դուք չեք կարող բացառություն ավելացնել տվյալ էջն այցելելու համար: </label>
     ]]></string>
@@ -65,14 +62,14 @@
     <!-- The document title and heading of the error page shown when the user's network connection is interrupted while connecting to a website. -->
     <string name="mozac_browser_errorpages_net_interrupt_title">Կապը խզվեց</string>
     <!-- The error message shown when the user's network connection is interrupted while connecting to a website. -->
-    <string name="mozac_browser_errorpages_net_interrupt_message"><![CDATA[<p> Զննարկիչը հաջողությամբ կապակցվեց, բայց տեղեկատվությունը փոխանցելիս կապն ընդհատվեց: Խնդրում ենք կրկին փորձել: </p>
+    <string name="mozac_browser_errorpages_net_interrupt_message"><![CDATA[<p> Դիտարկիչը հաջողությամբ կապակցվեց, բայց տեղեկատվությունը փոխանցելիս կապն ընդհատվեց: Խնդրում ենք կրկին փորձել: </p>
       <ul>
         <li> Կայքը կարող է ժամանակավորապես անհասանելի կամ շատ զբաղված լինել: Կրկին փորձեք մի քանի րոպեից: </li>
         <li> Եթե չեք կարողանում բեռնել որևէ էջ, ստուգեք ձեր սարքի տվյալները կամ Wi-Fi կապը: </li>
       </ul>]]></string>
 
     <!-- The document title and heading of the error page shown when a website takes too long to load. -->
-    <string name="mozac_browser_errorpages_net_timeout_title">Կապի հաստատման ժամանակը սպառվեց</string>
+    <string name="mozac_browser_errorpages_net_timeout_title">Կապը ժամանակասպառվեց</string>
 
     <!-- The error message shown when a website took long to load. -->
     <string name="mozac_browser_errorpages_net_timeout_message"><![CDATA[<p>Հարցվող կայքը չպատասխանեց կապի հարցմանը և ծրագիրը դադարեցրեց պատասխան սպասելուն</p>
@@ -84,7 +81,7 @@
       </ul>]]></string>
 
     <!-- The document title and heading of the error page shown when a website could not be reached. -->
-    <string name="mozac_browser_errorpages_connection_failure_title">Հնարավոր չէ կապակցվել</string>
+    <string name="mozac_browser_errorpages_connection_failure_title">Հնարավոր չէ միանալ</string>
 
     <!-- The error message shown when a website could not be reached. -->
     <string name="mozac_browser_errorpages_connection_failure_message"><![CDATA[<ul>
@@ -178,9 +175,12 @@
       </ul>]]></string>
 
     <!-- The document title and heading of an error page. -->
-    <string name="mozac_browser_errorpages_no_internet_title">Չկա կապակցում համացանցին</string>
+    <string name="mozac_browser_errorpages_no_internet_title_2">Կարծես թե ձեր ինտերնետ կապի հետ կապված խնդիր կա</string>
     <!-- The main body text of this error page. It will be shown beneath the title -->
-    <string name="mozac_browser_errorpages_no_internet_message">Ստուգեք ձեր ցանցային կապակցումը կամ փորձեք կրկին բեռնել էջը մի քանի վայրկյանից:</string>
+    <string name="mozac_browser_errorpages_no_internet_message_2">Փորձեք միանալ մեկ այլ սարքում: Ստուգեք ձեր մոդեմը կամ երթուղիչը: Կապախզեք և նորից միացեք Wi-Fi-ին:</string>
+    <!-- The document title and heading of an error page. -->
+    <string name="mozac_browser_errorpages_no_internet_error_code">Սխալի կոդը՝ NS_ERROR_OFFLINE</string>
+
     <!-- Text that will show up on the button at the bottom of the error page -->
     <string name="mozac_browser_errorpages_no_internet_refresh_button">Կրկին բեռնել</string>
 
@@ -215,13 +215,13 @@
       </ul>]]></string>
 
     <!-- The document title and heading of an error page. -->
-    <string name="mozac_browser_errorpages_file_access_denied_title">Մատչումը ֆայլին մերժված է</string>
+    <string name="mozac_browser_errorpages_file_access_denied_title">Հասանելիությունը ֆայլին մերժվեց</string>
     <string name="mozac_browser_errorpages_file_access_denied_message"><![CDATA[<ul>
         <li>Հնարավոր է՝ այն հեռացվել է, տեղափոխվել կամ ֆայլի թույլտվությունները կանխել են մատչումը:</li>
       </ul>]]></string>
 
     <!-- The document title and heading of an error page. -->
-    <string name="mozac_browser_errorpages_proxy_connection_refused_title">Միջանկյալ սպասարկիչը մերժեց կապը</string>
+    <string name="mozac_browser_errorpages_proxy_connection_refused_title">Փոխանորդ սպասարկիչը մերժեց կապը</string>
 
     <string name="mozac_browser_errorpages_proxy_connection_refused_message"><![CDATA[<p>Դիտարկիչը կազմաձևված է օգտագործելու վստահված պրոքսի սպասարկիչ, բայց պրոքսին մերժել է կապակցումը:</p>
       <ul>
@@ -231,7 +231,7 @@
       </ul>]]></string>
 
     <!-- The document title and heading of an error page. -->
-    <string name="mozac_browser_errorpages_unknown_proxy_host_title">Պրոքսի սպասարկիչը չի գտնվել</string>
+    <string name="mozac_browser_errorpages_unknown_proxy_host_title">Փոխանորդ սպասարկիչը չգտնվեց</string>
 
     <string name="mozac_browser_errorpages_unknown_proxy_host_message"><![CDATA[<p>Դիտարկիչը կազմաձևված է օգտագործելու վստահված պրոքսի սպասարկիչ, բայց պրոքսին մերժել է կապակցումը:</p>
       <ul>
