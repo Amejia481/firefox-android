@@ -60,10 +60,6 @@
     <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Advanced…</string>
 
     <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
-    <string moz:removedIn="104" name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo" tools:ignore="UnusedResources"><![CDATA[
-        <label> <b>%1$s</b> has a security policy called HTTP Strict Transport Security (HSTS), which means that <b>%2$s</b> can only connect to it securely. You can’t add an exception to visit this site.
-    ]]></string>
-    <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
     <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[
         <label><b>%1$s</b> has a security policy called HTTP Strict Transport Security (HSTS), which means that <b>%2$s</b> can only connect to it securely. You can’t add an exception to visit this site.</label>
     ]]></string>
@@ -196,9 +192,12 @@
     ]]></string>
 
     <!-- The document title and heading of an error page. -->
-    <string name="mozac_browser_errorpages_no_internet_title">No internet connection</string>
+    <string name="mozac_browser_errorpages_no_internet_title_2">Looks like there’s a problem with your internet connection</string>
     <!-- The main body text of this error page. It will be shown beneath the title -->
-    <string name="mozac_browser_errorpages_no_internet_message">Check your network connection or try reloading the page in a few moments.</string>
+    <string name="mozac_browser_errorpages_no_internet_message_2">Try connecting on a different device. Check your modem or router. Disconnect and reconnect to Wi-Fi.</string>
+    <!-- The document title and heading of an error page. -->
+    <string name="mozac_browser_errorpages_no_internet_error_code">Error Code: NS_ERROR_OFFLINE</string>
+
     <!-- Text that will show up on the button at the bottom of the error page -->
     <string name="mozac_browser_errorpages_no_internet_refresh_button">Reload</string>
 

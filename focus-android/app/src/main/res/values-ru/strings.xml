@@ -54,7 +54,6 @@
     <string name="menu_remove_from_shortcuts">Удалить из ярлыков</string>
 
     <!-- Menu item: Shows information about features and changes that are new to this version -->
-    <string name="menu_whats_new">Что нового</string>
     <string name="menu_settings">Настройки</string>
     <string name="menu_about">О приложении</string>
     <string name="menu_help">Справка</string>
@@ -85,10 +84,12 @@
          sharing an URL. -->
     <string name="share_dialog_title">Поделиться через</string>
 
-    <!-- While a browsing session is active (in the foreground or background) we will show a notification
-         so that the user doesn't forget about the website still being open. This text is shown in
-         the notification. Clicking the notification will have the same effect as clicking the "erase"
-         button in the application. -->
+    <string name="notification_erase_title_android_14">Удалить историю просмотра?</string>
+
+    <!-- Text shown in the notification description that pops up to remind the user that a browsing session is active
+    for Android 14+. -->
+    <string name="notification_erase_text_android_14_1">Нажмите или снимите это уведомление, чтобы надежно удалить свою историю просмотра.</string>
+
     <string name="notification_erase_text">Удалить историю просмотра сети</string>
 
     <!-- Notification action to open Focus and resume the current browsing session. -->
@@ -122,23 +123,23 @@
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
          Focus is hard coded since we can't use variables in this context.
          Do not translate or transliterate Focus.-->
-    <string name="text_selection_search_action_focus">Искать в Focus</string>
+    <string name="text_selection_search_action_focus" tools:ignore="BrandUsage">Искать в Focus</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
              Klar is hard coded since we can't use variables in this context.
              Do not translate or transliterate Klar.-->
-    <string name="text_selection_search_action_klar">Искать в Klar</string>
+    <string name="text_selection_search_action_klar" tools:ignore="BrandUsage">Искать в Klar</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
             Focus Beta is hard coded since we can't use variables in this context.
             Do not translate or transliterate Focus Beta.-->
-    <string name="text_selection_search_action_focus_beta">Искать в Focus Beta</string>
+    <string name="text_selection_search_action_focus_beta" tools:ignore="BrandUsage">Искать в Focus Beta</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
           Focus Nightly is hard coded since we can't use variables in this context.
           Do not translate or transliterate Focus Nightly.-->
-    <string name="text_selection_search_action_focus_nightly">Искать в Focus Nightly</string>
+    <string name="text_selection_search_action_focus_nightly" tools:ignore="BrandUsage">Искать в Focus Nightly</string>
 
     <!-- Content of about focus. Argument 1 is the app name (Firefox Focus/Firefox Klar/etc).
          Argument 2 is the url for the learn-more link. -->
-    <string name="about_content"><![CDATA[<p>%1$s даёт вам контроль.</p>
+    <string name="about_content" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[<p>%1$s даёт вам контроль.</p>
 <p>Используйте его как приватный браузер:
   <ul>
     <li>Ищите и просматривайте сеть</li>
@@ -354,6 +355,15 @@
     <!-- In-app link (in settings) to Focus privacy notice. -->
     <string name="preference_privacy_notice">Политика приватности</string>
 
+    <!-- In-app link (in settings) to Focus licensing information. -->
+    <string name="preference_licensing_info">Сведения о лицензии</string>
+
+    <!-- Link to Focus licensing information from other libraries that we use. -->
+    <string name="preference_libraries_we_use">Используемые библиотеки</string>
+
+    <!-- Open Source Licenses page title. The first parameter is the app name -->
+    <string name="open_source_licenses_title">%s | Свободные библиотеки</string>
+
     <!-- Item in Preferences that shows the about page. Parameter 1 is the app name, i.e. Firefox Focus/Firefox Klar. -->
     <string name="preference_about">О %1$s</string>
 
@@ -483,7 +493,10 @@
 
 
 
-  <string name="error_hostLookup_title">Сервер не найден</string>
+  <!-- Snackbar that will be displayed after a website has been added to shortcuts. -->
+    <string name="snackbar_added_to_shortcuts">Добавлено в ярлыки!</string>
+
+    <string name="error_hostLookup_title">Сервер не найден</string>
 
 
 
@@ -503,10 +516,7 @@
 
 
 
-  <!-- Content description (not visible, for screen readers etc.): This is the description for the close button from the new onboarding flow screen one and two -->
-    <string name="onboarding_close_button_content_description">Закрыть</string>
-
-    <!-- New Onboarding flow first screen title -->
+  <!-- New Onboarding flow first screen title -->
     <!-- %1$s will be replaced by the app name and build variant(e.g. Firefox Focus, Firefox Klar Nightly) -->
     <string name="onboarding_first_screen_title">Добро пожаловать в %1$s</string>
 
@@ -596,9 +606,12 @@
     <!-- Label for a button in the "tabs tray" to erase the browsing history (closes all tabs and removes associated data). -->
     <string name="tabs_tray_action_erase">Удалить историю просмотра сети</string>
 
+    <!-- Label for the option in the Focus "tabs tray" to clos the other tabs except the current tab. -->
+    <string name="tabs_tray_action_erase_other">Закрыть остальные вкладки</string>
+
     <!-- If the user decides to open the current page in another browser and if Firefox is not installed then we show this
       item in the list of browsers. Clicking it will open the app store installed on the device (usually that's Google Play). -->
-    <string name="download_firefox">Загрузить Firefox</string>
+    <string name="download_firefox" tools:ignore="BrandUsage">Загрузить Firefox</string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)-->
@@ -610,23 +623,23 @@
   <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the MPL (e.g. https://www.mozilla.org/en-US/MPL/) -->
-    <string name="your_rights_content2"><![CDATA[%1$s предоставляется вам на условиях <a href="%2$s">Mozilla Public License</a> и других лицензий для открытого исходного кода.]]></string>
+    <string name="your_rights_content2" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[%1$s предоставляется вам на условиях <a href="%2$s">Mozilla Public License</a> и других лицензий для открытого исходного кода.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the trademark policy (e.g. https://www.mozilla.org/foundation/trademarks/policy/) -->
-    <string name="your_rights_content3"><![CDATA[Вы не получаете никаких прав или лицензий на товарные знаки Mozilla Foundation или любой другой стороны, включая имена или логотипы Mozilla, Firefox или %1$s. Дополнительную информацию можно найти <a href="%2$s">здесь</a>.]]></string>
+    <string name="your_rights_content3" tools:ignore="BrandUsage,IncorrectStraightDoubleQuote"><![CDATA[Вы не получаете никаких прав или лицензий на товарные знаки Mozilla Foundation или любой другой стороны, включая имена или логотипы Mozilla, Firefox или %1$s. Дополнительную информацию можно найти <a href="%2$s">здесь</a>.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the list of licenses used by the dependencies.-->
-    <string name="your_rights_content4"><![CDATA[Дополнительный исходный код для %1$s доступен под различными другими свободными и открытыми <a href="%2$s">лицензиями</a>.]]></string>
+    <string name="your_rights_content4" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[Дополнительный исходный код для %1$s доступен под различными другими свободными и открытыми <a href="%2$s">лицензиями</a>.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the GPL
     %3$s will be replaced with a URL linking to the tracking protection wiki page (e.g. https://wiki.mozilla.org/Security/Tracking_protection#Lists) -->
-    <string name="your_rights_content5"><![CDATA[%1$s также использует списки блокировки от Disconnect, Inc. как отдельные и независимые работы на условиях <a href="%2$s">Основной общественной лицензии GNU 3-ей версии</a>, доступные <a href="%3$s">здесь</a>.]]></string>
+    <string name="your_rights_content5" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[%1$s также использует списки блокировки от Disconnect, Inc. как отдельные и независимые работы на условиях <a href="%2$s">Основной общественной лицензии GNU 3-ей версии</a>, доступные <a href="%3$s">здесь</a>.]]></string>
 
     <!-- Text shown in prompts for GeckoView -->
     <string name="gv_prompt_username_hint">Имя пользователя</string>
@@ -708,6 +721,9 @@
     <!-- Text for indicating cookie banner handling is on this site, this is shown as part of the protections panel with the tracking protection toggle. -->
     <string name="cookie_banner_exception_item_description_state_on">ВКЛЮЧЕНО для этого сайта</string>
 
+    <!-- Text for indicating cookie reducer is not supported on the current site, this is shown as part of the protections panel with the tracking protection toggle. -->
+    <string name="cookie_banner_exception_site_not_supported">В настоящее время сайт не поддерживается</string>
+
     <!-- Text for indicating cookie banner handling is off this site, this is shown as part of the protections panel with the tracking protection toggle. -->
     <string name="cookie_banner_exception_item_description_state_off">ОТКЛЮЧЕНО для этого сайта</string>
 
@@ -730,19 +746,26 @@
     <string name="cookie_banner_exception_panel_description_state_on_for_site">%1$s удалит куки этого сайта и обновит страницу. Удаление всех кук может привести к выходу из системы или к пропаже покупок из корзины.</string>
 
     <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. The placeholder will be updated with the app name. -->
-    <string name="cookie_banner_exception_panel_description_state_off_for_site" moz:RemovedIn="111" tools:ignore="UnusedResources">%1$s может попытаться автоматически отклонить запросы на использование кук. Если вариант отклонения недоступен, %1$s может принять все куки, чтобы скрыть уведомление.</string>
-
-    <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. The placeholder will be updated with the app name. -->
     <string name="cookie_banner_exception_panel_description_state_off_for_site2">%1$s может попытаться автоматически отклонить запросы на использование кук.</string>
 
-    <!-- Contextual Feature Recommendation Popups -->
-    <!-- CFR for Cookie Banner (Banner Info Message). The placeholder will be updated with the app name. -->
-    <string name="cfr_for_cookie_banner" moz:RemovedIn="111" tools:ignore="UnusedResources">%1$s пытается отклонить запросы кук, чтобы убрать надоедливые уведомления о куках.\n\nУправляйте настройками уведомлений о куках в настройках.</string>
+    <!-- Long text for a detail explanation indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_description_site_is_not_supported">Этот сайт в настоящее время не поддерживается функцией Уменьшения числа уведомлений о куках. Вы хотите, чтобы наша команда проверила этот веб-сайт и добавила поддержку в будущем?</string>
 
+    <!-- Text for cancel button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_site_is_not_supported_cancel_button">Отмена</string>
+
+    <!-- Text for request support button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_site_is_not_supported_request_support_button">Запросить поддержку</string>
+
+    <!-- Label for the snackBar, after the user reports with success a website where cookie banner reducer did not work -->
+    <string name="cookie_banner_report_a_site_snackbar_label">Запрос на поддержку сайта отправлен.</string>
+
+    <!-- Label for cookie banner item from tracking protection, after the user reports with success a website where cookie banner reducer did not work -->
+    <string name="cookie_banner_the_site_was_reported">Запрос на поддержку сайта отправлен.</string>
+
+    <!-- Contextual Feature Recommendation Popups -->
     <!-- CFR for Cookie Banner (Banner Info Message). %1$s will be replaced by the app name, %2$s will be an active link using the string cfr_cookie_banner_link as text. -->
     <string name="cfr_cookie_banner">%1$s пытается отклонить запросы кук, чтобы убрать надоедливые уведомления о куках.\n\nУправляйте настройками уведомлений о куках в %2$s.</string>
-    <!-- CFR for Cookie Banner (Banner Info Message). This text should be the same as the settings text from "cfr_for_cookie_banner". The text should be underlined and should redirect the user to the cookie banner settings screen. -->
-    <string name="cfr_for_cookie_banner_underline_settings" moz:RemovedIn="111" tools:ignore="UnusedResources">настройки</string>
 
     <!-- CFR for Cookie Banner (Banner Info Message). This string is used as text for a link in cfr_cookie_banner and takes the user to the app settings. -->
     <string name="cfr_cookie_banner_link">настройках</string>
@@ -808,13 +831,13 @@
     <string name="preference_studies">Исследования</string>
 
     <!-- Preference for studies summary-->
-    <string name="preference_studies_summary">Firefox может время от времени устанавливать и проводить исследования.</string>
+    <string name="preference_studies_summary" tools:ignore="BrandUsage">Firefox может время от времени устанавливать и проводить исследования.</string>
 
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Подробнее</string>
 
     <!-- Dialog message shown when some changes are made on studies -->
-    <string name="studies_restart_app">Приложение закроется, чтобы применить изменения</string>
+    <string name="studies_restart_app" moz:removedIn="135">Приложение закроется, чтобы применить изменения</string>
 
     <!-- Title of the remove studies button -->
     <string name="studies_remove">Удалить</string>
@@ -902,9 +925,6 @@
 
     <!-- Label for the button in the snackbar that switches to the newly opened tab -->
     <string name="open_new_tab_snackbar">Перейти</string>
-
-    <!-- Text displayed in a notification when the user enters full screen mode -->
-    <string name="full_screen_notification">Вход в полноэкранный режим</string>
 
     <!-- Preference for switching to a new tab immediately after opening -->
     <string name="preference_open_new_tab">Сразу переходить на новую вкладку</string>
@@ -1008,17 +1028,11 @@
 
 
     <!-- The title of the error page for websites that do not support HTTPS when HTTPS-Only is turned on  -->
-    <string name="errorpage_httpsonly_title" moz:RemovedIn="111" tools:ignore="UnusedResources">Запрошенный вами сайт не поддерживает HTTPS</string>
-
-    <!-- The title of the error page for websites that do not support HTTPS when HTTPS-Only is turned on  -->
     <string name="errorpage_httpsonly_title2">Этот сайт не поддерживает HTTPS</string>
-
-    <!-- The text of the error page for websites that do not support HTTPS when HTTPS-Only is turned on. %1$s will get replaced with the name of the app (e.g. "Firefox Focus") -->
-    <string name="errorpage_httpsonly_message" moz:RemovedIn="111" tools:ignore="UnusedResources">По умолчанию %1$s пытается соединиться по протоколу HTTPS для повышения безопасности. Чтобы изменить этот параметр или узнать больше, перейдите в «Параметры» &gt; «Приватность и защита» &gt; «Защита».</string>
 
     <!-- The text of the error page for websites that do not support HTTPS when HTTPS-Only is turned on. %1$s will get replaced with the name of the app (e.g. "Firefox Focus").
         Contains a button that will redirect the user to Privacy & Security Screen-->
-    <string name="errorpage_httpsonly_message2"><![CDATA[%1$s пытается использовать HTTPS-соединение, когда это возможно, для повышения безопасности.
+    <string name="errorpage_httpsonly_message2" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[%1$s пытается использовать HTTPS-соединение, когда это возможно, для повышения безопасности.
      <a href="%2$s">Подробнее</a> <br/><br/>
      Измените эту настройку в меню «Настройки» > «Приватность и защита» > «Защита».]]></string>
 
@@ -1100,4 +1114,12 @@
     <!-- This is te text of the snackbar that appears after the search widget was added successfully
     to the home screen. -->
     <string name="promote_search_widget_snackbar_message">Виджет добавлен на домашний экран</string>
+
+    <!-- Messages explaining how to exit fullscreen mode -->
+    <!-- Message shown to explain how to exit fullscreen mode when gesture navigation is enabled. -->
+    <!-- Localisation note: this text should be as short as possible, max 68 chars -->
+    <string name="exit_fullscreen_with_gesture_short">Перетащите сверху и используйте жест назад для выхода</string>
+    <!-- Message shown to explain how to exit fullscreen mode when using back button navigation. -->
+    <!-- Localisation note: this text should be as short as possible, max 68 chars -->
+    <string name="exit_fullscreen_with_back_button_short">Перетащите сверху и нажмите «Назад» для выхода</string>
 </resources>

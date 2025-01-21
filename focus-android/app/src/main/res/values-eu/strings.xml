@@ -53,7 +53,6 @@
     <string name="menu_remove_from_shortcuts">Kendu lasterbideetatik</string>
 
     <!-- Menu item: Shows information about features and changes that are new to this version -->
-    <string name="menu_whats_new">Nobedadeak</string>
     <string name="menu_settings">Ezarpenak</string>
     <string name="menu_about">Honi buruz</string>
     <string name="menu_help">Laguntza</string>
@@ -84,10 +83,12 @@
          sharing an URL. -->
     <string name="share_dialog_title">Partekatu</string>
 
-    <!-- While a browsing session is active (in the foreground or background) we will show a notification
-         so that the user doesn't forget about the website still being open. This text is shown in
-         the notification. Clicking the notification will have the same effect as clicking the "erase"
-         button in the application. -->
+    <string name="notification_erase_title_android_14">Ezabatu nabigatze-historia?</string>
+
+    <!-- Text shown in the notification description that pops up to remind the user that a browsing session is active
+    for Android 14+. -->
+    <string name="notification_erase_text_android_14_1">Sakatu edo pasatu zeharka jakinarazpen hau zure nabigatze-historia ezabatzeko.</string>
+
     <string name="notification_erase_text">Ezabatu nabigatze-historia</string>
 
     <!-- Notification action to open Focus and resume the current browsing session. -->
@@ -121,24 +122,24 @@
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
          Focus is hard coded since we can't use variables in this context.
          Do not translate or transliterate Focus.-->
-    <string name="text_selection_search_action_focus">Bilatu Focus erabiliz</string>
+    <string name="text_selection_search_action_focus" tools:ignore="BrandUsage">Bilatu Focus erabiliz</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
              Klar is hard coded since we can't use variables in this context.
              Do not translate or transliterate Klar.-->
-    <string name="text_selection_search_action_klar">Bilatu Klar erabliz</string>
+    <string name="text_selection_search_action_klar" tools:ignore="BrandUsage">Bilatu Klar erabliz</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
             Focus Beta is hard coded since we can't use variables in this context.
             Do not translate or transliterate Focus Beta.-->
-    <string name="text_selection_search_action_focus_beta">Bilatu Focus Beta erabiliz</string>
+    <string name="text_selection_search_action_focus_beta" tools:ignore="BrandUsage">Bilatu Focus Beta erabiliz</string>
 
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
           Focus Nightly is hard coded since we can't use variables in this context.
           Do not translate or transliterate Focus Nightly.-->
-    <string name="text_selection_search_action_focus_nightly">Bilatu Focus Nightly erabiliz</string>
+    <string name="text_selection_search_action_focus_nightly" tools:ignore="BrandUsage">Bilatu Focus Nightly erabiliz</string>
 
     <!-- Content of about focus. Argument 1 is the app name (Firefox Focus/Firefox Klar/etc).
          Argument 2 is the url for the learn-more link. -->
-    <string name="about_content"><![CDATA[<p>%1$s(e)k agintea ematen dizu.</p>
+    <string name="about_content" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[<p>%1$s(e)k agintea ematen dizu.</p>
 <p>Erabili nabigatzaile pribatu gisa:
   <ul>
     <li>Bilatu eta nabigatu aplikaziotik zuzenean</li>
@@ -353,6 +354,15 @@
     <!-- In-app link (in settings) to Focus privacy notice. -->
     <string name="preference_privacy_notice">Pribatutasun-oharra</string>
 
+    <!-- In-app link (in settings) to Focus licensing information. -->
+    <string name="preference_licensing_info">Lizentziaren informazioa</string>
+
+    <!-- Link to Focus licensing information from other libraries that we use. -->
+    <string name="preference_libraries_we_use">Erabiltzen ditugun liburutegiak</string>
+
+    <!-- Open Source Licenses page title. The first parameter is the app name -->
+    <string name="open_source_licenses_title">%s | Kode irekiko liburutegiak</string>
+
     <!-- Item in Preferences that shows the about page. Parameter 1 is the app name, i.e. Firefox Focus/Firefox Klar. -->
     <string name="preference_about">%1$s(r)i buruz</string>
 
@@ -481,7 +491,10 @@
 
 
 
-  <string name="error_hostLookup_title">Zerbitzaria ez da aurkitu</string>
+  <!-- Snackbar that will be displayed after a website has been added to shortcuts. -->
+    <string name="snackbar_added_to_shortcuts">Lasterbideetara gehituta!</string>
+
+    <string name="error_hostLookup_title">Zerbitzaria ez da aurkitu</string>
 
 
 
@@ -501,10 +514,7 @@
 
 
 
-  <!-- Content description (not visible, for screen readers etc.): This is the description for the close button from the new onboarding flow screen one and two -->
-    <string name="onboarding_close_button_content_description">Itxi</string>
-
-    <!-- New Onboarding flow first screen title -->
+  <!-- New Onboarding flow first screen title -->
     <!-- %1$s will be replaced by the app name and build variant(e.g. Firefox Focus, Firefox Klar Nightly) -->
     <string name="onboarding_first_screen_title">Ongi etorri %1$s(e)ra!</string>
 
@@ -592,9 +602,12 @@
     <!-- Label for a button in the "tabs tray" to erase the browsing history (closes all tabs and removes associated data). -->
     <string name="tabs_tray_action_erase">Ezabatu nabigatze-historia</string>
 
+    <!-- Label for the option in the Focus "tabs tray" to clos the other tabs except the current tab. -->
+    <string name="tabs_tray_action_erase_other">Itxi beste fitxak</string>
+
     <!-- If the user decides to open the current page in another browser and if Firefox is not installed then we show this
       item in the list of browsers. Clicking it will open the app store installed on the device (usually that's Google Play). -->
-    <string name="download_firefox">Deskargatu Firefox</string>
+    <string name="download_firefox" tools:ignore="BrandUsage">Deskargatu Firefox</string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)-->
@@ -606,23 +619,23 @@
   <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the MPL (e.g. https://www.mozilla.org/en-US/MPL/) -->
-    <string name="your_rights_content2"><![CDATA[%1$s zure eskura dago <a href="%2$s">Mozilla Public License</a> eta kode irekiko beste lizentzien baldintzapean.]]></string>
+    <string name="your_rights_content2" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[%1$s zure eskura dago <a href="%2$s">Mozilla Public License</a> eta kode irekiko beste lizentzien baldintzapean.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the trademark policy (e.g. https://www.mozilla.org/foundation/trademarks/policy/) -->
-    <string name="your_rights_content3"><![CDATA[Ez zaizu inolako eskubiderik edo lizentziarik aitortzen Mozilla Fundazioaren edo bestelakoen marka erregistratuetan, Mozilla, Firefox edo %1$s izen edo logoetan barne. Argibide gehiago <a href="%2$s">hemen</a> aurki daitezke.]]></string>
+    <string name="your_rights_content3" tools:ignore="BrandUsage,IncorrectStraightDoubleQuote"><![CDATA[Ez zaizu inolako eskubiderik edo lizentziarik aitortzen Mozilla Fundazioaren edo bestelakoen marka erregistratuetan, Mozilla, Firefox edo %1$s izen edo logoetan barne. Argibide gehiago <a href="%2$s">hemen</a> aurki daitezke.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the list of licenses used by the dependencies.-->
-    <string name="your_rights_content4"><![CDATA[%1$s aplikazioaren iturburu-kode gehigarria erabilgarri dago kode irekikoak eta libreak diren bestelako <a href="%2$s">lizentzietan</a>.]]></string>
+    <string name="your_rights_content4" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[%1$s aplikazioaren iturburu-kode gehigarria erabilgarri dago kode irekikoak eta libreak diren bestelako <a href="%2$s">lizentzietan</a>.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the GPL
     %3$s will be replaced with a URL linking to the tracking protection wiki page (e.g. https://wiki.mozilla.org/Security/Tracking_protection#Lists) -->
-    <string name="your_rights_content5"><![CDATA[%1$s aplikazioak Diskonnect, Inc.-ek emandako blokeo-zerrendak ere erabiltzen ditu, <a href="%2$s">GNU General Public License v3</a> lizentziapeko aparteko lan independente gisa eta eskuragarri dago <a href="%3$s">hemen</a>.]]></string>
+    <string name="your_rights_content5" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[%1$s aplikazioak Diskonnect, Inc.-ek emandako blokeo-zerrendak ere erabiltzen ditu, <a href="%2$s">GNU General Public License v3</a> lizentziapeko aparteko lan independente gisa eta eskuragarri dago <a href="%3$s">hemen</a>.]]></string>
 
     <!-- Text shown in prompts for GeckoView -->
     <string name="gv_prompt_username_hint">Erabiltzaile-izena</string>
@@ -704,6 +717,9 @@
     <!-- Text for indicating cookie banner handling is on this site, this is shown as part of the protections panel with the tracking protection toggle. -->
     <string name="cookie_banner_exception_item_description_state_on">Aktibatuta gune honetarako</string>
 
+    <!-- Text for indicating cookie reducer is not supported on the current site, this is shown as part of the protections panel with the tracking protection toggle. -->
+    <string name="cookie_banner_exception_site_not_supported">Une honetan gune honetarako euskarririk ez</string>
+
     <!-- Text for indicating cookie banner handling is off this site, this is shown as part of the protections panel with the tracking protection toggle. -->
     <string name="cookie_banner_exception_item_description_state_off">Desaktibatuta gune honetarako</string>
 
@@ -726,19 +742,26 @@
     <string name="cookie_banner_exception_panel_description_state_on_for_site">%1$s(e)k gune honetako cookieak garbitu eta orria berrituko du. Cookie guztiak garbitzean, saioak amaitu edo erosketa-orgak hustu litezke.</string>
 
     <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. The placeholder will be updated with the app name. -->
-    <string name="cookie_banner_exception_panel_description_state_off_for_site" moz:RemovedIn="111" tools:ignore="UnusedResources">%1$s saia daiteke cookie iragarki-bandetako eskaerak automatikoki ukatzen. Ukatzeko aukera ez badago erabilgarri, %1$s(e)k cookie guztiak onar litzake iragarki-banda baztertzeko.</string>
-
-    <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. The placeholder will be updated with the app name. -->
     <string name="cookie_banner_exception_panel_description_state_off_for_site2">%1$s automatikoki saia daiteke cookie-eskaerak ukatzen.</string>
 
-    <!-- Contextual Feature Recommendation Popups -->
-    <!-- CFR for Cookie Banner (Banner Info Message). The placeholder will be updated with the app name. -->
-    <string name="cfr_for_cookie_banner" moz:RemovedIn="111" tools:ignore="UnusedResources">%1$s cookie eskaerak ukatzen saiatzen da cookie iragarki-banda gogaikarriak baztertzeko.\n\nKudeatu cookie iragarki-banden hobespenak ezarpenetan.</string>
+    <!-- Long text for a detail explanation indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_description_site_is_not_supported">Cookie iragarki-banden murrizpenak oraindik ez du gune honetarako euskarririk. Gure taldeak webgune hau berrikusi eta etorkizunean bere euskarria gehitzea eskatu nahi duzu?</string>
 
+    <!-- Text for cancel button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_site_is_not_supported_cancel_button">Utzi</string>
+
+    <!-- Text for request support button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_site_is_not_supported_request_support_button">Eskatu euskarria</string>
+
+    <!-- Label for the snackBar, after the user reports with success a website where cookie banner reducer did not work -->
+    <string name="cookie_banner_report_a_site_snackbar_label">Gunearen euskarria gehitzeko eskaera bidalita.</string>
+
+    <!-- Label for cookie banner item from tracking protection, after the user reports with success a website where cookie banner reducer did not work -->
+    <string name="cookie_banner_the_site_was_reported">Gunearen euskarria gehitzeko eskaera bidalita.</string>
+
+    <!-- Contextual Feature Recommendation Popups -->
     <!-- CFR for Cookie Banner (Banner Info Message). %1$s will be replaced by the app name, %2$s will be an active link using the string cfr_cookie_banner_link as text. -->
     <string name="cfr_cookie_banner">%1$s cookie eskaerak ukatzen saiatzen da cookie iragarki-banda gogaikarriak baztertzeko.\n\nKudeatu cookie iragarki-banden hobespenak %2$s.</string>
-    <!-- CFR for Cookie Banner (Banner Info Message). This text should be the same as the settings text from "cfr_for_cookie_banner". The text should be underlined and should redirect the user to the cookie banner settings screen. -->
-    <string name="cfr_for_cookie_banner_underline_settings" moz:RemovedIn="111" tools:ignore="UnusedResources">ezarpenak</string>
 
     <!-- CFR for Cookie Banner (Banner Info Message). This string is used as text for a link in cfr_cookie_banner and takes the user to the app settings. -->
     <string name="cfr_cookie_banner_link">ezarpenetan</string>
@@ -804,13 +827,13 @@
     <string name="preference_studies">Esperimentuak</string>
 
     <!-- Preference for studies summary-->
-    <string name="preference_studies_summary">Noizean behin esperimentuak instala eta exekuta litzake Firefoxek.</string>
+    <string name="preference_studies_summary" tools:ignore="BrandUsage">Noizean behin esperimentuak instala eta exekuta litzake Firefoxek.</string>
 
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Argibide gehiago</string>
 
     <!-- Dialog message shown when some changes are made on studies -->
-    <string name="studies_restart_app">Aplikazioa itxi egingo da aldaketak aplikatzeko</string>
+    <string name="studies_restart_app" moz:removedIn="135">Aplikazioa itxi egingo da aldaketak aplikatzeko</string>
 
     <!-- Title of the remove studies button -->
     <string name="studies_remove">Kendu</string>
@@ -898,9 +921,6 @@
 
     <!-- Label for the button in the snackbar that switches to the newly opened tab -->
     <string name="open_new_tab_snackbar">Aldatu</string>
-
-    <!-- Text displayed in a notification when the user enters full screen mode -->
-    <string name="full_screen_notification">Pantaila osoko moduan sartzen</string>
 
     <!-- Preference for switching to a new tab immediately after opening -->
     <string name="preference_open_new_tab">Aldatu berehala loturara fitxa berrian</string>
@@ -1004,17 +1024,11 @@
 
 
     <!-- The title of the error page for websites that do not support HTTPS when HTTPS-Only is turned on  -->
-    <string name="errorpage_httpsonly_title" moz:RemovedIn="111" tools:ignore="UnusedResources">Eskatu duzun guneak ez du HTTPS onartzen</string>
-
-    <!-- The title of the error page for websites that do not support HTTPS when HTTPS-Only is turned on  -->
     <string name="errorpage_httpsonly_title2">Gune honek ez du HTTPS onartzen</string>
-
-    <!-- The text of the error page for websites that do not support HTTPS when HTTPS-Only is turned on. %1$s will get replaced with the name of the app (e.g. "Firefox Focus") -->
-    <string name="errorpage_httpsonly_message" moz:RemovedIn="111" tools:ignore="UnusedResources">Lehenespenez, segurtasuna areagotzeko HTTPS erabiliz konektatzen saiatzen da %1$s. Ezarpen hau aldatu edo argibide gehiago jasotzeko, zoaz Ezarpenak &gt; Pribatutasuna eta segurtasuna &gt; Segurtasuna atalera.</string>
 
     <!-- The text of the error page for websites that do not support HTTPS when HTTPS-Only is turned on. %1$s will get replaced with the name of the app (e.g. "Firefox Focus").
         Contains a button that will redirect the user to Privacy & Security Screen-->
-    <string name="errorpage_httpsonly_message2"><![CDATA[%1$s saiatzen da ahal denean HTTPS konexioa erabiltzen segurtasun hobeagorako.
+    <string name="errorpage_httpsonly_message2" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[%1$s saiatzen da ahal denean HTTPS konexioa erabiltzen segurtasun hobeagorako.
      <a href="%2$s">Argibide gehiago</a> <br/><br/>
      Aldatu ezarpen hau Ezarpenak > Pribatutasuna eta Segurtasuna > Segurtasuna atalean.]]></string>
 
@@ -1096,4 +1110,12 @@
     <!-- This is te text of the snackbar that appears after the search widget was added successfully
     to the home screen. -->
     <string name="promote_search_widget_snackbar_message">Widgeta hasierako pantailan gehitu da</string>
+
+    <!-- Messages explaining how to exit fullscreen mode -->
+    <!-- Message shown to explain how to exit fullscreen mode when gesture navigation is enabled. -->
+    <!-- Localisation note: this text should be as short as possible, max 68 chars -->
+    <string name="exit_fullscreen_with_gesture_short">Irteteko, arrastatu goitik eta erabili atzerako keinua</string>
+    <!-- Message shown to explain how to exit fullscreen mode when using back button navigation. -->
+    <!-- Localisation note: this text should be as short as possible, max 68 chars -->
+    <string name="exit_fullscreen_with_back_button_short">Irteteko, arrastatu goitik eta sakatu atzera</string>
 </resources>

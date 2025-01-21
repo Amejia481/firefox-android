@@ -54,7 +54,6 @@
     <string name="menu_remove_from_shortcuts">شارٹ کٹاں کنوں ہٹاؤ</string>
 
     <!-- Menu item: Shows information about features and changes that are new to this version -->
-    <string name="menu_whats_new">نواں کیا ہے؟</string>
     <string name="menu_settings">ترتیباں</string>
     <string name="menu_about">تعارف</string>
     <string name="menu_help">مدد</string>
@@ -87,10 +86,12 @@
          sharing an URL. -->
     <string name="share_dialog_title">شیئر بذریعہ</string>
 
-    <!-- While a browsing session is active (in the foreground or background) we will show a notification
-         so that the user doesn't forget about the website still being open. This text is shown in
-         the notification. Clicking the notification will have the same effect as clicking the "erase"
-         button in the application. -->
+    <string name="notification_erase_title_android_14">براؤزنگ تاریخ مٹاؤں؟</string>
+
+    <!-- Text shown in the notification description that pops up to remind the user that a browsing session is active
+    for Android 14+. -->
+    <string name="notification_erase_text_android_14_1">آپݨی براؤزنگ تاریخ کوں محفوظ طریقے نال مٹاوݨ کیتے ایں اطلاع نامے تے انگل پھیرو یا انگل نال پونجھو۔</string>
+
     <string name="notification_erase_text">براؤزنگ تاریخ مٹاؤ</string>
 
     <!-- Notification action to open Focus and resume the current browsing session. -->
@@ -124,23 +125,23 @@
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
          Focus is hard coded since we can't use variables in this context.
          Do not translate or transliterate Focus.-->
-    <string name="text_selection_search_action_focus">فوکس وچ ڳولو</string>
+    <string name="text_selection_search_action_focus" tools:ignore="BrandUsage">فوکس وچ ڳولو</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
              Klar is hard coded since we can't use variables in this context.
              Do not translate or transliterate Klar.-->
-    <string name="text_selection_search_action_klar">کلار وچ ڳولو</string>
+    <string name="text_selection_search_action_klar" tools:ignore="BrandUsage">کلار وچ ڳولو</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
             Focus Beta is hard coded since we can't use variables in this context.
             Do not translate or transliterate Focus Beta.-->
-    <string name="text_selection_search_action_focus_beta">فوکس بیٹا وچ ڳولو</string>
+    <string name="text_selection_search_action_focus_beta" tools:ignore="BrandUsage">فوکس بیٹا وچ ڳولو</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
           Focus Nightly is hard coded since we can't use variables in this context.
           Do not translate or transliterate Focus Nightly.-->
-    <string name="text_selection_search_action_focus_nightly">فوکس نائٹلی وچ ڳولو</string>
+    <string name="text_selection_search_action_focus_nightly" tools:ignore="BrandUsage">فوکس نائٹلی وچ ڳولو</string>
 
     <!-- Content of about focus. Argument 1 is the app name (Firefox Focus/Firefox Klar/etc).
          Argument 2 is the url for the learn-more link. -->
-    <string name="about_content"><![CDATA[<p>%1$s تہاکوں کنٹرول ݙیندی ہے </p>
+    <string name="about_content" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[<p>%1$s تہاکوں کنٹرول ݙیندی ہے </p>
 <p> ایں کوں نجی براؤزر وانگوں ورتو:
   <ul> 
     <li> ایپ وچ لبھو تے براؤز کرو </li>
@@ -361,6 +362,15 @@
     <!-- In-app link (in settings) to Focus privacy notice. -->
     <string name="preference_privacy_notice">رازداری نوٹس</string>
 
+    <!-- In-app link (in settings) to Focus licensing information. -->
+    <string name="preference_licensing_info">لائسنس ڄاݨکاری</string>
+
+    <!-- Link to Focus licensing information from other libraries that we use. -->
+    <string name="preference_libraries_we_use">لائبریریاں جہڑیاں اساں ورتیندوں</string>
+
+    <!-- Open Source Licenses page title. The first parameter is the app name -->
+    <string name="open_source_licenses_title">OSS | %s لائبریریاں</string>
+
     <!-- Item in Preferences that shows the about page. Parameter 1 is the app name, i.e. Firefox Focus/Firefox Klar. -->
     <string name="preference_about">%1$s دے بارے</string>
 
@@ -484,10 +494,10 @@
     <!-- Snackbar action to immediately open the successfully downloaded file. -->
     <string name="download_snackbar_open">کھولو</string>
 
-    <string name="error_hostLookup_title">سرور کائنی لبھا</string>
+    <!-- Snackbar that will be displayed after a website has been added to shortcuts. -->
+    <string name="snackbar_added_to_shortcuts">شارٹ کٹاں وچ شامل تھی ڳیا!</string>
 
-    <!-- Content description (not visible, for screen readers etc.): This is the description for the close button from the new onboarding flow screen one and two -->
-    <string name="onboarding_close_button_content_description">بند کرو</string>
+    <string name="error_hostLookup_title">سرور کائنی لبھا</string>
 
     <!-- New Onboarding flow first screen title -->
     <!-- %1$s will be replaced by the app name and build variant(e.g. Firefox Focus, Firefox Klar Nightly) -->
@@ -582,9 +592,12 @@
     <!-- Label for a button in the "tabs tray" to erase the browsing history (closes all tabs and removes associated data). -->
     <string name="tabs_tray_action_erase">براؤزنگ تاریخ مٹاؤ</string>
 
+    <!-- Label for the option in the Focus "tabs tray" to clos the other tabs except the current tab. -->
+    <string name="tabs_tray_action_erase_other">ٻیاں ٹیباں بند کرو</string>
+
     <!-- If the user decides to open the current page in another browser and if Firefox is not installed then we show this
       item in the list of browsers. Clicking it will open the app store installed on the device (usually that's Google Play). -->
-    <string name="download_firefox">فائرفوکس ڈاؤن لوڈ کرو</string>
+    <string name="download_firefox" tools:ignore="BrandUsage">فائرفوکس ڈاؤن لوڈ کرو</string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)-->
@@ -593,23 +606,23 @@
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the MPL (e.g. https://www.mozilla.org/en-US/MPL/) -->
-    <string name="your_rights_content2"><![CDATA[ <a href="%2$s">موزلّا عوامی لائسنس</a>  تے ٻئے کھلے ماخذ لائسنساں دیاں شرطاں دے تحت تہاݙے کیتے %1$s دستیاب بݨایا ڳئے۔]]></string>
+    <string name="your_rights_content2" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[ <a href="%2$s">موزلّا عوامی لائسنس</a>  تے ٻئے کھلے ماخذ لائسنساں دیاں شرطاں دے تحت تہاݙے کیتے %1$s دستیاب بݨایا ڳئے۔]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the trademark policy (e.g. https://www.mozilla.org/foundation/trademarks/policy/) -->
-    <string name="your_rights_content3"><![CDATA[تہاکوں موزلّا فاؤنڈیشن یا کہیں ٻئی پارٹی  دے ٹریڈ مارک، موزلّا، فائرفوکس یا %1$s ناں یا لوگو سمیت، کوئی خاص حق یا لائسنس کائنی ݙتا ڳیا۔ وادھوں ڄاݨکاری <a href="%2$s">اتھ</a> لبھ سڳدی ہے۔]]></string>
+    <string name="your_rights_content3" tools:ignore="BrandUsage,IncorrectStraightDoubleQuote"><![CDATA[تہاکوں موزلّا فاؤنڈیشن یا کہیں ٻئی پارٹی  دے ٹریڈ مارک، موزلّا، فائرفوکس یا %1$s ناں یا لوگو سمیت، کوئی خاص حق یا لائسنس کائنی ݙتا ڳیا۔ وادھوں ڄاݨکاری <a href="%2$s">اتھ</a> لبھ سڳدی ہے۔]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the list of licenses used by the dependencies.-->
-    <string name="your_rights_content4"><![CDATA[%1$s کیتے ٻئے ٻہوں سارے مفتی تے کھلے ماخذ <a href="%2$s">لائسنس</a> دے تحت وادھوں ماخذ کوڈ دستیاب ہے۔]]></string>
+    <string name="your_rights_content4" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[%1$s کیتے ٻئے ٻہوں سارے مفتی تے کھلے ماخذ <a href="%2$s">لائسنس</a> دے تحت وادھوں ماخذ کوڈ دستیاب ہے۔]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the GPL
     %3$s will be replaced with a URL linking to the tracking protection wiki page (e.g. https://wiki.mozilla.org/Security/Tracking_protection#Lists) -->
-    <string name="your_rights_content5"><![CDATA[ %1$s<a href="%2$s">جی این یو عمومی عوامی لائسنس وی3</a> دے تحت انج تے آزاد کماں دے طور تے ڈسکنکٹ، انک۔ ولوں فراہم تھیاں بلاک تندیراں کوں وی ورتیندے،   تے <a href="%3$s">اِتھ</a> دستیاب ہے۔]]></string>
+    <string name="your_rights_content5" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[ %1$s<a href="%2$s">جی این یو عمومی عوامی لائسنس وی3</a> دے تحت انج تے آزاد کماں دے طور تے ڈسکنکٹ، انک۔ ولوں فراہم تھیاں بلاک تندیراں کوں وی ورتیندے،   تے <a href="%3$s">اِتھ</a> دستیاب ہے۔]]></string>
 
     <!-- Text shown in prompts for GeckoView -->
     <string name="gv_prompt_username_hint">ورتݨ ناں</string>
@@ -691,6 +704,9 @@
     <!-- Text for indicating cookie banner handling is on this site, this is shown as part of the protections panel with the tracking protection toggle. -->
     <string name="cookie_banner_exception_item_description_state_on">ایں سائٹ کیتے چالو کرو</string>
 
+    <!-- Text for indicating cookie reducer is not supported on the current site, this is shown as part of the protections panel with the tracking protection toggle. -->
+    <string name="cookie_banner_exception_site_not_supported">سائٹ فی الحال سہارا تھئی کائنی</string>
+
     <!-- Text for indicating cookie banner handling is off this site, this is shown as part of the protections panel with the tracking protection toggle. -->
     <string name="cookie_banner_exception_item_description_state_off">ایں سائٹ کیتے بند کرو</string>
 
@@ -713,19 +729,26 @@
     <string name="cookie_banner_exception_panel_description_state_on_for_site">%1$s ایں سائٹ دیاں کوکیاں صاف کریسی تے ورقہ تازہ کریسی۔ساریاں کوکیاں صاف کرݨ نال تساں سائن آوٹ تھی سڳدے ہو یا تہاݙی خریداری ریڑھی خالی تھی ویسی۔</string>
 
     <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. The placeholder will be updated with the app name. -->
-    <string name="cookie_banner_exception_panel_description_state_off_for_site" moz:RemovedIn="111" tools:ignore="UnusedResources">%1$s آپݨے آپ کوکی بینراں دی درخواست کوں مسترد کرݨ دی کوشش کریندا ہے. اگر مسترد کرݨ دا آپشن موجودکائنی ، تاں %1$s ساری کوکیز کوں بینر ختم کرݨ پاروں قبول کر سڳدا ہے. </string>
-
-    <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. The placeholder will be updated with the app name. -->
     <string name="cookie_banner_exception_panel_description_state_off_for_site2">%1$s آپݨے آپ کوکی ارداساں کوں مسترد کرݨ دی کوشش کر سڳدے۔</string>
 
-    <!-- Contextual Feature Recommendation Popups -->
-    <!-- CFR for Cookie Banner (Banner Info Message). The placeholder will be updated with the app name. -->
-    <string name="cfr_for_cookie_banner" moz:RemovedIn="111" tools:ignore="UnusedResources">%1$s پریشان کن کوکی بینراں کوں برخواست کرݨ دیاں کوکی ارداساں کوں مسترد کرݨ دی کوشش کریندے۔ \n\n ترتیباں وچ کوکی بینر ترجیحاں دا بندوبست کرو۔</string>
+    <!-- Long text for a detail explanation indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_description_site_is_not_supported">ایہ سائٹ کوکی بینر گھٹاوݨ ولوں حمایت یافتہ کائنی۔ بھلا تساں ساݙی ٹیم کوں ایں ویب سائٹ تے نظرثانی کرݨ تے مستقبل وچ سپورٹ شامل کرݨ کیتے ارداس کرݨ پسند کریسو؟</string>
 
+    <!-- Text for cancel button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_site_is_not_supported_cancel_button">منسوخ</string>
+
+    <!-- Text for request support button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_site_is_not_supported_request_support_button">سپورٹ کیتے ارداس کرو</string>
+
+    <!-- Label for the snackBar, after the user reports with success a website where cookie banner reducer did not work -->
+    <string name="cookie_banner_report_a_site_snackbar_label">سپورٹ سائٹ دی ارداس جمع کرا ݙتی ڳئی ہے۔</string>
+
+    <!-- Label for cookie banner item from tracking protection, after the user reports with success a website where cookie banner reducer did not work -->
+    <string name="cookie_banner_the_site_was_reported">سپورٹ سائٹ دی ارداس جمع کرا ݙتی ڳئی ہے۔</string>
+
+    <!-- Contextual Feature Recommendation Popups -->
     <!-- CFR for Cookie Banner (Banner Info Message). %1$s will be replaced by the app name, %2$s will be an active link using the string cfr_cookie_banner_link as text. -->
     <string name="cfr_cookie_banner">%1$s پریشان کن کوکی بینراں کوں برخواست کرݨ دیاں کوکی ارداساں کوں مسترد کرݨ دی کوشش کریندے۔ \n\n %2$s وچ کوکی بینر ترجیحاں دا بندوبست کرو۔</string>
-    <!-- CFR for Cookie Banner (Banner Info Message). This text should be the same as the settings text from "cfr_for_cookie_banner". The text should be underlined and should redirect the user to the cookie banner settings screen. -->
-    <string name="cfr_for_cookie_banner_underline_settings" moz:RemovedIn="111" tools:ignore="UnusedResources">ترتیباں</string>
 
     <!-- CFR for Cookie Banner (Banner Info Message). This string is used as text for a link in cfr_cookie_banner and takes the user to the app settings. -->
     <string name="cfr_cookie_banner_link">ترتیباں</string>
@@ -791,13 +814,13 @@
     <string name="preference_studies">مطالعہ</string>
 
     <!-- Preference for studies summary-->
-    <string name="preference_studies_summary">فائرفوکس وقتاً فوقتاً مطالعہ انسٹال کرسڳدے تے چلا سڳدے۔</string>
+    <string name="preference_studies_summary" tools:ignore="BrandUsage">فائرفوکس وقتاً فوقتاً مطالعہ انسٹال کرسڳدے تے چلا سڳدے۔</string>
 
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">ٻیا سِکھو</string>
 
     <!-- Dialog message shown when some changes are made on studies -->
-    <string name="studies_restart_app">تبدیلیاں لاگو کرݨ کیتے ایپ چھوڑ ݙتی ویسی</string>
+    <string name="studies_restart_app" moz:removedIn="135">تبدیلیاں لاگو کرݨ کیتے ایپ چھوڑ ݙتی ویسی</string>
 
     <!-- Title of the remove studies button -->
     <string name="studies_remove">ہٹاؤ</string>
@@ -892,9 +915,6 @@
 
     <!-- Label for the button in the snackbar that switches to the newly opened tab -->
     <string name="open_new_tab_snackbar">سوئچ کرو</string>
-
-    <!-- Text displayed in a notification when the user enters full screen mode -->
-    <string name="full_screen_notification">پوری سکرین موڈ وچ داخل تھیندا پئے</string>
 
     <!-- Preference for switching to a new tab immediately after opening -->
     <string name="preference_open_new_tab">فوری طور تے نویں ٹیب وچ لنک تے سوئچ کرو</string>
@@ -994,15 +1014,15 @@
     <string name="preference_follow_device_theme">ڈیوائس تھیم تے عمل کرو</string>
 
     <!-- The title of the error page for websites that do not support HTTPS when HTTPS-Only is turned on  -->
-    <string name="errorpage_httpsonly_title" moz:RemovedIn="111" tools:ignore="UnusedResources">جہڑی سائٹ دی تساں ارداس کیتی ہے ایچ ٹی ٹی پی ایس کوں سہارا کائنی ݙیندی</string>
-
-    <!-- The title of the error page for websites that do not support HTTPS when HTTPS-Only is turned on  -->
     <string name="errorpage_httpsonly_title2">ایہ سائٹ ایچ ٹی ٹی پی ایس کوں سہارا کائنی ݙیندی</string>
 
-    <!-- The text of the error page for websites that do not support HTTPS when HTTPS-Only is turned on. %1$s will get replaced with the name of the app (e.g. "Firefox Focus") -->
-    <string name="errorpage_httpsonly_message" moz:RemovedIn="111" tools:ignore="UnusedResources">ڈیفالٹ نال، ایچ ٹی ٹی پی ایس ورتیندے ہوئے ودھائی سلامتی کیتے %1$s کنکٹ کرݨ دی کوشش کریندے۔ ایہ ترتیب وٹاوݨ کیتے یا ٻیا سکھݨ کیتے، ترتیباں &gt; رازداری تے سلامتی &gt; سلامتی تے ون٘ڄو۔ </string>
+     <!-- The text of the error page for websites that do not support HTTPS when HTTPS-Only is turned on. %1$s will get replaced with the name of the app (e.g. "Firefox Focus").
+        Contains a button that will redirect the user to Privacy & Security Screen-->
+    <string name="errorpage_httpsonly_message2" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[ڄݙݨ ممکن ہووے ودھیک سلامتی سانگے %1$s ایچ ٹی ٹی پی ایس کنکشن ورتݨ دی کوشش کریندے۔
+ <a href="%2$s">ٻیا سکھو</a><br/><br/>
+  ایہ ترتیباں وٹاؤ، ترتیباں > رازداری &amp; سلامتی > سلامتی۔]]></string>
 
-     <!-- The document title and heading of the error page shown when a website has an invalid or expired SSL certificate. -->
+    <!-- The document title and heading of the error page shown when a website has an invalid or expired SSL certificate. -->
     <string name="mozac_browser_errorpages_security_bad_cert_title">ناقابل بھروسا کنکشن</string>
 
      <!-- The error message shown when a website has an invalid or expired SSL certificate. -->
@@ -1079,4 +1099,12 @@
     <!-- This is te text of the snackbar that appears after the search widget was added successfully
     to the home screen. -->
     <string name="promote_search_widget_snackbar_message">ہوم سکرین تے ویجٹ شامل تھی ڳیا</string>
+
+    <!-- Messages explaining how to exit fullscreen mode -->
+    <!-- Message shown to explain how to exit fullscreen mode when gesture navigation is enabled. -->
+    <!-- Localisation note: this text should be as short as possible, max 68 chars -->
+    <string name="exit_fullscreen_with_gesture_short">اُتوں گھیلو تے ٻاہر نکلݨ کیتے واپسی دا اشارہ ورتو</string>
+    <!-- Message shown to explain how to exit fullscreen mode when using back button navigation. -->
+    <!-- Localisation note: this text should be as short as possible, max 68 chars -->
+    <string name="exit_fullscreen_with_back_button_short">اُتوں گھیلو تے ٻاہر نکلݨ کیتے واپس دباؤ</string>
 </resources>

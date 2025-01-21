@@ -57,10 +57,6 @@
     <string name="mozac_browser_errorpages_security_bad_hsts_cert_advanced">Erweitert…</string>
 
     <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
-    <string moz:removedIn="104" name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo" tools:ignore="UnusedResources"><![CDATA[
-        <label> <b>%1$s</b> hat eine Sicherheitsrichtlinie namens HTTP Strict Transport Security (HSTS), was bedeutet, dass sich <b>%2$s</b> nur über eine sichere Verbindung mit der Website verbinden kann. Daher kann keine Ausnahme für die Website hinzugefügt werden.
-    ]]></string>
-    <!-- The advanced certificate information shown when a website uses HSTS. The %1$s will be replaced by the website URL and %2$s will be replaced by the app name. It's only shown when a website uses HSTS. -->
     <string name="mozac_browser_errorpages_security_bad_hsts_cert_techInfo2"><![CDATA[
         <label> <b>%1$s</b> hat eine Sicherheitsrichtlinie namens HTTP Strict Transport Security (HSTS), was bedeutet, dass sich <b>%2$s</b> nur über eine sichere Verbindung mit der Website verbinden kann. Daher kann keine Ausnahme für die Website hinzugefügt werden.</label>
     ]]></string>
@@ -196,9 +192,12 @@
 	</ul>]]></string>
 
     <!-- The document title and heading of an error page. -->
-    <string name="mozac_browser_errorpages_no_internet_title">Keine Internetverbindung</string>
+    <string name="mozac_browser_errorpages_no_internet_title_2">Anscheinend gibt es ein Problem mit Ihrer Internetverbindung</string>
     <!-- The main body text of this error page. It will be shown beneath the title -->
-    <string name="mozac_browser_errorpages_no_internet_message">Überprüfen Sie Ihre Netzwerkverbindung oder versuchen Sie in wenigen Augenblicken, die Seite neu zu laden.</string>
+    <string name="mozac_browser_errorpages_no_internet_message_2">Versuchen Sie, auf einem anderen Gerät eine Verbindung herzustellen. Überprüfen Sie Ihr Modem oder Router. Trennen Sie die WLAN-Verbindung und stellen Sie die Verbindung wieder her.</string>
+    <!-- The document title and heading of an error page. -->
+    <string name="mozac_browser_errorpages_no_internet_error_code">Fehlercode: NS_ERROR_OFFLINE</string>
+
     <!-- Text that will show up on the button at the bottom of the error page -->
     <string name="mozac_browser_errorpages_no_internet_refresh_button">Neu laden</string>
 

@@ -53,7 +53,6 @@
     <string name="menu_remove_from_shortcuts">Usuń ze skrótów</string>
 
     <!-- Menu item: Shows information about features and changes that are new to this version -->
-    <string name="menu_whats_new">Co nowego</string>
     <string name="menu_settings">Ustawienia</string>
     <string name="menu_about">O programie</string>
     <string name="menu_help">Pomoc</string>
@@ -84,10 +83,12 @@
          sharing an URL. -->
     <string name="share_dialog_title">Udostępnij przez</string>
 
-    <!-- While a browsing session is active (in the foreground or background) we will show a notification
-         so that the user doesn't forget about the website still being open. This text is shown in
-         the notification. Clicking the notification will have the same effect as clicking the "erase"
-         button in the application. -->
+    <string name="notification_erase_title_android_14">Usunąć historię przeglądania?</string>
+
+    <!-- Text shown in the notification description that pops up to remind the user that a browsing session is active
+    for Android 14+. -->
+    <string name="notification_erase_text_android_14_1">Stuknij lub przeciągnij to powiadomienie, aby bezpiecznie usunąć historię przeglądania.</string>
+
     <string name="notification_erase_text">Usuń historię przeglądania</string>
 
     <!-- Notification action to open Focus and resume the current browsing session. -->
@@ -121,23 +122,23 @@
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
          Focus is hard coded since we can't use variables in this context.
          Do not translate or transliterate Focus.-->
-    <string name="text_selection_search_action_focus">Wyszukaj w Focus</string>
+    <string name="text_selection_search_action_focus" tools:ignore="BrandUsage">Wyszukaj w Focus</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
              Klar is hard coded since we can't use variables in this context.
              Do not translate or transliterate Klar.-->
-    <string name="text_selection_search_action_klar">Wyszukaj w Klar</string>
+    <string name="text_selection_search_action_klar" tools:ignore="BrandUsage">Wyszukaj w Klar</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
             Focus Beta is hard coded since we can't use variables in this context.
             Do not translate or transliterate Focus Beta.-->
-    <string name="text_selection_search_action_focus_beta">Wyszukaj w Focus Beta</string>
+    <string name="text_selection_search_action_focus_beta" tools:ignore="BrandUsage">Wyszukaj w Focus Beta</string>
     <!-- This is the label of an action we offer when the user selects text in other third-party apps.
           Focus Nightly is hard coded since we can't use variables in this context.
           Do not translate or transliterate Focus Nightly.-->
-    <string name="text_selection_search_action_focus_nightly">Wyszukaj w Focus Nightly</string>
+    <string name="text_selection_search_action_focus_nightly" tools:ignore="BrandUsage">Wyszukaj w Focus Nightly</string>
 
     <!-- Content of about focus. Argument 1 is the app name (Firefox Focus/Firefox Klar/etc).
          Argument 2 is the url for the learn-more link. -->
-    <string name="about_content"><![CDATA[<p>%1$s daje większą kontrolę.</p>
+    <string name="about_content" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[<p>%1$s daje większą kontrolę.</p>
 <p>Jako prywatna przeglądarka umożliwia:
   <ul>
     <li>wyszukiwanie i przeglądanie prosto z aplikacji</li>
@@ -290,7 +291,7 @@
     <string name="preference_privacy_block_ads">Blokowanie śledzących reklam</string>
     <string name="preference_privacy_block_ads_summary">Niektóre reklamy (nawet niekliknięte) śledzą odwiedziny zawierających je stron</string>
     <string name="preference_privacy_block_analytics">Blokowanie śledzących statystyk</string>
-    <string name="preference_privacy_block_analytics_summary">Używane do zbierania, analizowania i mierzenia działań użytkownika, takich jak kliknięcia i przewijanie</string>
+    <string name="preference_privacy_block_analytics_summary">Używane do zbierania, analizowania i mierzenia działań użytkownika, takich jak stuknięcia i przewijanie</string>
     <string name="preference_privacy_block_social">Blokowanie śledzących społecznościowych</string>
     <string name="preference_privacy_block_social_summary">Osadzane na stronach, aby śledzić ich odwiedziny i dodawać np. przyciski udostępniania</string>
     <string name="preference_privacy_block_content">Blokowanie pozostałych śledzących</string>
@@ -352,6 +353,15 @@
 
     <!-- In-app link (in settings) to Focus privacy notice. -->
     <string name="preference_privacy_notice">Zasady ochrony prywatności</string>
+
+    <!-- In-app link (in settings) to Focus licensing information. -->
+    <string name="preference_licensing_info">Informacje licencyjne</string>
+
+    <!-- Link to Focus licensing information from other libraries that we use. -->
+    <string name="preference_libraries_we_use">Używane przez nas biblioteki</string>
+
+    <!-- Open Source Licenses page title. The first parameter is the app name -->
+    <string name="open_source_licenses_title">%s | Biblioteki open source</string>
 
     <!-- Item in Preferences that shows the about page. Parameter 1 is the app name, i.e. Firefox Focus/Firefox Klar. -->
     <string name="preference_about">O programie %1$s</string>
@@ -482,7 +492,10 @@
 
 
 
-  <string name="error_hostLookup_title">Nie odnaleziono serwera</string>
+  <!-- Snackbar that will be displayed after a website has been added to shortcuts. -->
+    <string name="snackbar_added_to_shortcuts">Dodano do skrótów</string>
+
+    <string name="error_hostLookup_title">Nie odnaleziono serwera</string>
 
 
 
@@ -502,10 +515,7 @@
 
 
 
-  <!-- Content description (not visible, for screen readers etc.): This is the description for the close button from the new onboarding flow screen one and two -->
-    <string name="onboarding_close_button_content_description">Zamknij</string>
-
-    <!-- New Onboarding flow first screen title -->
+  <!-- New Onboarding flow first screen title -->
     <!-- %1$s will be replaced by the app name and build variant(e.g. Firefox Focus, Firefox Klar Nightly) -->
     <string name="onboarding_first_screen_title">Witamy w przeglądarce %1$s</string>
 
@@ -595,9 +605,12 @@
     <!-- Label for a button in the "tabs tray" to erase the browsing history (closes all tabs and removes associated data). -->
     <string name="tabs_tray_action_erase">Usuń historię przeglądania</string>
 
+    <!-- Label for the option in the Focus "tabs tray" to clos the other tabs except the current tab. -->
+    <string name="tabs_tray_action_erase_other">Zamknij inne karty</string>
+
     <!-- If the user decides to open the current page in another browser and if Firefox is not installed then we show this
       item in the list of browsers. Clicking it will open the app store installed on the device (usually that's Google Play). -->
-    <string name="download_firefox">Pobierz Firefoksa</string>
+    <string name="download_firefox" tools:ignore="BrandUsage">Pobierz Firefoksa</string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)-->
@@ -609,23 +622,23 @@
   <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the MPL (e.g. https://www.mozilla.org/en-US/MPL/) -->
-    <string name="your_rights_content2"><![CDATA[%1$s jest dostępny na warunkach licencji <a href="%2$s">MPL (Mozilla Public License)</a> i innych licencji open source.]]></string>
+    <string name="your_rights_content2" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[%1$s jest dostępny na warunkach licencji <a href="%2$s">MPL (Mozilla Public License)</a> i innych licencji open source.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the trademark policy (e.g. https://www.mozilla.org/foundation/trademarks/policy/) -->
-    <string name="your_rights_content3"><![CDATA[Nie otrzymujesz żadnych praw ani licencji do znaków towarowych Mozilla Foundation i innych podmiotów, w tym do nazw i logotypów Mozilla, Firefox i %1$s. <a href="%2$s">Tutaj</a> znajduje się więcej informacji na ten temat.]]></string>
+    <string name="your_rights_content3" tools:ignore="BrandUsage,IncorrectStraightDoubleQuote"><![CDATA[Nie otrzymujesz żadnych praw ani licencji do znaków towarowych Mozilla Foundation i innych podmiotów, w tym do nazw i logotypów Mozilla, Firefox i %1$s. <a href="%2$s">Tutaj</a> znajduje się więcej informacji na ten temat.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the list of licenses used by the dependencies.-->
-    <string name="your_rights_content4"><![CDATA[Dodatkowy kod źródłowy programu %1$s jest dostępny na warunkach innych <a href="%2$s">licencji</a> wolnego oprogramowania i open source.]]></string>
+    <string name="your_rights_content4" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[Dodatkowy kod źródłowy programu %1$s jest dostępny na warunkach innych <a href="%2$s">licencji</a> wolnego oprogramowania i open source.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the GPL
     %3$s will be replaced with a URL linking to the tracking protection wiki page (e.g. https://wiki.mozilla.org/Security/Tracking_protection#Lists) -->
-    <string name="your_rights_content5"><![CDATA[%1$s używa także list blokowania dostarczanych przez Disconnect, Inc. jako oddzielny i niezależny produkt dostępny na warunkach licencji <a href="%2$s">GPLv3 (GNU General Public License v3)</a>, opisany <a href="%3$s">tutaj</a>.]]></string>
+    <string name="your_rights_content5" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[%1$s używa także list blokowania dostarczanych przez Disconnect, Inc. jako oddzielny i niezależny produkt dostępny na warunkach licencji <a href="%2$s">GPLv3 (GNU General Public License v3)</a>, opisany <a href="%3$s">tutaj</a>.]]></string>
 
     <!-- Text shown in prompts for GeckoView -->
     <string name="gv_prompt_username_hint">Nazwa użytkownika</string>
@@ -707,6 +720,9 @@
     <!-- Text for indicating cookie banner handling is on this site, this is shown as part of the protections panel with the tracking protection toggle. -->
     <string name="cookie_banner_exception_item_description_state_on">Włączone na tej witrynie</string>
 
+    <!-- Text for indicating cookie reducer is not supported on the current site, this is shown as part of the protections panel with the tracking protection toggle. -->
+    <string name="cookie_banner_exception_site_not_supported">Witryna obecnie nie jest obsługiwana</string>
+
     <!-- Text for indicating cookie banner handling is off this site, this is shown as part of the protections panel with the tracking protection toggle. -->
     <string name="cookie_banner_exception_item_description_state_off">Wyłączone na tej witrynie</string>
 
@@ -729,18 +745,26 @@
     <string name="cookie_banner_exception_panel_description_state_on_for_site">%1$s usunie ciasteczka tej witryny i odświeży stronę. Usunięcie wszystkich ciasteczek może spowodować wylogowanie ze strony lub opróżnienie koszyka w sklepie.</string>
 
     <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. The placeholder will be updated with the app name. -->
-    <string name="cookie_banner_exception_panel_description_state_off_for_site" moz:RemovedIn="111" tools:ignore="UnusedResources">%1$s może próbować automatycznie odrzucać prośby o akceptację ciasteczek. Jeśli nie ma możliwości odrzucenia, %1$s może zaakceptować wszystkie ciasteczka, aby zamknąć prośbę.</string>
-
-    <!-- Long text for a detail explanation indicating what will happen if cookie banner handling is off for a site, this is shown as part of the cookie banner panel in the toolbar. The placeholder will be updated with the app name. -->
     <string name="cookie_banner_exception_panel_description_state_off_for_site2">%1$s może próbować automatycznie odrzucać prośby o akceptację ciasteczek.</string>
 
+    <!-- Long text for a detail explanation indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_description_site_is_not_supported">Ta witryna nie jest obecnie obsługiwana przez funkcję ograniczania informacji o ciasteczkach. Czy chcesz poprosić nasz zespół o sprawdzenie tej witryny i dodanie jej obsługi w przyszłości?</string>
+
+    <!-- Text for cancel button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_site_is_not_supported_cancel_button">Anuluj</string>
+
+    <!-- Text for request support button indicating that cookie banner reduction is not supported for the current site, this is shown as part of the cookie banner panel in the toolbar. -->
+    <string name="cookie_banner_exception_panel_site_is_not_supported_request_support_button">Poproś o dodanie obsługi</string>
+
+    <!-- Label for the snackBar, after the user reports with success a website where cookie banner reducer did not work -->
+    <string name="cookie_banner_report_a_site_snackbar_label">Przesłano prośbę o dodanie obsługi witryny.</string>
+
+    <!-- Label for cookie banner item from tracking protection, after the user reports with success a website where cookie banner reducer did not work -->
+    <string name="cookie_banner_the_site_was_reported">Przesłano prośbę o dodanie obsługi witryny.</string>
+
     <!-- Contextual Feature Recommendation Popups -->
-    <!-- CFR for Cookie Banner (Banner Info Message). The placeholder will be updated with the app name. -->
-    <string name="cfr_for_cookie_banner" moz:RemovedIn="111" tools:ignore="UnusedResources">%1$s próbuje odrzucać irytujące prośby o akceptację ciasteczek.\n\nZarządzaj preferencjami odrzucania w ustawieniach.</string>
     <!-- CFR for Cookie Banner (Banner Info Message). %1$s will be replaced by the app name, %2$s will be an active link using the string cfr_cookie_banner_link as text. -->
     <string name="cfr_cookie_banner">%1$s próbuje odrzucać irytujące prośby o akceptację ciasteczek.\n\nZarządzaj preferencjami odrzucania w %2$s.</string>
-    <!-- CFR for Cookie Banner (Banner Info Message). This text should be the same as the settings text from "cfr_for_cookie_banner". The text should be underlined and should redirect the user to the cookie banner settings screen. -->
-    <string name="cfr_for_cookie_banner_underline_settings" moz:RemovedIn="111" tools:ignore="UnusedResources">ustawieniach</string>
     <!-- CFR for Cookie Banner (Banner Info Message). This string is used as text for a link in cfr_cookie_banner and takes the user to the app settings. -->
     <string name="cfr_cookie_banner_link">ustawieniach</string>
 
@@ -805,13 +829,13 @@
     <string name="preference_studies">Badania</string>
 
     <!-- Preference for studies summary-->
-    <string name="preference_studies_summary">Firefox może od czasu do czasu instalować i przeprowadzać badania.</string>
+    <string name="preference_studies_summary" tools:ignore="BrandUsage">Firefox może od czasu do czasu instalować i przeprowadzać badania.</string>
 
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Więcej informacji</string>
 
     <!-- Dialog message shown when some changes are made on studies -->
-    <string name="studies_restart_app">Aplikacja zakończy działanie, aby zastosować zmiany</string>
+    <string name="studies_restart_app" moz:removedIn="135">Aplikacja zakończy działanie, aby zastosować zmiany</string>
 
     <!-- Title of the remove studies button -->
     <string name="studies_remove">Usuń</string>
@@ -899,9 +923,6 @@
 
     <!-- Label for the button in the snackbar that switches to the newly opened tab -->
     <string name="open_new_tab_snackbar">Przejdź</string>
-
-    <!-- Text displayed in a notification when the user enters full screen mode -->
-    <string name="full_screen_notification">Włączono tryb pełnoekranowy</string>
 
     <!-- Preference for switching to a new tab immediately after opening -->
     <string name="preference_open_new_tab">Przechodzenie do odnośnika w nowej karcie bez pytania</string>
@@ -1005,12 +1026,31 @@
 
 
     <!-- The title of the error page for websites that do not support HTTPS when HTTPS-Only is turned on  -->
-    <string name="errorpage_httpsonly_title">Otwierana witryna nie obsługuje protokołu HTTPS</string>
+    <string name="errorpage_httpsonly_title2">Ta witryna nie obsługuje protokołu HTTPS</string>
 
-    <!-- The text of the error page for websites that do not support HTTPS when HTTPS-Only is turned on. %1$s will get replaced with the name of the app (e.g. "Firefox Focus") -->
-    <string name="errorpage_httpsonly_message">Domyślnie %1$s próbuje łączyć się za pomocą protokołu HTTPS w celu zwiększenia bezpieczeństwa. Aby zmienić to ustawienie lub dowiedzieć się więcej, otwórz Ustawienia → Prywatność i bezpieczeństwo → Bezpieczeństwo.</string>
+     <!-- The text of the error page for websites that do not support HTTPS when HTTPS-Only is turned on. %1$s will get replaced with the name of the app (e.g. "Firefox Focus").
+        Contains a button that will redirect the user to Privacy & Security Screen-->
+    <string name="errorpage_httpsonly_message2" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[%1$s próbuje używać połączenia HTTPS, kiedy tylko jest to możliwe, aby zwiększyć bezpieczeństwo.
+     <a href="%2$s">Więcej informacji</a> <br/><br/>
+     Można to zmienić w Ustawienia → Prywatność i bezpieczeństwo → Bezpieczeństwo.]]></string>
 
-    <!-- Sessions List -->
+    <!-- The document title and heading of the error page shown when a website has an invalid or expired SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_bad_cert_title">Niezabezpieczone połączenie</string>
+
+    <!-- The error message shown when a website has an invalid or expired SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_bad_cert_message"><![CDATA[
+    Może to być problem konfiguracji serwera lub próba podania się za ten serwer przez podmiot nieuprawniony. <br/><br/>
+    Jeśli łączono się wcześniej z tym serwerem, błąd może być tymczasowy.
+    ]]></string>
+
+    <!-- The advanced certificate information shown when a website has an invalid SSL certificate. The %1$s will be replaced by the app name and %2$s will be replaced by website URL. It's only shown when a website has an invalid SSL certificate. -->
+    <string name="mozac_browser_errorpages_security_bad_cert_techInfo"><![CDATA[
+        <label>Ktoś może próbować podszywać się pod tę witrynę. Kontynuacja może być ryzykowna.</label>
+        <br><br>
+        <label>%1$s nie ufa certyfikatowi witryny <b>%2$s</b>, ponieważ jego wystawca jest nieznany, jest samopodpisany lub serwer nie przesyła właściwych certyfikatów pośrednich.</label>
+    ]]></string>
+
+     <!-- Sessions List -->
     <!-- Content description (not visible, for screen readers etc.): Button that closes a tab n the sessions list -->
     <string name="close_tab">Zamknij kartę</string>
 
@@ -1072,4 +1112,12 @@
     <!-- This is te text of the snackbar that appears after the search widget was added successfully
     to the home screen. -->
     <string name="promote_search_widget_snackbar_message">Dodano widżet do ekranu głównego</string>
+
+    <!-- Messages explaining how to exit fullscreen mode -->
+    <!-- Message shown to explain how to exit fullscreen mode when gesture navigation is enabled. -->
+    <!-- Localisation note: this text should be as short as possible, max 68 chars -->
+    <string name="exit_fullscreen_with_gesture_short">Przeciągnij od góry i użyj gestu Wstecz, aby wyjść</string>
+    <!-- Message shown to explain how to exit fullscreen mode when using back button navigation. -->
+    <!-- Localisation note: this text should be as short as possible, max 68 chars -->
+    <string name="exit_fullscreen_with_back_button_short">Przeciągnij od góry i naciśnij Wstecz, aby wyjść</string>
 </resources>

@@ -53,7 +53,6 @@
     <string name="menu_remove_from_shortcuts">Pašalinti iš leistukų</string>
 
     <!-- Menu item: Shows information about features and changes that are new to this version -->
-    <string name="menu_whats_new">Kas naujo</string>
     <string name="menu_settings">Nustatymai</string>
     <string name="menu_about">Apie</string>
     <string name="menu_help">Žinynas</string>
@@ -84,10 +83,6 @@
          sharing an URL. -->
     <string name="share_dialog_title">Dalintis naudojant</string>
 
-    <!-- While a browsing session is active (in the foreground or background) we will show a notification
-         so that the user doesn't forget about the website still being open. This text is shown in
-         the notification. Clicking the notification will have the same effect as clicking the "erase"
-         button in the application. -->
     <string name="notification_erase_text">Valyti naršymo žurnalą</string>
 
     <!-- Notification action to open Focus and resume the current browsing session. -->
@@ -118,13 +113,9 @@
     <string name="shortcut_erase_and_open_long_label">Išvalyti ir atverti „%1$s“</string>
 
 
-    <!-- This is the label of an action we offer when the user selects text in other third-party apps.
-         Clicking this action will launch Focus and perform a search in the default search engine. -->
-    <string name="text_selection_search_action">Ieškoti privačiai</string>
-
     <!-- Content of about focus. Argument 1 is the app name (Firefox Focus/Firefox Klar/etc).
          Argument 2 is the url for the learn-more link. -->
-    <string name="about_content"><![CDATA[<p>„%1$s“ suteikia jums kontrolę.</p>
+    <string name="about_content" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[<p>„%1$s“ suteikia jums kontrolę.</p>
 <p>Naudokite ją kaip privačią naršyklę:
   <ul>
     <li>Ieškokite ir naršykite pačioje programoje</li>
@@ -294,10 +285,6 @@
 
     <!-- Preference Title: Biometrics can be used to unlock Focus if the previous session's data was not erased by the user. -->
     <string name="preference_security_biometric">Atrakinti programą piršto atspaudu</string>
-    <!-- Preference Summary: Biometrics (iris scan, fingerprint, or facial scan) can be used to unlock Focus if the app had a URL
-        open when the app was last run to ensure that only the phone's owner can view a previous session.
-        %1$s will be replaced by the app name (e.g. Firefox Focus) -->
-    <string name="preference_security_biometric_summary">Naudojant jūsų piršto antspaudą, galima atrakinti „%1$s“ programą, kai joje jau yra atvertas tinklalapis. Bus įjungtas slaptumas.</string>
 
     <!-- Preference Title: Secure Mode is a setting that prevents the app's content to show up in the "recent apps" screen
          and prevents the user from taking screenshots or casting the app to other displays. -->
@@ -359,10 +346,6 @@
     <string name="preference_search_add3">Pridėti kitą ieškyklę</string>
     <!-- Explanation text above the list of search engines-->
     <string name="preference_select_preferred_engine">Pasirinkite norimą ieškyklę:</string>
-
-    <!-- Title: Homescreen tips settings toggle to determine whether or not tips are displayed when
-     a user first launches the app. -->
-    <string name="preference_homescreen_tips">Rodyti pradžios ekrano patarimus</string>
 
     <!-- Clickable action text that shows when user long-presses on a search engine search field (this is similar to paste or copy when long-pressing a text field) -->
     <string name="action_option_add_search_engine">Pridėti ieškyklę</string>
@@ -554,7 +537,7 @@
 
     <!-- If the user decides to open the current page in another browser and if Firefox is not installed then we show this
       item in the list of browsers. Clicking it will open the app store installed on the device (usually that's Google Play). -->
-    <string name="download_firefox">Parsisiųsti „Firefox“</string>
+    <string name="download_firefox" tools:ignore="BrandUsage">Parsisiųsti „Firefox“</string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)-->
@@ -566,23 +549,23 @@
   <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the MPL (e.g. https://www.mozilla.org/en-US/MPL/) -->
-    <string name="your_rights_content2"><![CDATA[Jums leidžiama naudotis „%1$s“ programa, vadovaujantis <a href="%2$s">„Mozillos“ viešąja licencija</a> ir kitomis atviromis licencijomis.]]></string>
+    <string name="your_rights_content2" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[Jums leidžiama naudotis „%1$s“ programa, vadovaujantis <a href="%2$s">„Mozillos“ viešąja licencija</a> ir kitomis atviromis licencijomis.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the trademark policy (e.g. https://www.mozilla.org/foundation/trademarks/policy/) -->
-    <string name="your_rights_content3"><![CDATA[Jums nesuteikiamos jokios prekės ženklo teisės ar licencijos į „Mozilla Foundation“ ar kitų šalių prekės ženklus, tame tarpe – į „Mozilla“, „Firefox“ ar „%1$s“ vardus ar logotipus. Papildomą informaciją apie prekės ženklus galite rasti <a href="%2$s">čia</a>.]]></string>
+    <string name="your_rights_content3" tools:ignore="BrandUsage,IncorrectStraightDoubleQuote"><![CDATA[Jums nesuteikiamos jokios prekės ženklo teisės ar licencijos į „Mozilla Foundation“ ar kitų šalių prekės ženklus, tame tarpe – į „Mozilla“, „Firefox“ ar „%1$s“ vardus ar logotipus. Papildomą informaciją apie prekės ženklus galite rasti <a href="%2$s">čia</a>.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the list of licenses used by the dependencies.-->
-    <string name="your_rights_content4"><![CDATA[Papildoma „%1$s“ pirminis kodas yra pateikiamas su įvairiomis kitomis, laisvomis ir atviromis <a href="%2$s">licencijomis</a>.]]></string>
+    <string name="your_rights_content4" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[Papildoma „%1$s“ pirminis kodas yra pateikiamas su įvairiomis kitomis, laisvomis ir atviromis <a href="%2$s">licencijomis</a>.]]></string>
 
     <!-- Text shown in the "Your rights" screen.
     %1$s will be replaced with the name of the app (e.g. Firefox Focus)
     %2$s will be replaced with a URL linking to the GPL
     %3$s will be replaced with a URL linking to the tracking protection wiki page (e.g. https://wiki.mozilla.org/Security/Tracking_protection#Lists) -->
-    <string name="your_rights_content5"><![CDATA[„%1$s“ naudoja blokavimo sąrašus, kuriuos teikia „Disconnect, Inc.“, kaip atskirus ir nepriklausomus darbus vadovaujantis <a href="%2$s">„GNU General Public License v3“</a> licencija, ir pasiekiamus <a href="%3$s">čia</a>.]]></string>
+    <string name="your_rights_content5" tools:ignore="IncorrectStraightDoubleQuote"><![CDATA[„%1$s“ naudoja blokavimo sąrašus, kuriuos teikia „Disconnect, Inc.“, kaip atskirus ir nepriklausomus darbus vadovaujantis <a href="%2$s">„GNU General Public License v3“</a> licencija, ir pasiekiamus <a href="%3$s">čia</a>.]]></string>
 
     <!-- Text shown in prompts for GeckoView -->
     <string name="gv_prompt_username_hint">Naudotojo vardas</string>
@@ -662,13 +645,13 @@
     <string name="preference_studies">Tyrimai</string>
 
     <!-- Preference for studies summary-->
-    <string name="preference_studies_summary">„Firefox“ retkarčiais gali įdiegti ir vykdyti tyrimus.</string>
+    <string name="preference_studies_summary" tools:ignore="BrandUsage">„Firefox“ retkarčiais gali įdiegti ir vykdyti tyrimus.</string>
 
     <!-- Learn more link for studies, links to an article for more information about studies. -->
     <string name="studies_learn_more">Sužinoti daugiau</string>
 
     <!-- Dialog message shown when some changes are made on studies -->
-    <string name="studies_restart_app">Norint pritaikyti pakeitimus, programa bus uždaryta</string>
+    <string name="studies_restart_app" moz:removedIn="135">Norint pritaikyti pakeitimus, programa bus uždaryta</string>
 
     <!-- Title of the remove studies button -->
     <string name="studies_remove">Pašalinti</string>
@@ -681,17 +664,6 @@
 
     <!-- Preference to enable remote debugging of the app via USB or Wi-Fi -->
     <string name="preference_remote_debugging">Nuotolinis derinimas per USB arba belaidį tinklą</string>
-
-    <!-- Title for the fingerprint authentication dialog box that is shown to the user when opening the app.
-     %1$s is replaced with the app name -->
-    <string name="biometric_auth_title">Atrakinti „%1$s“</string>
-
-    <!-- Description for the fingerprint authentication dialog box that is shown to the user when opening the app -->
-    <string name="biometric_auth_description">Palieskite piršto atspaudo jutiklį.</string>
-
-    <!-- New session button for the fingerprint authentication dialog box that is shown to the user when opening the app.
-     When pressed, the user's previous session is cleared, and authentication is not required. -->
-    <string name="biometric_auth_new_session">Naujas seansas</string>
 
     <!-- Button for the fingerprint authentication dialog box that is shown to the user when sharing a link to the app
     while the user has biometric authentication enabled. When pressed, the user's previous session is cleared, and the shared link is opened. -->
@@ -733,11 +705,6 @@
     The new line here must be kept as the second half of the string is clickable for the user. -->
     <string name="tip_disable_tracking_protection">Svetainė veikia netinkamai?\n Pabandykite išjungti apsaugą nuo stebėjimo</string>
 
-    <!-- Tip displayed on home view explaining how to disable enhanced tracking protection
-The new line here must be kept as the second half of the string is clickable for the user. -->
-    <string name="tip_disable_tracking_protection3">Svetainėje trūksta turinio, arba ji veikia netinkamai?\n
-    Pabandykite išjungti išplėstą apsaugą nuo stebėjimo</string>
-
     <!-- Tip displayed on home view explaining how to add sites to homescreen
     Argument 1 will be replaced with a line break in the application.-->
     <string name="tip_add_to_homescreen"><![CDATA[Pasiekite lankomiausias svetaines vienu spustelėjimu%1$s Meniu > Įtraukti į pradžios ekraną]]></string>
@@ -755,28 +722,8 @@ The new line here must be kept as the second half of the string is clickable for
     The new line here must be kept as the second half of the string is clickable for the user. -->
     <string name="tip_open_in_new_tab">Atverkite saitą naujoje kortelėje\n Spustelėkite ir palaikykite bet kurį saitą tinklalapyje</string>
 
-    <!-- Tip displayed on home view explaining how to request the desktop version of a website.
-      %1$s is a placeholder for the app name. -->
-    <string name="tip_request_desktop2">Norite matysi pilną svetainė versiją?\n
-        Pasirinkite „komp. svetainė“ iš „%1$s“ meniu</string>
-
     <!-- Tip displayed on home view explaining how to add a custom autocomplete URL -->
     <string name="tip_disable_tips2">Išjungti patarimus pradžios ekrane</string>
-
-    <!-- Tip displayed on the home view explaining how to use the Allowlist feature.
-     "Allowlist" is a replacement for the word whitelist. -->
-    <string name="tip_explain_allowlist3">Norite išjungti išplėstą apsaugą nuo stebėjimo patikimoje svetainėje?\n
-        Pridėkite ją į leidimų sąrašą nustatymuose.
-    </string>
-
-    <!-- Tip displayed on the home view about the changes in the new release.
-    %1$s is a placeholder for the app name -->
-    <string name="tip_fresh_look">Kad jau klausiate, mes tikrai turime naują išvaizdą!\n Sužinokite apie tai, ir apie kitus „%1$s“ atnaujinimus.</string>
-
-    <!-- Tip displayed on the home view about shortcuts
-    %1$s is a placeholder for the app name -->
-    <string name="tip_about_shortcuts">Sukurkite leistukus dažniausiai lankomoms svetainėms:\n
-    Pasirinkite „pridėti prie leistukų“ iš „%1$s“ meniu</string>
 
     <!-- Label for the snackbar when a user opens a new tab -->
     <string name="new_tab_opened_snackbar">Atverta nauja kortelė</string>
@@ -787,8 +734,6 @@ The new line here must be kept as the second half of the string is clickable for
     <!-- Preference for switching to a new tab immediately after opening -->
     <string name="preference_open_new_tab">Pereiti į saitą naujoje kortelėje nedelsiant</string>
 
-    <!-- Preference for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
-    <string moz:removedIn="97" name="preference_category_safe_browsing">Saugusis naršymas</string>
     <!-- Preference title for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
     <string name="preference_safe_browsing_title">Blokuoti galimai pavojingas ir apgaulingas svetaines</string>
     <!-- Preference summary for safe browsing which when enabled, blocks dangerous or deceptive webpages that may include phishing or malware -->
@@ -796,9 +741,8 @@ The new line here must be kept as the second half of the string is clickable for
 
     <!-- Title of the preference to enable "HTTPS-Only" mode -->
     <string name="preference_https_only_title">Tik HTTPS veiksena</string>
-    <!-- Description of the preference to enable "HTTPS-Only" mode. -->
-    <string moz:removedIn="98" name="preference_https_only_summary2" tools:ignore="UnusedResources">Siekiant didesnio saugumo, automatiškai bandoma jungtis prie svetainių naudojant HTTPS. HTTPS ryšys užtikrina saugų, šifruotą prisijungimą prie jūsų lankomų svetainių.</string>
 
+    <!-- Description of the preference to enable "HTTPS-Only" mode. -->
     <string name="preference_https_only_summary3">Siekiant didesnio saugumo, automatiškai bandoma jungtis prie svetainių naudojant šifruotą HTTPS protokolą.</string>
 
     <!-- Preference for exceptions tracking protection -->
@@ -886,12 +830,10 @@ The new line here must be kept as the second half of the string is clickable for
     <!-- Preference for using following device theme -->
     <string name="preference_follow_device_theme">Naudoti įrenginio grafinį apvalkalą</string>
 
-    <!-- The title of the error page for websites that do not support HTTPS when HTTPS-Only is turned on  -->
-    <string name="errorpage_httpsonly_title">Bandoma atverti svetainė nepalaiko HTTPS</string>
-    <!-- The text of the error page for websites that do not support HTTPS when HTTPS-Only is turned on. %1$s will get replaced with the name of the app (e.g. "Firefox Focus") -->
-    <string name="errorpage_httpsonly_message">Pagal numatytuosius nustatymus, siekiant didesnio saugumo, „%1$s“ bando jungtis naudojant HTTPS. Norėdami pakeisti šį nustatymą, arba sužinoti daugiau, eikite į meniu „Nustatymai“ &gt; „Privatumas ir saugumas“ &gt; „Saugumas“.</string>
-
-    <!-- Sessions List -->
+     <!-- Sessions List -->
     <!-- Content description (not visible, for screen readers etc.): Button that closes a tab n the sessions list -->
     <string name="close_tab">Užverti kortelę</string>
-</resources>
+
+    <!-- Promote SearchWidget Dialog -->
+
+    </resources>
